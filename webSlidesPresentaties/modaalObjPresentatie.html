@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objecten in JavaScript</title>
+    <link rel="stylesheet" href="css/webslides.css">
+    <style>
+        nav .alignright a {
+            padding: 0 .3em;
+        }
+    </style>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/1a91c75a80.js"></script>
+</head>
+<body>
+    <header role="banner">
+        <nav role="navigation">
+          <span>Objecten in <i class="fab fa-js"></i></span>
+          <span class="alignright">
+            <a href="#slide=2"><img src="https://i1.wp.com/ao.gl/wp-content/uploads/2020/02/spreadit.png" alt="JavaScript object"></a>
+            <a href="../modaalJS.html"><img src="https://blanken5.home.xs4all.nl/afb/logotheo.jpg" alt="logo Theo den Blanken"></a>
+            <a href="https://welkombijma.nl/" target="_blank"><img src="https://welkombijma.nl/wp-content/themes/welkombijma/public/img/logo.svg" alt="logo Mediacollege Amsterdam"></a>
+          </span>
+        </nav>
+      </header>
+
+      
+    <main role="main">
+        <article id="webslides" class="horizontal">
+            <!-- dia 1  -->
+            <section class="slide top">
+                
+                <div class="content-center">
+                    <h1>Objecten in JavaScript</h1>
+                    <p class="text-intro ">
+                        Verrijk jouw script met objecten
+                    </p>
+                    <p>
+                        <a href="../modaalJS.html#modObject" class="button zoomIn" target="_blank">
+                            <i class="fab fa-js fa-lg"></i> naar de webpagina</a>
+                    </p>
+                    <p>&nbsp;</p>
+                </div>
+                <div class="aligncenter">
+                    <img src="https://i1.wp.com/ao.gl/wp-content/uploads/2020/02/spreadit.png" alt="JavaScript object"
+                    style="max-height: 50vh">
+                </div>
+
+            </div>
+        </section>
+
+         <!-- dia 2 inhoudsopgave  -->
+         <section class="fullscreen">
+            <div class="card-50">                    
+                <div class="flex-content flexblock reasons fadeInUp">
+                    <h2>Inhoudsopgave <i class="fab fa-js fa-lg"></i></h2>                         
+                    <ol>
+                        <li><a href="#slide=3">Leerdoelen vandaag</a></li>
+                        <li><a href="#slide=4">Waarom objecten?</a></li>
+                        <li><a href="#slide=5">Objecten: properties/methods</a></li>
+                        <li><a href="#slide=6">Objecten: <code>this</code> keyword</a></li>
+                        <li><a href="#slide=8">De opdrachten</a></li>
+                        <li><a href="#slide=9">Credits </a></li>
+                    </ol>
+                </div>
+                <figure>
+                    <img src="https://i1.wp.com/ao.gl/wp-content/uploads/2020/02/spreadit.png" 
+                    alt="JavaScript object" style="object-position: left;">
+                </figure>
+            </div>                            
+        </section>
+
+        <!-- dia 3 leerdoelen  -->
+        <section class="fullscreen">
+            <div class="card-70">
+                <figure class="fadeInUp">
+                    <img src="https://i1.wp.com/ao.gl/wp-content/uploads/2020/02/spreadit.png"
+                     alt="JavaScript object" style="object-position: right;">
+                    <figcaption style="color: black;"><i class="fab fa-js fa-lg"></i> JavaScript object</figcaption>
+                </figure>
+                <div class="flex-content flexblock reasons">
+                    <h2 class="aligncenter">Leerdoelen <i class="fab fa-js fa-lg"></i></h2>
+                    <ul>
+                        <li>Objecten</li>
+                        <li>Properties</li>
+                        <li>Methods</li> 
+                        <li><code>this</code> keyword in objecten</li> 
+                    </ul>
+                </div>                    
+            </div>
+        </section>
+
+        <!-- dia 3 waarom objecten?  -->
+        <section class="bg-black">
+            <div class="card-50">
+                
+                <div class="flex-content flexblock reasons">
+                    <h2>Waarom objecten in JS?</h2>
+                    <ul>
+                        <li>Je hebt meer mogelijkheden: je kunt b.v. afbeeldingen: 
+                            <br>- behalve een url 
+                            <br>- ook hoogte, breedte, 
+                            <br>- alt 
+                            <br>- en afbeeldings-type meegeven;</li>
+                        <li>Je kunt veel globale variabelen onderbrengen in een object. <br>
+                        Daarmee voorkom je dat er conflicten onstaan met andere scripts op de site. <br>
+                    Denk hierbij aan <br>
+                    - scripts van een library; <br>
+                    - ingevoegde widgets, <br>
+                    - een partner, die advertenties plaatst.</li>
+                    </ul>
+                </div>
+                <figure class="zoomIn">
+                    <img src="https://www.websystemer.no/wp-content/uploads/2020/05/colliding-javascript-objects.jpg" alt="botsende JavaScript objecten">
+                    <figcaption>Botsende JavaScript variabelen</figcaption> 
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- voorbeeldcode van een JS object  -->
+        <section class="bg-blue">
+            <div class="wrap">
+                <h2 class="aligncenter">  <i class="fab fa-js fa-lg" style="color: orange; font-size: 2em;"></i>
+                    object <i class="fas fa-crown fa-lg" style="color: orange;"></i>  properties - method</h2>
+                <div class="grid">
+                    <div class="column">
+                        <h2 class="aligncenter orange">
+                        </h2>
+                        <ul>
+                            <li>regel 1: <span style="color: orange; font-weight: 900;">object</span> <code>koning</code></li>
+                            <li>regels 2-6: eigenschappen (<span style="color: orange; font-weight: 900;">properties</span>):
+                                <ul>
+                                    <li><code>naam</code> (string)</li>
+                                    <li><code>echtgenote</code> (string)</li>
+                                    <li><code>kinderen</code> (array)</li>
+                                    <li><code>geboortejaar</code> (getal)</li>
+                                    <li><code>url</code> (string)</li>
+                                </ul>
+                            </li>
+                            <li>regels 7-13: <span style="color: orange; font-weight: 900;">method</span> <code>noemKinderen</code></li>
+                        </ul>
+                        
+                    </div>
+                    <div class="column zoomIn">
+                        <script src="https://gist.github.com/Theo-denBlanken/7c2109c2ce3f727688e7e63af1975d9e.js"></script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- this keyword in code  -->
+        <section class="bg-blue">
+            <div class="wrap">
+                <h2 class="aligncenter"><code style="color: orange;">this</code> keyword in <i class="fab fa-js fa-lg"></i> object <i class="fas fa-crown fa-lg" style="color: orange;"></i></h2>
+                <p class="text-intro aligncenter"></p>
+                <div class="grid">
+                    <div class="column zoomIn">
+                        <script src="https://gist.github.com/Theo-denBlanken/7c2109c2ce3f727688e7e63af1975d9e.js"></script>
+                    </div>
+                    <div class="column">
+                        <h3>regel 9 & <br> regel 10</h3>
+                        <p class="text-intro">
+                            <code>this</code> verwijst naar het object <strong>koning</strong><br>
+                            <code style="color: orange;">this.kinderen</code> is dus de array in het object 
+                            <code style="color: orange;">koning</code><br>
+                            <code>this</code> verwijst dus naar het object waar het zelf in zit.
+                        </p>
+                        <h4>Opmerking</h4>
+                        <p>regel 8 <code>zin</code> is een locale variabele: <br>
+                        <code>zin</code> bestaat na de <code>return</code> in regel 12 niet meer</p>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- de opdracht  -->
+        <section class="fullscreen">
+            <div class="card-50">
+                <figure class="fadeInUp">
+                    <img src="https://blog.neweb.co/wp-content/uploads/2013/07/screenshot-1.jpg" alt="modaal venster">
+                    <figcaption>Een modaal venster met JS object maken</figcaption>
+                </figure>
+                <div class="flex-content flex-content reasons">
+                    <h2>De opdrachten</h2>
+                    <ul>
+                        <li>Demonstreer jouw object koning aan Theo</li>
+                        <li>Neem de opdracht <a href="https://blanken5.home.xs4all.nl/modaalJS.html">modaal venster (lightbox)</a></li>
+                        <li>Pas het JavaScript aan zodat: <br>
+                        - er geen onnodige globale variabelen zijn; <br>
+                        - de functies als method zijn opgenomen</li>
+                        <li>Commit jouw updates naar GitHub <i class="fab fa-github"></i></li>
+                        <li>Update jouw site op hosts.ma-cloud</li>
+                        <li>Geef Theo de GitHub-link in zijn chat-kanaal als hij kan beoordelen</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="grid">
+                
+                <div class="column">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_Y4mMDadl-8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="column">
+                    <h2>Videoinstructie <i class="fab fa-js"></i></h2>
+                    <p>Nadat je hebt laten zien dat je met <a href="#slide=6">het modaalJS</a> (kopieer daar de code uit de GIST) gewerkt hebt in de console.
+                        <br>Dit moet je wel <strong>laten aftekenen</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- laatste dia: credits  -->
+        <section class="slide-bottom">
+            <div class="wrap zoomIn">
+                <div class="content-right">
+                    <h3>Credits</h3>
+                    <p>Deze presentatie is gemaakt met gebruik van:</p>
+                    <ol class="flexblock reasons">
+                        <li>
+                            <a href="https://github.com/webslides/WebSlides">WebSlides</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=uE1m21Umn0s&list=LLrGLVN889769Dfa1kzliUxQ&index=3&t=0s">Video tutorial Brad Traversy</a>
+                        </li>
+                        <li>
+                            <a href="https://webslides.tv/demos/classes#slide=2">documentatie WebSlides</a>
+                        </li>
+                    </ol>
+                </div> 
+            </div>  <!-- einde van de wrap die heb je nodig om de inhoud rechtsonder te plaatsen -->
+        </section>
+        </article>
+    </main>
+    
+    <script src="js/webslides.min.js"></script>
+    <script>
+        window.ws = new WebSlides();
+    </script>
+</body>
+</html>

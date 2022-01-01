@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objecten | in JavaScript</title>
+    <link rel="stylesheet" href="css/webslides.css">
+    <style>
+        nav .alignright a {
+            padding: 0 .3em;
+        }
+
+        li.niet-afbreken {
+            display: block;
+        }
+        .text-landing {
+            text-align: center;
+        }
+        .reasons>li {
+            display: block;
+        }
+        .theo-telt {
+            list-style: none;
+            counter-reset: grote-nummers;
+            margin-left: 2em;
+        }
+        .theo-telt>li {
+            counter-increment: grote-nummers;
+            list-style-position: outside;
+            display: block;
+        }
+        .theo-telt>li::before {
+            content: counter(grote-nummers);
+            color: royalblue;
+            display: inline-block;
+            font-size: 2em;
+            transform: translate(-1em,1em);
+            font-size: 2.5em;
+        }
+        linkjes onderscheiden van broodtekst
+        .flexblock li > a, [class*='bg-'] li > a {
+            color: dodgerblue;
+        }
+        [class*='bg-'] li:hover > a {
+            color: aliceblue;
+            text-decoration: underline;
+        }
+    </style>
+    <link rel="stylesheet" href="../highlight/styles/agate.css">
+    <script  charset="UTF-8" src="../highlight/highlight.pack.js"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/1a91c75a80.js"></script>
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="navigation">
+            <span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1200px-JSON_vector_logo.svg.png" alt="JSON"> JSON: data importeren</span>
+            <span class="alignright">
+                <a href="#slide=2"><img src="https://nextfaze.gallerycdn.vsassets.io/extensions/nextfaze/json-parse-stringify/1.0.2/1519864325244/Microsoft.VisualStudio.Services.Icons.Default" alt="JSON"></a>
+                <a href="../index.html"><img src="https://blanken5.home.xs4all.nl/afb/logotheo.jpg"
+                        alt="logo Theo den Blanken"></a>
+                <a href="https://welkombijma.nl/" target="_blank"><img
+                        src="https://welkombijma.nl/wp-content/themes/welkombijma/public/img/logo.svg"
+                        alt="logo Mediacollege Amsterdam"></a>
+            </span>
+        </nav>
+    </header>
+
+    <main role="main">
+        <article id="webslides" class="horizontal bg-apple fullscreen">
+            
+            <!-- dia 1  -->
+            <section>
+                <span class="background-right-bottom"
+                    style="opacity: .3; background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1200px-JSON_vector_logo.svg.png'); background-size: cover;">
+                </span>
+
+                
+                <div class="wrap grid">
+                    <div class="column">
+                        <h1>Importeren<strong> van JSON <span class="fab fa-js"></span></strong></h1>
+                        <p class="text-intro ">
+                            Asynchroon JavaScript: AJAX
+                        </p>
+                        <p><a class="button zoomIn" href="#slide=2">Naar de slides</a></p>
+                        <hr>
+                        Vorige les: <a href="objectEigenschappen.html" target="_blank">Object-eigenschappen uitvoeren</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- dia 2 inhoudsopgave  -->
+            <section class="aligncenter">
+
+                <div class="grid ">
+                    <div class="column">
+                        <h2>Inhoud <span class="fab fa-js fa-lg"></span></h2>
+                        <ul class="flexblock border">
+                            <li>
+                                <h3>Inhoud</h3>
+                                <ol>
+                                    <li><a href="#slide=3">Leerdoelen <span class="toc-page">3</span></a></li>
+                                    <li><a href="#slide=4">JSON <span class="toc-page">4</span></a></li>
+                                    <li><a href="#slide=5">AJAX <span class="toc-page">5</span></a></li>
+                                    <li><a href="#slide=6">XML <span class="toc-page">6</span></a></li>
+                                    <li><a href="#slide=7">XMLHttpRequest<span class="toc-page">7</span></a></li>
+                                    <li><a href="#slide=8">HTTP-statuscodes<span class="toc-page">8</span></a></li>
+                                    <li><a href="#slide=9">Voorbeeld XMLHttpRequest<span class="toc-page">9</span></a></li>
+                                    <li><a href="#slide=10">Wat er gebeurt bij een XMLHttpRequest<span class="toc-page">10</span></a></li>
+                                    <li><a href="#slide=11">Demo import JSON<span class="toc-page">11</span></a></li>
+                                    <li><a href="#slide=12">JSON.parse()<span class="toc-page">12</span></a></li>
+                                    <li><a href="#slide=13">Opdracht<span class="toc-page">13</span></a></li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <figure class="zoomIn">
+                            <img src="https://miro.medium.com/max/512/1*4e5PgSBgxgFolqvob9x_Wg.png"
+                                alt="JSON" style="object-position: left;">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- dia 3 leerdoelen  -->
+            <section class="fullscreen">
+                <div class="card-50">
+                    <div class="flex-content flexblock reasons">
+                        <h2>Leerdoelen <i class="fab fa-js fa-lg"></i></h2>
+                        <ul>
+                            <li>JSON</li>
+                            <li>AJAX</li>
+                            <li>HTTP-statuscodes</li>
+                        </ul>
+                    </div>
+                    <figure class="fadeInUp" style="max-height: 100vh; max-width: 50vw">
+                        <img src="afb/importJSON/AJAX.svg" alt="AJAX" >
+                        <figcaption><i class="fab fa-js fa-lg"></i> AJAX
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- dia 4 JSON -->
+            <section class="fullscreen">
+                <div class="card-50">
+                    <div style="width: 50vw; padding: 1em 2em">
+                        <h3 class="text-landing">JSON</h3>
+                        <ul class="flexblock reasons">
+                            <li style="font-size: 1.8em;"><strong style="color: royalblue">J</strong>ava<strong style="color: royalblue">S</strong>cript <strong style="color: royalblue">O</strong>bject <strong style="color: royalblue">N</strong>otation</li>
+                            <li>Eenvoudig en veelgebruikt formaat om data op te slaan en te transporteren</li>
+                            <li>Veel gebruikt als data van de server naar de browser gehaald moeten worden</li>
+                            <li>Kan worden opgeslagen in het formaat <strong>.json</strong></li>
+                            <li>JSON is zelfbeschrijvend en eenvoudig te lezen</li>
+                            <li>een combinatie van array's en objecten die als string worden getransporteerd.</li>
+                        </ul>
+                    </div>
+                    <div class="column bg-light fadeInUp" style="width: 50vw; padding: 2em;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1200px-JSON_vector_logo.svg.png" alt="JSON" style="width: 10vh; margin: 1em auto;">
+                        <img src="https://enterprise.arcgis.com/es/geoevent/latest/process-event-data/GUID-800BE275-3250-4BF9-93C2-B934C9AA468E-web.png" alt="JSON voorbeeldcode">
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 5 AJAX   -->
+            <section class="fullscreen">
+                <div class="card-50">
+                    <div class="colum bg-light fadeInUp">
+                        <img src="https://storage.semalt.com/uploads/articles/971ea008d2a4c2f4dddd6c5b83afd8b22.jpg" alt="AJAX">
+                        <hr>
+                        <img src="https://artkentro.com/uploads/hub/1529073231no-football-dubai-bar.jpg" alt="geen voetbal">
+                    </div>
+                    <div style="padding: 2em;">
+                        <h2 class="text-landing">AJAX</h2>
+                        <ul class="flexblock reasons">
+                            <li><span style="font-size: 2em;"><strong>A</strong>synchronous <strong>J</strong>avaScript <strong>a</strong>nd <strong>X</strong>ML</span><br>In het begin gebeurde dit veelal met XML-bestanden, maar het kan ook met text en HTML en tegenwoordig meestel met JSON.</li>
+                            <li>Haal data van de server <em>nadat</em> de pagina geladen is</li>
+                            <li>De pagina bijwerken <em>zonder</em> deze te verversen</li>
+                            <li>Stuur -op de achtergrond- data naar de server (niet in de les vandaag) </li>
+                        </ul>
+                        <hr>    
+                        <p>AJAX is geen programmeertaal maar een JavaScript-techniek. <br>
+                        Het gebruikt:</p>
+                        <ol>
+                            <li>het XMLHttpRequest-object dat elke browser heeft <a href="https://caniuse.com/xhr2" target="_blank">https://caniuse.com/xhr2</a></li>
+                            <li>JavaScript en HTML DOM om de opgehaalde data weer te geven.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 6 XML  -->
+            <section class="full-screen">
+                <div class="grid">
+                    
+                        <div class="column">
+                            <figure class="fadeInUp">
+                                <img src="https://jkp-ads.com/images/xml01NL.gif" alt="XML voorbeeldcode" >
+                                <figcaption>XML voorbeeldcode</figcaption>
+                            </figure>
+                        </div>
+                    
+                    <div style="padding: 2em;" class="column">
+                        <h2 class="text-landing">XML</h2>
+                        <ul class="flexblock reasons">
+                            <li>Extensible Markup Language (heeft elementen en attributen)</li>
+                            <li>Je kunt data in XML zetten om het te versturen</li>
+                            <li>RSS-feeds zijn als XML geschreven</li>
+                        </ul>
+
+                        <p>Tegenwoordig wordt dit door JSON vervangen, ondanks dat XML nog extra mogelijkheden heeft om vanuit zichzelf data weer te geven. 
+                        De reden daarvoor is:</p>
+                        <ul class="flexblock reasons">
+                            <li>JSON ziet er eenvoudiger uit</li>
+                            <li>JSON kan arrays bevatten</li>
+                            <li>JSON kan eenvoudiger met JavaScript verwerkt worden. <br> (Dat gaan we vandaag doen!)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 7 XMLHttpRequest-object  -->
+            <section>
+                <div class="wrap">
+                    <div class="grid">
+                        <div class="column bg-apple">
+                            <h2>XML<span style="color:royalblue">Http</span>Request</h2>
+                        </div>
+                        <div class="column">
+                            <p>
+                                Hier een aantal properties en methods van het XMLHttpRequest-object <br>
+                                    <a class="button" href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank">Compleet overzicht</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="column">
+                            <h3>eigenschappen (properties):</h3>
+                            <ul>
+                                <li><strong>.onreadystatechange</strong> <br>
+                                    Telkens als de .readyState wijzigt, wordt dat gezien als een <strong>event</strong> en roep je een functie aan. Dit wordt een callback-functie genoemd
+                                </li>
+                                <li><strong>.readyState </strong><br>de toestand van de aanvraag aan de server</li>
+                                <li><strong>.status</strong><br>
+                                het antwoord van de server als een getal: <em>info, succes, herleiden, fouten</em>.<br>
+                                Volgende dia hier meer over.</li>
+                                <li><strong>.responseText</strong> <br>
+                                    de opgevraagde data als een string. <br>Hier is het ons om te doen.
+                                </li>
+                                <li><strong>.statusText</strong><br>
+                                Net als .status maar dan krijg geen getal maar een korte tekst.</li>                                
+                            </ul>                            
+                        </div>
+                        <div class="column bg-apple">
+                            <h3>
+                                methods:
+                            </h3>
+                            <ul>
+                                <li><strong>.open()</strong> <br>
+                                Details van de aanvraag:
+                                <ol type="1" >
+                                    <li style="list-style: decimal;">"GET" (voor ophalen van data) of "POST" (als je dat wilt wegschrijven)</li>
+                                    <li style="list-style: decimal;">
+                                        url <br>
+                                        het adres van de de server
+                                    </li>
+                                    <li style="list-style: decimal;">synchroon <br>
+                                    een boolean. Geef daarvoor <em>true</em>: dan loopt het JavaScript gedurende de aanvraag gewoon door</li>
+                                </ol></li>
+                                <li><strong>.send()</strong> <br>
+                                Verstuur de request naar de server </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 8 HTTP-statuscodes  -->
+            <section>
+                <div class="wrap">
+                    <h2 class="text-landing">
+                        HTTP-statuscodes
+                    </h2>
+                    <div class="grid">
+                        <div class="column">
+                            <h3>100+: Mededelend</h3>
+                            <ul>
+                                <li>100: Doorgaan</li>
+                                <li>101: Protocolwissel</li>
+                                <li>102: Processing</li>
+                            </ul>
+
+                            <h3>200+: Goed gevolg</h3>
+                            <ul>
+                                <li><strong>200</strong>: OK</li>
+                                <li>201: Aangemaakt</li>
+                                <li>202: Aanvaard</li>
+                                <li>203: Niet-gemachtigde informatie</li>
+                                <li>204: Geen inhoud</li>
+                                <li>205: Inhoud opnieuw instellen</li>
+                                <li>206: Gedeeltelijke inhoud</li>
+                                <li>207: Meerdere statussen</li>
+                            </ul>
+
+                            <h3>300+: Omleiding</h3>
+                            <ul>
+                                <li>301: Definitief verplaatst</li>
+                                <li>302: Tijdelijk verplaatst</li>
+                                <li>305: Gebruik Proxy </li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h3>400+: Aanvraagfout</h3>
+                            <ul>
+                                <li>400: Foute aanvraag</li>
+                                <li>401: Niet geautoriseerd</li>
+                                <li>402: Betaalde toegang</li>
+                                <li><strong>403</strong>: Verboden toegang</li>
+                                <li><strong>404</strong>: Niet gevonden</li>
+                                <li>405: Methode niet toegestaan</li>
+                            </ul>
+                            <h3>500+: Serverfout</h3>
+                            <ul>
+                                <li>500: Interne serverfout</li>
+                                <li>501: Niet geïmplementeerd</li>
+                                <li>502: Bad Gateway</li>
+                                <li>503: Dienst niet beschikbaar</li>
+                                <li>504: Gateway Timeout</li>
+                            </ul>
+                            <p>
+                                De server geeft bij de communicatie altijd de statuscode mee, in ieder geval het getal dat bij de statuscode hoort.
+                            </p>
+                            <a href="https://nl.wikipedia.org/wiki/Lijst_van_HTTP-statuscodes" target=_blank class="button">Volledige lijst van HTTP-statuscodes</a>
+                        </div>
+                        <div class="column">
+                            
+                            
+                            <img src="http://www.viralseoservices.com/resources/wp-content/uploads/2013/11/HTTP-status-codes.jpg" alt="HTTP statuscodes" style="height: 70vh; width: 32.447vh; margin: 0 auto; display: block;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 9 voorbeeld XMLHttpRequest  -->
+            <section>
+                <h2 class="text-landing">voorbeeld <span style="color: royalblue;">XML</span>HttpRequest</h2>
+                <div class="grid">
+                    <div class="column">
+                        <pre><code style="font-size: 1.2em;">
+        // het adres van de server
+        const url = '<span style="font-size: 50%;">https://gist.githubusercontent.com/Theo-denBlanken/ed9551298618eb05ad01b838b3bf32b5/raw/c8c1fed36793bdd6fd69ba6ee815c263a61118c3/boekenTheo.json</span>';
+
+        // het XMLHttpRequest object maken
+        const aanvraag = new XMLHttpRequest();
+
+        // omschrijf wat er moet gebeuren ALS je de data succesvol binnen hebt
+        aanvraag.onreadystatechange = () => {
+            if( aanvraag.readyState==4  && aanvraag.status==200 ) {
+                let data = aanvraag.responseText;
+                // schrijf dit direct in het browservenster
+                document.body.innerHTML = data;
+            }
+        }
+
+        // serveraanvraag specificeren
+        aanvraag.open( "GET", url, true);
+
+        // aanvraag versturen
+        aanvraag.send();     
+                </code></pre>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- dia 10: wat er gebeurt bij een XMLHttpRequest  -->
+            <section class="fullscreen">
+                
+                <div class="grid">
+                    <div class="column bg-white" style="text-align: right;">
+                        <img src="afb/importJSON/AJAX.svg" alt="AJAX" style="max-width: 40vw; float: right;">
+                    </div>
+                    <div class="column">
+                        <h2 class="aligncenter">Wat er gebeurt bij een XMLHttpRequest (AJAX)</h2>
+                        <ol>
+                            <li style="padding: .5em 2em;">Zolang <code>.send</code> niet wordt uitgevoerd: niets <br>maar dit kan veranderen als er bijvoorbeeld een venster geladen is, of als er op een knop wordt geklikt;</li>
+                            <li style="padding: .5em 2em;">bij <code>.send</code> wordt de request volgens de specs in <code>.open()</code> naar de server gestuurd: AJAX call;</li>
+                            <li style="padding: .5em 2em;">om dat de aanvraag is verstuurd en de server nog moet reageren worden intussen andere opdrachten in het JavaScript bestand uitgevoerd: het is niet bijzonder dat het hele script al doorlopen is voordat de juiste response van de server terug is. Je noemt dit een <em>asynchroon</em> proces. <br>
+                            Dit a-synchroon staat voor de A in AJAX.</li>
+                            <li style="padding: .5em 2em;">Telkens als de readyState van de response wijzigt, veroorzaakt dit bij het XMLHttpRequest-object een event: <code>onreadystatechange</code></li>
+                            <li style="padding: .5em 2em;">Als de server met het goede reactie terug is, komt dat in de responseText-property van het XMLHttpRequest-object.</li>
+                            <li style="padding: .5em 2em;">Je controleert of de <code>readyState</code> en <code>status</code> jiust zijn, en dan roep je een functie aan die de responseText gaat verwerken: Dit wordt een <code>callback-functie</code> genoemd.</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- dia 11 demo import JSON  -->
+            <section>
+                <h2 class="text-landing">Demo import JSON</h2>
+                <div class="grid">
+                    <div class="column fadeInUp">
+                     <iframe src="https://www.youtube.com/embed/c4olRZQE-Ig" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" style="width:42vw; height:27vw"></iframe>
+                     <p class="aligncenter">
+                        <img src="https://storage.semalt.com/uploads/articles/971ea008d2a4c2f4dddd6c5b83afd8b22.jpg" alt="AJAX" style="width:441px; height:286px; padding-top: 2em; ">
+                     </p>
+                     
+                    </div>
+                    <div class="column">
+                        <ul class="flexblock reasons">
+                            <li>Bekijk deze demo (00:21:17) en doe hem na.</li>
+                            <li>Gebruikte gist: <a style="word-break: break-all;" href="https://gist.githubusercontent.com/Theo-denBlanken/ed9551298618eb05ad01b838b3bf32b5/raw/c8c1fed36793bdd6fd69ba6ee815c263a61118c3/boekenTheo.json" target="_blank">https://gist.githubusercontent.com/Theo-denBlanken/ed9551298618eb05ad01b838b3bf32b5/raw/c8c1fed36793bdd6fd69ba6ee815c263a61118c3/boekenTheo.json</a></li>
+                            
+                            <li>Resultaat online (op hosts.ma-cloud.nl) en op GitHub <span class="fab fa-github"></span></li>
+                            <li>Linkje naar online versie in README.md</li>
+                            <li> GitHub-link inleveren in Teams</li>
+                        </ul>
+                    </div>
+                </div> 
+            </section>
+
+            <!-- dia 12 JSON.parse() https://youtu.be/kNJuDVz1OkQ  00:01:09 -->
+            <section class="aligncenter">
+                    <h2 class="text-landing">Van JSON naar JS-object</h2>
+                    <!-- <p class="text-intro aligncenter">met JSON.parse()</p> -->
+                    <div class="grid">
+                        <div class="column" style="width: 35vw">
+                            <h4>data in json</h4>
+                            <pre><code>
+let jsonData = `[
+    {
+        "tijd": "13 Jan 2021 17:10",
+        "tempBuiten": 3,
+        "tempBinnen": 19,
+        "tempGewenst": 19,
+        "lichtKamer": true,
+        "lichtBuiten": false
+    }, {
+        "tijd": "13 Jan 2021 17:20",
+        "tempBuiten": 3,
+        "tempBinnen": 18,
+        "tempGewenst": 19,
+        "lichtKamer": true,
+        "lichtBuiten": false
+    }
+]`
+                            </code></pre>
+                        </div>
+                        <div class="column zoomIn" style="width: 16vw">
+                    <p><code>let objectData = JSON.parse(jsonData);</code></p>
+                    <hr>
+                    <img src="https://miro.medium.com/max/2414/1*z5zXwIOIm2lC_8kHhtMKvQ.png" alt="JSON in JS">
+                        </div>
+
+                        <div class="column" style="width: 35vw">
+                            <h4>data in JS-object</h4>
+                            <iframe src="https://www.youtube.com/embed/c4olRZQE-Ig" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" style="width:35vw; height:20vw" autoplay></iframe>
+                            <hr>
+                            <p style="text-align: left; padding-top: 1em;">
+                                De omgekeerde weg:
+                                <br>
+                                <code>jsonData = JSON.stringify(objectData);</code>
+                            </p>
+                        </div>
+
+                    </div>
+                
+
+            </section>
+
+            <!-- dia 13 opdracht https://youtu.be/PijMMdjP8TI -->
+            <section>
+                <div class="wrap aligncenter">
+                    <h2 class="text-landing">Opdracht</h2>
+                    <p class="text-intro">Bekijk deze instructie (00:15:50) en doe mee.</p>
+                         <iframe  class="column fadeInUp" src="https://www.youtube.com/embed/PijMMdjP8TI" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" style="width:50vw; height:29vw"></iframe>
+                          <ul class="flexblock reasons size-60">
+                                <li>Gebruikte gist: <a style="word-break: break-all;" target="_blank" href="https://gist.githubusercontent.com/Theo-denBlanken/193d989a2aab328f847f4357e7171dc5/raw/1ca3b05253dee0dac348b9ded4ada8a64d97ff5e/huisDataa.json">https://gist.githubusercontent.com/Theo-denBlanken/193d989a2aab328f847f4357e7171dc5/raw/1ca3b05253dee0dac348b9ded4ada8a64d97ff5e/huisDataa.json</a></li>
+                                <li>Resultaat online (op hosts.ma-cloud.nl) en op GitHub <span class="fab fa-github"></span> bijwerken</li>
+                            </ul>
+                </div>
+            </section>
+
+
+
+            <!-- laatste dia: credits  -->
+            <section class="slide-bottom">
+                <div class="wrap zoomIn">
+                    <div class="content-right">
+                        <h3>Credits</h3>
+                        <p>Deze presentatie is gemaakt met gebruik van:</p>
+                        <ol class="flexblock reasons">
+                            <li>
+                                <a href="https://github.com/webslides/WebSlides">WebSlides</a>
+                            </li>
+                            <li>
+                                <a href="https://webslides.tv/demos/classes#slide=2">documentatie WebSlides</a>
+                            </li>
+                            <li>
+                                <a href="https://www.w3schools.com/js/js_ajax_intro.asp">W3 Schools</a>
+                            </li>
+                            <li><a href="https://css-tricks.com/custom-list-number-styling/" target="_blank">instructie de nummering stylen</a></li>
+                        </ol>
+                    </div>
+                </div> <!-- einde van de wrap die heb je nodig om de inhoud rechtsonder te plaatsen -->
+            </section>
+        </article>
+    </main>
+
+    <script src="js/webslides.min.js"></script>
+    <script>
+        // highlight.js activieren
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+        // webSlides activeren
+        window.ws = new WebSlides();
+    </script>
+</body>
+
+</html>

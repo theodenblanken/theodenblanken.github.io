@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps API</title>
+    <link rel="stylesheet" href="css/webslides.css">
+    <style>
+        nav .alignright a {
+            padding: 0 .3em;
+        }
+    </style>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/1a91c75a80.js"></script>
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="navigation">
+            <span>Google Maps API <i class="fas fa-map-marker-alt"></i></span>
+            <span class="alignright">
+                <a href="#slide=2"><img src="https://www.want.nl/wp-content/uploads/2019/11/Google-MAps.jpg"
+                        alt="Google Maps API"></a>
+                <a href="../index.html"><img src="https://blanken5.home.xs4all.nl/afb/logotheo.jpg" alt="logo Theo den Blanken"></a>
+                <a href="https://welkombijma.nl/" target="_blank"><img
+                        src="https://welkombijma.nl/wp-content/themes/welkombijma/public/img/logo.svg"
+                        alt="logo Mediacollege Amsterdam"></a>
+            </span>
+        </nav>
+    </header>
+
+
+    <main role="main">
+        <article id="webslides" class="horizontal">
+            <!-- dia 1  -->
+            <section class="slide top">
+
+                <div class="content-center">
+                    <h1>Google Maps API</h1>
+                    <p class="text-intro ">
+                        <strong>A</strong>pplication <strong>P</strong>rogramming <strong>I</strong>nterface
+                    </p>
+                    <p>
+                        <a href="#slide=2" class="button zoomIn">
+                            <i class="fas fa-map-marker-alt"></i> naar de slides</a>
+                    </p>
+                    <p>&nbsp;</p>
+                </div>
+                <div class="aligncenter">
+                    <img src="https://manifesto.co.uk/wp-content/uploads/2018/05/google-maps-api-pricing.png"
+                        alt="Google Maps" style="max-height: 50vh">
+                </div>
+
+                </div>
+            </section>
+
+            <!-- dia 2 inhoudsopgave  -->
+            <section>
+                <div class="card-50">
+                    <figure>
+                        <img src="https://i.ytimg.com/vi/lVhDux1vmIU/maxresdefault.jpg" alt="Google Maps"
+                            style="object-position: right;">
+                    </figure>
+                    <div class="wrap">
+                        <h2 class="aligncenter">Inhoudsopgave <i class="fas fa-map-marker-alt fa-lg"></i></h2>
+                        <div class="grid">
+
+                            <div class="column">
+
+                                <ol>
+                                    <li><a href="#slide=3">Leerdoelen vandaag</a></li>
+                                    <li><a href="#slide=4">Opdracht</a></li>
+                                    <li><a href="#slide=5">Kaart maken en api-key</a></li>
+                                    <li><a href="#slide=6">API key beperken</a></li>
+                                    <li><a href="#slide=7">Betaling instellen</a></li>
+                                    <li><a href="#slide=8">Kaart op juiste plaats </a></li>
+                                </ol>
+                            </div>
+                            <div class="column">
+                                <ol start=6>
+                                    <li><a href="#slide=9">Marker plaatsen</a></li>
+                                    <li><a href="#slide=10">Marker vormgeven</a></li>
+                                    <li><a href="#slide=11">Info-venster</a></li>
+                                    <li><a href="#slide=12">Op GitHub</a></li>
+                                    <li><a href="#slide=13">Meerdere markers</a></li>
+                                    <li><a href="#slide=14">Alternatieve tutorial</a></li>
+
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- dia 3 leerdoelen  -->
+            <section class="fullscreen">
+                <div class="card-70">
+                    <figure class="fadeInUp">
+                        <img src="https://i.ytimg.com/vi/lVhDux1vmIU/maxresdefault.jpg" alt="JavaScript object"
+                            style="object-position: right;">
+                        <figcaption style="color: black;"><i class="fab fa-js fa-lg"></i> JavaScript object</figcaption>
+                    </figure>
+                    <div class="flex-content flexblock reasons">
+                        <h2 class="aligncenter">Leerdoelen <i class="fas fa-map-marker-alt fa-lg"></i></h2>
+                        <ul>
+                            <li>Objecten</li>
+                            <li>Google Map API verkennen</li>
+                            <li>Mogelijkheden met API</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 4 waarom objecten?  -->
+            <section class="bg-black">
+                <div class="card-50">
+
+                    <div class="flex-content flexblock reasons">
+                        <h2>Opdracht <i class="fas fa-map-marker-alt fa-lg"></i></h2>
+                        <ul>
+                            <li>Volg de tutorials in de <a href="#slide=5">komende dia's</a></li>
+                            <li><strong>of</strong> de documentatie op <a
+                                    href="https://developers.google.com/maps/documentation/javascript/tutorial">https://developers.google.com/maps/documentation/javascript/tutorial</a>
+                            </li>
+                            <li><strong>of</strong> op deze: <a
+                                    href="https://www.youtube.com/watch?v=Zxf1mnP5zcw">https://www.youtube.com/watch?v=Zxf1mnP5zcw</a>
+                            </li>
+                            <li>en maak een kaart met verschillende markers die ook een info-venster geven.</li>
+                        </ul>
+                    </div>
+                    <figure class="zoomIn">
+                        <img src="https://i.ytimg.com/vi/Zxf1mnP5zcw/maxresdefault.jpg" alt="Google Maps tutorial">
+                        <figcaption>Google Maps tutorial</figcaption>
+                    </figure>
+
+                </div>
+            </section>
+
+            <!-- dia 5 Kaart maken en api-key  -->
+            <section class="wrap size-60">
+
+                <div class="content-center">
+                    <h4>1. Kaart maken en api-key</h4>
+                    <a href="https://cloud.google.com/maps-platform/">https://cloud.google.com/maps-platform/</a> <br>
+                    <br>
+                    <a
+                        href="https://developers.google.com/maps/documentation/javascript/tutorial">https://developers.google.com/maps/documentation/javascript/tutorial</a>
+                </div>
+                <p>&nbsp;</p>
+                <div class="embed zoomIn">
+                    <iframe src="https://www.youtube.com/embed/0I3SlUMIC1M">
+                    </iframe>
+                </div>
+            </section>
+            <!-- dia 6 API key beperken  -->
+            <section class="wrap size-60">
+
+                <div class="content-center">
+                    <h4>2. API key beperken</h4>
+                    Voorkom dat anderen jouw key in hun pagina gaan gebruiken
+                    <p>&nbsp;</p>
+                </div>
+
+                <div class="embed zoomIn">
+                    <iframe src="https://www.youtube.com/embed/WDqHzE6gfPg">
+                    </iframe>
+                </div>
+            </section>
+
+            <!-- dia 7 API betaling instellen  -->
+            <section class="wrap size-60">
+
+                <div class="content-center">
+                    <h4>3. API betaling instellen</h4>
+                    De key kan echt werken als er betaling wordt ingesteld. De eerste 300 euro per jaar zijn gratis.
+                    Views van jouw kaart leveren kosten op. <br>
+                    Daarom is die beperking zo belangrijk. <br>
+                    Ook kun je de key bij mogelijk misbruik omzetten.
+                    <p>&nbsp;</p>
+                </div>
+
+                <div class="embed zoomIn">
+                    <iframe src="https://www.youtube.com/embed/mKLK66IUOUA">
+                    </iframe>
+                </div>
+            </section>
+
+            <!-- dia 8 kaart op juiste plaats  -->
+            <section class="wrap size-60">
+
+                <div class="content-center">
+                    <h4>4. Kaart op juiste plaats</h4>
+                    De kaart kan inzoomen en uitzoomen en het punt waarop gecentreerd wordt, kan worden opgezocht en
+                    ingesteld.
+                    Plek uitzoeken met: <a href="https://www.latlong.net/">https://www.latlong.net/</a>
+                    <p>&nbsp;</p>
+                </div>
+
+                <div class="embed zoomIn">
+                    <iframe src="https://www.youtube.com/embed/Bw53qYUoUwM">
+                    </iframe>
+                </div>
+            </section>
+
+            <!-- dia 9 marker plaatsen  -->
+            <section class="wrap size-60">
+
+                <div class="content-center">
+                    <h4>5. Marker plaatsen</h4>
+                    Een marker kun je zelf op de kaart plaatsen
+                    Plek uitzoeken met: <a href="https://www.latlong.net/">https://www.latlong.net/</a>
+                    <p>&nbsp;</p>
+                </div>
+
+                <div class="embed zoomIn">
+                    <iframe src="https://www.youtube.com/embed/0NiSsoFx8LY">
+                    </iframe>
+                </div>
+            </section>
+
+
+            <!-- dia 10 marker vormgeven  -->
+            <section class="wrap size-60">
+
+                <div class="content-center">
+                    <h4>6. Marker vormgeven</h4>
+                    Je kunt een andere afbeelding in plaats van de standaard marker plaatsen
+                    <p>&nbsp;</p>
+                </div>
+
+                <div class="embed zoomIn">
+                    <iframe src="https://www.youtube.com/embed/08wretzQs7Y">
+                    </iframe>
+                </div>
+            </section>
+
+            <!-- dia 11 info-venster  -->
+            <section class="wrap size-60">
+                <div class="content-center">
+                    <h4>7. Info-venster</h4>
+                    Een marker kan worden uitgebreid met een info-venster. <br>
+                    Deze verschijnt bij een klik op de marker. <br>
+                    <a
+                        href="https://developers.google.com/maps/documentation/javascript/infowindows">https://developers.google.com/maps/documentation/javascript/infowindows</a>
+                    <p>&nbsp;</p>
+                </div>
+
+                <div class="embed zoomIn">
+                    <iframe src="https://www.youtube.com/embed/JM--r5u_-Ps">
+                    </iframe>
+                </div>
+            </section>
+
+            <!-- dia 12 pushen op GitHub  -->
+            <section class="wrap size-60">
+                <div class="content-center">
+                    <h4>8. pushen op GitHub <i class="fab fa-github"></i></h4>
+                    Vóór de volgende stap eerst op GitHub. Dat kan eenvoudig met de Terminal. <br>
+                    Zet hem private en deel met Theo-denBlanken. <br>Lever de link in. (Live versie in README.md)
+                    <p>&nbsp;</p>
+                </div>
+
+                <div class="embed zoomIn">
+                    <iframe src="https://www.youtube.com/embed/N_iAUoOAd30">
+                    </iframe>
+                </div>
+            </section>
+
+            <!-- dia 13 Meerdere markers plaatsen  -->
+            <section class="wrap size-60">
+                <div class="content-center">
+                    <h4>9. Meerdere markers plaatsen</h4>
+                    Voor meerdere markers eerst een functie maken, die objecten als parameter hebben. <br>
+                    Dan kun je sneller de functie aanroepen, met verschillende objecten als argument. <br>
+                    Pas de functie met een if-conditional aan voor het geval de marker een andere afbeelding moet krijgen.
+                    <p>&nbsp;</p>
+                </div>
+
+                <div class="embed zoomIn">
+                    <iframe src="https://www.youtube.com/embed/imN6zMGksuE">
+                    </iframe>
+                </div>
+            </section>
+            <!-- dia 13 alteratieve video instructie  -->
+            <section class="wrap size-60">
+                <div class="content-center">
+                    <h4>Alteratieve video instructie</h4>
+                    Asl je tussentijds commits op GitHub plaatst mag je deze tutorial ook volgen
+                    <p>&nbsp;</p>
+                </div>
+
+                <div class="embed zoomIn">
+                    <iframe src="https://www.youtube.com/embed/Zxf1mnP5zcw">
+                    </iframe>
+                </div>
+            </section>
+            <!-- laatste dia: credits  -->
+            <section class="slide-bottom">
+                <div class="wrap zoomIn">
+                    <div class="content-right">
+                        <h6>wordt vervolgd....</h6>
+                        <h3>Credits</h3>
+                        <p>Deze presentatie is gemaakt met gebruik van:</p>
+                        <ol class="flexblock reasons">
+                            <li>
+                                <a href="https://github.com/webslides/WebSlides">WebSlides</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.youtube.com/watch?v=Zxf1mnP5zcw">Video
+                                    tutorial Brad Traversy</a>
+                            </li>
+                            <li>
+                                <a href="https://webslides.tv/demos/classes#slide=2">documentatie WebSlides</a>
+                            </li>
+                        </ol>
+                        
+                    </div>
+                </div> <!-- einde van de wrap die heb je nodig om de inhoud rechtsonder te plaatsen -->
+            </section>
+        </article>
+    </main>
+
+    <script src="js/webslides.min.js"></script>
+    <script>
+        window.ws = new WebSlides();
+    </script>
+</body>
+
+</html>

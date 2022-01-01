@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objecten | in JavaScript</title>
+    <link rel="stylesheet" href="css/webslides.css">
+    <style>
+        nav .alignright a {
+            padding: 0 .3em;
+        }
+
+        li.niet-afbreken {
+            display: block;
+        }
+        .text-landing {
+            text-align: center;
+        }
+        .reasons>li {
+            display: block;
+        }
+        .theo-telt {
+            list-style: none;
+            counter-reset: grote-nummers;
+            margin-left: 2em;
+        }
+        .theo-telt>li {
+            counter-increment: grote-nummers;
+            list-style-position: outside;
+            display: block;
+        }
+        .theo-telt>li::before {
+            content: counter(grote-nummers);
+            color: royalblue;
+            display: inline-block;
+            font-size: 2em;
+            transform: translate(-1em,1em);
+            font-size: 2.5em;
+        }
+        .flexblock li > a, [class*='bg-'] li > a {
+            color: dodgerblue;
+        }
+        [class*='bg-'] li:hover > a {
+            color: aliceblue;
+            text-decoration: underline;
+        }
+    </style>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/1a91c75a80.js"></script>
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="navigation">
+            <span><img src="http://bla.hosts1.ma-cloud.nl/blog/wp-content/uploads/2018/01/JSlogo.png" alt="JavaScript">
+                     Eigenschappen van objecten </span>
+            <span class="alignright">
+                <a href="#slide=2"><img src="http://bla.hosts1.ma-cloud.nl/blog/wp-content/uploads/2018/01/JSlogo.png" alt="JavaScript"></a>
+                <a href="../index.html"><img src="https://blanken5.home.xs4all.nl/afb/logotheo.jpg"
+                        alt="logo Theo den Blanken"></a>
+                <a href="https://welkombijma.nl/" target="_blank"><img
+                        src="https://welkombijma.nl/wp-content/themes/welkombijma/public/img/logo.svg"
+                        alt="logo Mediacollege Amsterdam"></a>
+            </span>
+        </nav>
+    </header>
+
+    <main role="main">
+        <article id="webslides" class="horizontal bg-apple fullscreen">
+            
+            <!-- dia 1  -->
+            <section>
+                <span class="background-right-bottom"
+                    style="opacity: .3; background-image:url('https://d34urnl45u363e.cloudfront.net/store/article/426/image/large-ff3e076aab0f615681e682f4c4990935.jpg'); background-size: cover;">
+                </span>
+
+                
+                <div class="wrap grid">
+                    <div class="column">
+                        <h1>Eigenschappen<strong> van objecten <span class="fab fa-js"></span></strong></h1>
+                        <p class="text-intro ">
+                            maken het tot krachtige variabelen
+                        </p>
+                        <p><a class="button zoomIn" href="#slide=2">Naar de slides</a></p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- dia 2 inhoudsopgave  -->
+            <section class="aligncenter">
+
+                <div class="grid sm">
+                    <div class="column">
+                        <h2>Inhoud <span class="fab fa-js fa-lg"></span></h2>
+                        <ul class="flexblock border">
+                            <li>
+                                <h3>Inhoud</h3>
+                                <ol>
+                                    <li><a href="#slide=3">Leerdoelen <span class="toc-page">3</span></a></li>
+                                    <li><a href="#slide=4">Object syntax <span class="toc-page">4</span></a></li>
+                                    <li><a href="#slide=5">Objectvoorbeeld <span class="toc-page">5</span></a></li>
+                                    <li><a href="#slide=7">Date-object<span class="toc-page">7</span></a></li>
+                                    <li><a href="#slide=8">Arrow-functie<span class="toc-page">8</span></a></li>
+                                    <li><a href="#slide=9">forEach()-lus<span class="toc-page">9</span></a></li>
+                                    <li><a href="#slide=10">Opdracht<span class="toc-page">10</span></a></li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <figure class="zoomIn">
+                            <img src="https://i.ytimg.com/vi/bDk8NPoTQKA/maxresdefault.jpg"
+                                alt="Voorbeeldcode JS objecten" style="object-position: left;">
+                                <figcaption style="z-index: 2; transform: translateY(1em);">Voorbeeldcode JS objecten</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- dia 3 leerdoelen  -->
+            <section class="fullscreen">
+                <div class="card-70">
+                    <div class="flex-content flexblock reasons">
+                        <h2>Leerdoelen <i class="fab fa-js fa-lg"></i></h2>
+                        <ul>
+                            <li>Eigenschappen van JS-objecten</li>
+                            <li>Uitvoeren naar DOM</li>
+                            <li>JS Date-object met methods</li>
+                            <li>Arrow-functies</li>
+                            <li>forEach-loop</li>
+                        </ul>
+                    </div>
+                    <figure class="fadeInUp">
+                        <img src="https://raw.githubusercontent.com/agapas/make-solid/master/images/after.png" alt="object met eigenschappen">
+                        <figcaption><i class="fab fa-js fa-lg"></i> Objecten hebben eigenschappen
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- dia 4 Syntax van een javaScript object -->
+            <section>
+                <span class="background-right-bottom"
+                    style="opacity: .2; background-image:url('afb/objectProps/koning.svg'); background-size: contain;background-position: 50vw 10vh;">
+                </span>                
+                <div class="wrap">
+                    <h2 class="text-landing">Syntax van een object <span class="fab fa-js fa-lg"></span></h2>
+                    <pre style="font-weight: 900;">
+    const koning = <span style="color: red; font-size: 1.5em;">{</span>
+        naam<span style="color: magenta; font-size: 1.5em">:</span> 'Willem-Alexander der Nederlanden'<span style="color: rgb(100, 247, 100); font-size: 1.5em;">,</span>
+        echtgenote<span style="color: magenta; font-size: 1.5em">:</span> 'Máxima Zorreguieta'<span style="color: rgb(100, 247, 100); font-size: 1.5em;">,</span>
+        kinderen<span style="color: magenta; font-size: 1.5em">:</span> ['Amalia', 'Alexia', 'Ariane']<span style="color: rgb(100, 247, 100); font-size: 1.5em;">,</span>
+        geboortejaar<span style="color: magenta; font-size: 1.5em">:</span> 1967<span style="color: rgb(100, 247, 100); font-size: 1.5em;">,</span>
+        url<span style="color: magenta; font-size: 1.5em">:</span> 'https://imgg.rgcdn.nl/162226349cc546fb9f908c4faaf8bf75/opener/Foto-NOS.jpg'<span style="color: rgb(100, 247, 100); font-size: 1.5em;">,</span>
+        noemKinderen() {
+                let zin = 'Mijn kinderen zijn: ';
+                for (let i=0; i&lt;this.kinderen.length; i++) {
+                    zin += this.kinderen[i] + ' ';
+                }
+                return zin;
+        }
+            <span style="color: red; font-size: 1.5em;">}</span>
+                    </pre>
+                </div>
+            </section>
+
+            <!-- dia 5 voorbeeld van een object in JavaScript  -->
+            <section>
+                <span class="background-right-bottom"
+                    style="opacity: .2; background-image:url('afb/objectProps/koning.svg'); background-size: contain;background-position: 50vw 10vh;">
+                </span>
+                <h2 class="text-landing">Voorbeeld van een object <span class="fab fa-js fa-lg"></span> </h2>
+                <div class="grid">
+                    <div class="column fadeInUp" style="width: 40vw;">
+                        <script src="https://gist.github.com/Theo-denBlanken/7c2109c2ce3f727688e7e63af1975d9e.js"></script>
+                    </div>
+                    <div class="column" style="width: 40vw;">
+                        <h5>Merk op:</h5>
+                        <ol>
+                            <li>Object is een variabele: <code>koning</code></li>
+                            <li>Eigenschappen zijn: <code>
+                                <ul style="padding-left: 3em">
+                                    <li>naam</li>
+                                    <li>echtgenote</li>
+                                    <li>kinderen</li>
+                                    <li>geboortejaar</li>
+                                    <li>url</li>
+                                </ul>
+                            </code></li>
+                            <li><code>noemKinderen()</code> is een method: een soort van functie in het object</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 6 voorbeeld van een object in JavaScript  -->
+            <section>
+                <span class="background-right-bottom"
+                    style="opacity: .2; background-image:url('afb/objectProps/koning.svg'); background-size: contain;background-position: 50vw 10vh;">
+                </span>
+                <h2 class="text-landing">Voorbeeld van een object <span class="fab fa-js fa-lg"></span> </h2>
+                <div class="grid">
+                    
+                    <div class="column" style="width: 40vw;">
+                        
+                        <h5>Doe nu zelf:</h5>
+                        <ol>
+                            <li>Kopieer het object hiernaast en plak het in de console van een webbrowser</li>
+                            <li>Vraag in de console de eigenschappen op met de punt-notatie:
+                                <ol>
+                                    <li><code>koning.echtgenote</code></li>
+                                    <li><code>koning.kinderen</code></li>
+                                    <li>enz.... enz...</li>
+                                </ol>
+                            </li>
+                            <li>Roep de method aan (vergeet de haakjes <code>()</code> niet)</li>
+                            <li>Kun je ook in de console het oudste kind laten afdrukken?</li>
+                        </ol>
+                    </div>
+                    <div class="column fadeInUp" style="width: 40vw;">
+                        <script src="https://gist.github.com/Theo-denBlanken/7c2109c2ce3f727688e7e63af1975d9e.js"></script>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 7 Date-object in JS  -->
+            <section>
+                <span class="background-right-bottom"
+                    style="opacity: .4; background-image:url('afb/objectProps/datumTijd.svg'); background-size: 50%;background-position: 50vw 40vh;">
+                </span>
+                <div class="wrap">
+                    <h2 class="text-landing"><span class="fab fa-js fa-lg"></span>Date-object</h2>
+                <ol class="theo-telt" style="padding:0 15vw;">
+                    <li><br> is een ingebouwd object in JavaScript</li>
+                    <li> <br>
+                        heeft verscheidene <em>methods</em> om datum en tijd te berekenen
+                    </li>
+                    <li><br>
+                        <code>Date.parse('13 Jan 2021 15:30')</code> levert het aantal milliseconden op dat moment verstreken zijn vanaf 1 januari 1970: <code>1610548200000</code>. <br>
+                        Oudere mensen hebben dus een negatieve JS-tijd: Theo is geboren op: <code>-438570000000</code>
+                    </li>
+                    <li> <br> met <code>let mijnTijd = new Date('1610548200000')</code> heb je een JS-Date-object, waar je allerlei methods op kunt loslaten om datum en tijden te berekenen:
+                    <ol>
+                        <li><code>mijnTijd.getDay()</code> geeft de dag van de week als en cijfer tussen <code>0</code> en <code>6</code></li>
+                        <li><code>mijnTijd.getDate()</code> geeft de dag van de maand ( <code>1-31</code> )</li>
+                        <li><code>mijnTijd.getFullYear()</code> geeft het jaar</li>
+                        <li><code>mijnTijd.getHours()</code> geeft het aantal uur ( <code>0-23</code> )</li>
+                        <li>enz...  enz...</li>
+                    </ol></li>
+                </ol>
+                <p><a href="https://www.w3schools.com/jsref/jsref_obj_date.asp" class="button zoomIn" target="_blank">meer info</a></p> 
+                </div>
+            </section>
+
+           <!-- dia 8 arrow-functie in JS  -->
+           <section>
+            <span class="background-right-bottom"
+                style="opacity: .3; background-image:url('afb/objectProps/grijzePijl.svg'); background-size: 20%;background-position: 10vw 60vh;">
+            </span>
+               <h2 class="text-landing"><span class="fab fa-js fa-lg"></span> arrow-functie <code> => </code> </h2>
+               <div class="grid sm">
+                   <div class="column fadeInUp slow" style="width: 25vw; font-weight: 900;">
+                        <h3 style="padding-top: 10vh;">functie-notatie</h3>
+                        <h3 style="padding-top: 20vh;">arrow functie-notatie <br> <code>() => {}</code></h3>
+                   </div>
+                   <div class="column" style="width: 60vw;">
+                       
+                       <script src="https://gist.github.com/Theo-denBlanken/22153c9f49ffe113dd3afe691e3f86a7.js"></script>
+                   </div>
+               </div>
+           </section>
+
+           <!-- dia 9 forEach()-lus  -->
+           <section>
+            <span class="background-right-bottom"
+                style="opacity: .3; background-image:url('afb/objectProps/loop.svg'); background-size: 20%;background-position: 10vw 60vh;">
+            </span>
+               <div class="grid">
+                   <h2 class="text-landing"><span class="fab fa-js fa-lg"></span> lussen met for en forEach() </h2>
+                   <p class="text-intro">Beide lussen (loops) doen hetzelfde.</p>
+                   <div class="grid sm">
+                       <div class="column fadeInUp slow" style="width: 25vw; font-weight: 900;">
+                           <h3 style="padding-top: 9vh;">forEach()-loop</h3>
+                           <h3 style="padding-top: 20vh;">for-loop</h3>
+                           <p style="padding-top: 5em;">
+                            <a target="_blank" href="http://bla.hosts1.ma-cloud.nl/blog/foreach-vs-for-lus-in-javascript/" class="button">Meer info...</a>
+                           </p>
+                       </div>
+                       <div class="column" style="width: 65vw;">
+                        <script src="https://gist.github.com/Theo-denBlanken/4d06982a0ce718dbef0680c96ee0688d.js"></script>
+                       </div>
+                   </div>
+               </div>
+           </section>
+
+           <!-- dia 10 de opdracht  -->
+           <section>
+               <h2 class="text-landing">opdracht</h2>
+               <div class="grid">
+                   <div class="column">
+                    <iframe src="https://www.youtube.com/embed/5aa7lPQNrag" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" style="width:40vw; height:26vw"></iframe>
+                    <p style="padding-top: 3em;">
+                        <a class="button" href="../objectProps.html" target="parent">naar de opdracht</a>
+                    </p>
+                   </div>
+                   <div class="column">
+                       <ul class="flexblock reasons">
+                           <li>Hiernaast een impressie van het resultaat</li>
+                           <li><a target="_blank" href="https://gist.github.com/Theo-denBlanken/1493b067a87db6709dbc20b49b99378a">Klik hier voor de data in een JS-object om mee te beginnen</a></li>
+                           <li>Vul dit aan met eigen bedachte data en doorloop de video's</li>
+                           <li>Resultaat online (op hosts.ma-cloud.nl)</li>
+                           <li>Linkje naar online versie in README.md</li>
+                           <li><span class="fab fa-github"></span> GitHub-link inleveren in Teams</li>
+                       </ul>
+                       <hr>
+                       <p style="display: block; text-align: right;">Volgende les: <a href="importJSON.html">JSON data importeren</a></p>
+                   </div>
+               </div>
+
+           </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- laatste dia: credits  -->
+            <section class="slide-bottom">
+                <div class="wrap zoomIn">
+                    <div class="content-right">
+                        <h3>Credits</h3>
+                        <p>Deze presentatie is gemaakt met gebruik van:</p>
+                        <ol class="flexblock reasons">
+                            <li>
+                                <a href="https://github.com/webslides/WebSlides">WebSlides</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.youtube.com/watch?v=uE1m21Umn0s&list=LLrGLVN889769Dfa1kzliUxQ&index=3&t=0s">Video
+                                    tutorial Brad Traversy</a>
+                            </li>
+                            <li>
+                                <a href="https://webslides.tv/demos/classes#slide=2">documentatie WebSlides</a>
+                            </li>
+                            <li>
+                                <a href="https://www.svgrepo.com/">de svg's</a>
+                            </li>
+                            <li><a href="https://css-tricks.com/custom-list-number-styling/" target="_blank">instructie de nummering stylen</a></li>
+                        </ol>
+                    </div>
+                </div> <!-- einde van de wrap die heb je nodig om de inhoud rechtsonder te plaatsen -->
+            </section>
+        </article>
+    </main>
+
+    <script src="js/webslides.min.js"></script>
+    <script>
+        window.ws = new WebSlides();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1366 368" style="enable-background:new 0 0 1366 368;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:none;}
+	.st2{fill:#00CC66;}
+	.st3{font-family:'CourierNewPS-BoldMT';}
+	.st4{font-size:36px;}
+	.st5{fill:#0033FF;}
+	.st6{font-family:'PTSans-Narrow';}
+	.st7{font-size:27px;}
+	.st8{fill:#FFAF33;}
+	.st9{font-size:29px;}
+	.st10{fill:#FF0000;}
+	.st11{font-family:'PTSans-NarrowBold';}
+	.st12{font-size:40px;}
+	.st13{letter-spacing:5;}
+	.st14{font-size:32px;}
+	.st15{fill:none;stroke:#FFAF33;stroke-width:4;stroke-miterlimit:10;}
+	.st16{fill:none;stroke:#FFAF33;stroke-width:4;stroke-miterlimit:10;stroke-dasharray:8.3967,8.3967;}
+	.st17{fill:none;stroke:#FFAF33;stroke-width:4;stroke-miterlimit:10;stroke-dasharray:8.5,8.5;}
+	.st18{fill:none;stroke:#0033FF;stroke-width:4;stroke-miterlimit:10;stroke-dasharray:8.5,8.5;}
+</style>
+<g id="wit_achter">
+	<rect class="st0" width="1366" height="368"/>
+</g>
+<g id="Laag_1">
+	<rect x="57" y="163" class="st1" width="1249" height="51"/>
+	<text transform="matrix(1 0 0 1 195.4209 185.7881)"><tspan x="0" y="0" class="st2 st3 st4">&lt;img </tspan><tspan x="108.02" y="0" class="st5 st3 st4">src=&quot;afb/vogel.jpg&quot;</tspan><tspan x="518.48" y="0" class="st2 st3 st4"> </tspan><tspan x="540.09" y="0" class="st5 st3 st4">alt=&quot;foto vogeltje&quot;</tspan><tspan x="950.55" y="0" class="st2 st3 st4">&gt;</tspan></text>
+	<text transform="matrix(1 0 0 1 237.6758 322.6025)" class="st5 st6 st7">Attribuutnaam</text>
+	<text transform="matrix(1 0 0 1 638.2966 278.9127)" class="st8 st6 st9">Attribuutwaarde</text>
+	<text transform="matrix(1 0 0 1 614.9951 354.8889)" class="st10 st11 st12 st13">Element</text>
+	<g>
+		<path class="st10" d="M1166,348h-10.8v-3.64h10.8V348z M1144.4,348h-10.8v-3.64h10.8V348z M1122.81,348h-10.8v-3.64h10.8V348z
+			 M1101.21,348h-10.8v-3.64h10.8V348z M1079.62,348h-10.8v-3.64h10.8V348z M1058.02,348h-10.8v-3.64h10.8V348z M1036.43,348h-10.8
+			v-3.64h10.8V348z M1014.83,348h-10.8v-3.64h10.8V348z M993.24,348h-10.8v-3.64h10.8V348z M971.64,348h-10.8v-3.64h10.8V348z
+			 M950.05,348h-10.8v-3.64h10.8V348z M928.45,348h-10.8v-3.64h10.8V348z M906.85,348h-10.8v-3.64h10.8V348z M885.26,348h-10.8
+			v-3.64h10.8V348z M863.66,348h-10.8v-3.64h10.8V348z M842.07,348h-10.8v-3.64h10.8V348z M820.47,348h-10.8v-3.64h10.8V348z
+			 M798.88,348h-10.8v-3.64h10.8V348z M777.28,348h-10.8v-3.64h10.8V348z M604.52,348h-10.8v-3.64h10.8V348z M582.92,348h-10.8
+			v-3.64h10.8V348z M561.33,348h-10.8v-3.64h10.8V348z M539.73,348h-10.8v-3.64h10.8V348z M518.13,348h-10.8v-3.64h10.8V348z
+			 M496.54,348h-10.8v-3.64h10.8V348z M474.94,348h-10.8v-3.64h10.8V348z M453.35,348h-10.8v-3.64h10.8V348z M431.75,348h-10.8
+			v-3.64h10.8V348z M410.16,348h-10.8v-3.64h10.8V348z M388.56,348h-10.8v-3.64h10.8V348z M366.97,348h-10.8v-3.64h10.8V348z
+			 M345.37,348h-10.8v-3.64h10.8V348z M323.77,348h-10.8v-3.64h10.8V348z M302.18,348h-10.8v-3.64h10.8V348z M280.58,348h-10.8
+			v-3.64h10.8V348z M258.99,348h-10.8v-3.64h10.8V348z M237.39,348h-10.8v-3.64h10.8V348z M215.8,348H205v-3.64h10.8V348z"/>
+	</g>
+	<g>
+		<g>
+			<polygon class="st10" points="1181,348 1173.51,348 1173.51,338.3 1176.72,338.3 1176.72,331.03 1181,331.03 			"/>
+		</g>
+		<g>
+			<polygon class="st10" points="199.49,348 192,348 192,331.03 196.28,331.03 196.28,338.3 199.49,338.3 			"/>
+		</g>
+		<g>
+			<path class="st10" d="M196.28,320.75H192v-21.92h4.28V320.75z M196.28,276.92H192V255h4.28V276.92z"/>
+		</g>
+		<g>
+			<path class="st10" d="M1181,322.69h-4.28v-21.92h4.28V322.69z M1181,278.86h-4.28v-21.92h4.28V278.86z"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 452.5818 37.1127)" class="st5 st6 st14">Attribuut</text>
+	<g>
+		<g>
+			<polygon class="st5" points="699,33.25 695,33.25 695,31 692.75,31 692.75,27 699,27 			"/>
+		</g>
+		<g>
+			<path class="st5" d="M684.27,31h-8.48v-4h8.48V31z M667.32,31h-8.48v-4h8.48V31z M650.36,31h-8.48v-4h8.48V31z M633.41,31h-8.48
+				v-4h8.48V31z M616.45,31h-8.48v-4h8.48V31z M599.49,31h-8.48v-4h8.48V31z M582.54,31h-8.48v-4h8.48V31z M565.58,31h-8.48v-4h8.48
+				V31z M446.89,31h-8.48v-4h8.48V31z M429.94,31h-8.48v-4h8.48V31z M412.98,31h-8.48v-4h8.48V31z M396.03,31h-8.48v-4h8.48V31z
+				 M379.07,31h-8.48v-4h8.48V31z M362.12,31h-8.48v-4h8.48V31z M345.16,31h-8.48v-4h8.48V31z M328.21,31h-8.48v-4h8.48V31z"/>
+		</g>
+		<g>
+			<polygon class="st5" points="309,33.25 305,33.25 305,27 311.25,27 311.25,31 309,31 			"/>
+		</g>
+		<g>
+			<path class="st5" d="M309,121.89h-4v-8.86h4V121.89z M309,104.16h-4V95.3h4V104.16z M309,86.43h-4v-8.86h4V86.43z M309,68.7h-4
+				v-8.86h4V68.7z M309,50.98h-4v-8.86h4V50.98z"/>
+		</g>
+		<g>
+			<path class="st5" d="M699,121.89h-4v-8.86h4V121.89z M699,104.16h-4V95.3h4V104.16z M699,86.43h-4v-8.86h4V86.43z M699,68.7h-4
+				v-8.86h4V68.7z M699,50.98h-4v-8.86h4V50.98z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<polygon class="st5" points="1136,33.25 1132,33.25 1132,31 1129.75,31 1129.75,27 1136,27 			"/>
+		</g>
+		<g>
+			<path class="st5" d="M1121.09,31h-8.66v-4h8.66V31z M1103.78,31h-8.66v-4h8.66V31z M1086.47,31h-8.66v-4h8.66V31z M1069.16,31
+				h-8.66v-4h8.66V31z M1051.85,31h-8.66v-4h8.66V31z M1034.54,31h-8.66v-4h8.66V31z M896.05,31h-8.66v-4h8.66V31z M878.74,31h-8.66
+				v-4h8.66V31z M861.43,31h-8.66v-4h8.66V31z M844.12,31h-8.66v-4h8.66V31z M826.81,31h-8.66v-4h8.66V31z M809.5,31h-8.66v-4h8.66
+				V31z M792.18,31h-8.66v-4h8.66V31z M774.87,31h-8.66v-4h8.66V31z M757.56,31h-8.66v-4h8.66V31z"/>
+		</g>
+		<g>
+			<polygon class="st5" points="738,33.25 734,33.25 734,27 740.25,27 740.25,31 738,31 			"/>
+		</g>
+		<g>
+			<path class="st5" d="M738,121.89h-4v-8.86h4V121.89z M738,104.16h-4V95.3h4V104.16z M738,86.43h-4v-8.86h4V86.43z M738,68.7h-4
+				v-8.86h4V68.7z M738,50.98h-4v-8.86h4V50.98z"/>
+		</g>
+		<g>
+			<path class="st5" d="M1136,121.89h-4v-8.86h4V121.89z M1136,104.16h-4V95.3h4V104.16z M1136,86.43h-4v-8.86h4V86.43z M1136,68.7
+				h-4v-8.86h4V68.7z M1136,50.98h-4v-8.86h4V50.98z"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 452.5818 37.1127)" class="st5 st6 st14">Attribuut</text>
+	<text transform="matrix(1 0 0 1 450.406 37.1127)" class="st5 st11 st14">Attribuut</text>
+	<text transform="matrix(1 0 0 1 909.253 36.625)" class="st5 st11 st14">Attribuut</text>
+	<g>
+		<g>
+			<line class="st15" x1="805" y1="266" x2="808.79" y2="264.08"/>
+			<line class="st16" x1="816.28" y1="260.28" x2="902.39" y2="216.58"/>
+			<line class="st15" x1="906.13" y1="214.68" x2="909.92" y2="212.76"/>
+			<g>
+				<path class="st8" d="M903.52,216.01l-14.34-8.89l0.29-0.51l25.18-2.31c8.12-2.1,16.23-4.2,24.35-6.3
+					c-6.49,5.31-12.97,10.62-19.46,15.93l-16.73,18.96l-0.55,0L903.52,216.01z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st17" x1="634" y1="268" x2="545.92" y2="214.85"/>
+			<g>
+				<path class="st8" d="M552.07,218.56l0.06,16.87l-0.59,0.02l-15.3-20.13c-6.08-5.77-12.16-11.54-18.24-17.32
+					c7.94,2.69,15.88,5.38,23.82,8.06l24.94,4.15l0.29,0.46L552.07,218.56z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st18" x1="311.84" y1="279" x2="327.08" y2="225.37"/>
+			<g>
+				<path class="st5" d="M325.12,232.27l-16.26,4.49l-0.18-0.56l15.4-20.05c3.97-7.38,7.94-14.77,11.91-22.15
+					c-0.51,8.37-1.01,16.74-1.52,25.1l2.55,25.16l-0.37,0.41L325.12,232.27z"/>
+			</g>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 844.7947 322.2128)" class="st5 st6 st7">Attribuutnaam</text>
+	<g>
+		<g>
+			<line class="st18" x1="901" y1="301" x2="801.69" y2="215.3"/>
+			<g>
+				<path class="st5" d="M807.12,219.99l-2.78,16.64l-0.59-0.07l-11.69-22.42c-5.02-6.71-10.04-13.42-15.07-20.14
+					c7.38,3.99,14.75,7.97,22.13,11.96l23.89,8.29l0.21,0.51L807.12,219.99z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

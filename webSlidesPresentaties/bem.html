@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM</title>
+    <link rel="stylesheet" href="css/webslides.css">
+    <style>
+        nav .alignright a {
+            padding: 0 .3em;
+        }
+    </style>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/1a91c75a80.js"></script>
+    <style>
+        .kaartje {
+            width: 400px;
+            background-color: #fff;
+            border: 1px solid gray;
+            border-radius: 1em;
+            transform: translate(-150px, 0);
+            box-shadow: .5em .5em 1em lightgray;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .kaartje__afbeelding {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            border-radius:  1em 1em 0 0;
+        }
+        .kaartje__beschrijving, .kaartje__kop {
+            padding: 1rem 3rem;
+        }
+        .kaartje__knop {
+            font-weight: 900;
+            font-size: .5em;
+            border-radius: 1em;
+            margin-right: 1em;
+            padding-left: 2em;
+            padding-right: 2em;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+        .kaartje__knop:hover {
+            background-color: red;
+            color: #fff;
+        }
+        .kaartje--cta {
+            background-color: maroon;
+            color: lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="navigation">
+            <span>BEM</span>
+            <span class="alignright">
+                <a href="#slide=2"><img src="https://www.pngfind.com/pngs/b/204-2047278_bem-blocks-elements-and-modifiers-bem-css-logo.png"
+                        alt="BEM"></a>
+                    
+                <a href="../index.html"><img src="https://blanken5.home.xs4all.nl/afb/logotheo.jpg" alt="logo Theo den Blanken"></a>
+                <a href="https://welkombijma.nl/" target="_blank"><img
+                        src="https://welkombijma.nl/wp-content/themes/welkombijma/public/img/logo.svg"
+                        alt="logo Mediacollege Amsterdam"></a>
+            </span>
+        </nav>
+    </header>
+
+    <main role="main">
+        <article id="webslides" class="horizontal">
+            <!-- dia 1  -->
+            <section class="slide current">
+
+                <div class="wrap">
+                    <div class="card-50 bg-white">
+                        <figure>
+                            <img src="https://miro.medium.com/max/638/1*xHJeNZlLtdFkjMMIL1z4Ag.jpeg"
+                            alt="BEM" >
+                            <figcaption>BEM: Block Element Modifier</figcaption>
+                        </figure>
+                        <div class="flex-content">
+                            <h1>BEM </h1>
+                            <p class="text-intro ">
+                                <strong>B</strong>lock <strong>E</strong>lement <strong>M</strong>odifier <br>
+                                Een naamconventie
+                            </p>
+                            <p>
+                                <a href="#slide=2" class="button zoomIn">
+                                    naar de slides
+                                </a>
+                            </p>
+                        </div>
+                    </div>                    
+                </div>
+                <!-- einde van wrap  -->
+            </section>
+
+            <!-- dia 2 inhoudsopgave  -->
+            <section>
+                <div class="wrap">
+                        <h2 class="aligncenter">Inhoudsopgave</h2>
+                        <div class="grid">
+
+                            <div class="column">
+
+                                <ul class="description">
+                                    <li><a href="#slide=3">Leerdoelen</a></li>
+                                    <li><a href="#slide=4">Probleemstelling</a></li>
+                                    <li><a href="#slide=6">De oplossing</a></li>
+                                    <li><a href="#slide=7">BEM: betekenis</a></li>
+                                    <li><a href="#slide=8">BEM: voorbeelden</a></li>
+                                    <li><a href="#slide=9">BEM: naamconventie</a></li>  
+                                    <li><a href="#slide=10">Kaart als BEM voorbeeld</a></li>                                                                     
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <ul class="description">
+                                    <li><a href="#slide=11">Onhandige markup en CSS</a></li>
+                                    <li><a href="#slide=12">De verbetering</a></li>
+                                    <li><a href="#slide=13">Voordelen van BEM</a></li>
+                                    <li><a href="#slide=14">Nog een codevoorbeeld BEM</a></li>
+                                    <li><a href="#slide=15">Sass met BEM</a></li>
+                                    <li><a href="#slide=16">Opdracht</a></li>
+                                    <li><a href="#slide=17">Bonus opdracht</a></li>                                                
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <img src="https://www.pngfind.com/pngs/b/204-2047278_bem-blocks-elements-and-modifiers-bem-css-logo.png" alt="BEM"
+                                style="object-position: right;">
+                            </div>
+                        </div>
+                </div>
+            </section>
+
+            <!-- dia 3 leerdoelen  -->
+            <section class="bg-apple">
+                <div class="wrap">
+                    <div class="content-left">
+                        <figure class="fadeInUp browser">
+                            <img src="https://webroad.pl/wp-content/uploads/2014/04/big-bem.png" alt="CLI output">
+                            <figcaption style="color: black;"> BEM: <br>Block - Element - Modifier</figcaption>
+                        </figure>
+                    </div>
+                    <div class="content-left">
+
+                        <h2 class="aligncenter">Leerdoelen</h2>
+                        <div class="flexblock reasons">
+                            <ul>
+                                <li>BEM begrijpen</li>
+                                <li>Specificiteit bij CSS begrijpen</li>
+                                <li>BEM zelfstandig inzetten</li>                            
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 4 probleemstelling  -->
+            <section class="fullscreen bg-apple">
+                <div class="wrap aligncenter">
+                    <h2> 
+                        <strong>Probleemstelling</strong> 
+                        <br>  specificiteit bij CSS</h2>
+                        <div data-youtube data-youtube-id="sEeaBYiAc9Q" style=" height:70vw; width: 100vw">
+                </div>
+            </section>
+
+            <!-- dia 5 specificiteit berekenen  -->
+            <section class="fullscreen bg-apple">
+                <div class="wrap aligncenter">
+                    <h2> 
+                        <strong>Specificiteit</strong> 
+                          kun je zelfs 'berekenen'</h2>
+                        <img style="max-height: 35vh;" src="https://i2.wp.com/css-tricks.com/wp-content/csstricks-uploads/specificity-calculationbase.png" alt="rekenwijze specificiteit">
+                        
+                        <div class="grid">
+                        <div class="column"><p><img src="https://i1.wp.com/css-tricks.com/wp-content/csstricks-uploads/cssspecificity-calc-1.png" alt="rekenwijze specificiteit">
+                        <br> 0,1,1,3 wordt dus 113 <br>(dit is redelijk hoog)</p></div>
+                        
+                        <div class="column"><p><img src="https://i1.wp.com/css-tricks.com/wp-content/csstricks-uploads/cssspecificity-calc-2.png" alt="rekenwijze specificiteit">
+                        <br> 0,0,2,3 wordt dus 23 <br>(niet echt hoog)</p></div>
+                        
+                        <div class="column"><p><img src="https://i2.wp.com/css-tricks.com/wp-content/csstricks-uploads/cssspecificity-calc-4.png" alt="rekenwijze specificiteit">
+                        <br> 1,0,0,0 wordt dus 1000 <br>(erg hoog)</p></div>
+                    
+                    </div>
+
+                        
+                </div>
+            </section>
+
+
+
+            <!-- dia 6 oplossing  -->
+            <section class=" bg-blue">
+                <span class="background" style="background-image:url('https://www.pngfind.com/pngs/b/204-2047278_bem-blocks-elements-and-modifiers-bem-css-logo.png')"></span>
+                <div class="wrap zoomIn">
+                    <h2> 
+                        <strong>Oplossing:</strong> voorkom onverwachte effecten specificiteit </h2>
+                        <hr>
+                            <h4>
+                                geef de elementen een eigen class
+                            </h4>
+                         
+                            <h4>
+                                en selecteer die elementen met die class-selector.
+                            </h4>
+                        
+                        <h4>Dat kan met een naamconventie zoals BEM!</h4>
+                        <hr>
+                        <p>Zeker van belang bij grote projecten met meerdere developers in de frontend.</p>
+                        <p>Kijk bijvoorbeeld bij <a target="_blank" href="https://github.com/twbs/bootstrap/blob/main/dist/css/bootstrap.css"> bootstrap.css: 9690 regels!!!</a></p>
+                </div>
+            </section>
+
+            <!-- dia 7 BEM  -->
+            <section class="bg-apple">
+                <div class="wrap">
+                        <h2 class="aligncenter">BEM</h2>
+                        <div class="grid">
+
+                            <div class="column" style="border:1px solid lightgray; margin-right: 1em; border:1px solid darkgrey; background-color: rgba(200, 200, 200, .2);">
+                                <h2 class="aligncenter"><strong style="color: seagreen;">Block</strong></h2>
+                                <p>
+                                    Een op zichzelf staand deel van de pagina. <br>
+                                    Stukjes mark-up, die vanuit zichzelf een zinvolle betekenis hebben.
+                                </p>
+                            </div>
+                            <div class="column" style="border:3px solid rgb(96, 95, 95); background-color: rgba(150, 150, 150, .2);">
+                                <h2 class="aligncenter"><strong style="color: steelblue;">Element</strong></h2>
+                                <p>Een element in dat block. <br>
+                                Het heeft binnen dat block een eigen semantische betekenis voor het block. <br>
+                            </p>
+                            </div>
+                            <div class="column" style="border:1px solid red; margin-left: 1em; background-color: rgba(2, 188, 255, 0.2);">
+                                <h2 class="aligncenter"><strong style="color: tomato;">Modifier</strong></h2>
+                                <p>variatie in de vormgeving van al deze elementen</p>
+                            </div>
+                        </div>
+
+                        <img src="https://www.transip.nl/img/cms/blog/block-element-modifier.jpg" alt="Block Element Modifier" class="aligncenter">
+                </div>
+            </section>
+
+            <!-- dia 8 BEM voorbeelden  -->
+            <section class="bg-apple">
+                <div class="wrap">
+                        <h2 class="aligncenter">Voorbeelden</h2>
+                        <div class="grid">
+
+                            <div class="column" style="border:1px solid lightgray; margin-right: 1em; border:1px solid darkgrey; background-color: rgba(200, 200, 200, .2);">
+                                <h2 class="aligncenter"><strong style="color: seagreen;">Block</strong></h2>
+                                <p>
+                                    Een op zichzelf staand deel van de pagina. <br>
+                                    <em>header, nav, container, input met label</em>
+                                </p>
+                            </div>
+                            <div class="column" style="border:3px solid rgb(96, 95, 95); background-color: rgba(150, 150, 150, .2);">
+                                <h2 class="aligncenter"><strong style="color: steelblue;">Element</strong></h2>
+                                <p>Een element in dat block. <br><br>
+                                <em>menu-item, list-item, checkbox-caption, title in de header</em>
+                            </p>
+                            </div>
+                            <div class="column" style="border:1px solid red; margin-left: 1em; background-color: rgba(2, 188, 255, 0.2);">
+                                <h2 class="aligncenter"><strong style="color: tomato;">Modifier</strong></h2>
+                                <p>variatie in de vormgeving van al deze elementen</p>
+                                <em>disabled, highlighted, checked, big, success </em>
+                            </div>
+                        </div>
+
+                        <img style="height: 55vh;" src="afb/bem/github_captions.jpg" alt="Block Element Modifier" class="aligncenter fadeInUp">
+                </div>
+            </section>
+
+            <!-- dia 9 BEM naamconventie  -->
+            <section class="bg-apple">
+                <div class="wrap">
+                        <h2 class="aligncenter"><strong>BEM naamconventie</strong></h2>
+                        <p style="text-align: center; font-size: 2em;">
+                            <strong><code style="display: block; padding: .5em 2em; margin: 1em; letter-spacing: .1em; color: tomato;">block__element--modifier</code></strong>
+                        </p>
+                </div>
+                <div>
+                    <h4 class="aligncenter">
+                        Voorbeelden
+                    </h4>
+                    <p style="margin-left: 25vw; font-size:2em; line-height: 2.2em; letter-spacing: .1em;" class="fadeInUp">
+                        <code>.menu</code> <br>
+                        <code>.menu__menu-item</code> <br>
+                        <code>.menu__menu-item--active</code> <br>
+                        <code>.buttons--horizontal</code>
+                    </p>
+                </div>
+                <div style="margin-left: 5vw; line-height: 2.2em;" class="fadeInUp slow">Leuke voorbeelden online <br>
+                    bekijk de broncode van: <a href="https://github.com/benbrehaut/bem-examples" target="_blank">https://github.com/benbrehaut/bem-examples</a></div>
+            </section>
+
+            <!-- dia 10 voorbeeld: card  -->
+            <section class="fullscreen">
+                <div class="grid">
+                    <div class="column">
+                        <div class="kaartje">
+                            <img src="https://images.unsplash.com/photo-1526310098835-b0a077889002?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=628&q=80" alt="Amsterdam" 
+                            class="kaartje__afbeelding">
+                            <h3 class="kaartje__kop">Amsterdam</h3>
+                            <p class="kaartje__beschrijving">Vanuit de Jordaan een foto richting Westertoren genomen. <br>Een mooie lichtval al is het nat!
+                                <br>
+                            <button class="kaartje__knop kaartje--cta">Lees meer</button>   
+                            <button class="kaartje__knop">Verberg</button>                          
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="column" style="width: 40vw;">
+                        <h3>Kaart als BEM voorbeeld</h3>
+                        <ul>
+                            <li>
+                                De hele kaart: <code style="letter-spacing: .1em; color: cornflowerblue;">.kaartje</code>. Dit is het blok.<hr>
+                            </li>
+                            <li>
+                                De afbeelding <code>img</code> in de kaart: <code style="letter-spacing: .1em; color: cornflowerblue;">.kaartje__afbeelding</code>
+                                <br> Dit is een element in het blok.<hr>
+                            </li>
+                            <li>
+                                de kop <code>h3</code> in de kaart: <code style="letter-spacing: .1em; color: cornflowerblue;">.kaartje__kopje</code>
+                                <br> Dit is een element in het blok.<hr>
+                            </li>
+                            <li>
+                                de paragraaf <code>p</code> in de kaart: <code style="letter-spacing: .1em; color: cornflowerblue;">.kaartje__beschrijving</code>
+                                <br> Dit is een element in het blok.
+                                <hr>
+                            </li>
+                            <li>
+                                de knoppen <code>button</code> in de kaart: <code style="letter-spacing: .1em; color: cornflowerblue;">.kaartje__knop</code>
+                                <br> Dit is een element in het blok.<hr>
+                            </li>
+                            <li>
+                                de knop in de kaart met de call-to-action krijgt <em>bovendien</em> de class <code style="letter-spacing: .1em; color: cornflowerblue;">.kaartje--cta</code> 
+                                <br>Dit is een modifier op de andere knop.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 11 niet zo goed voorbeeld  -->
+            <section class="bg-apple fullscreen">
+                <div class="grid">
+
+
+                    <div class="column" style="height: 99vh;">
+                        <h2>Voorbeeld van markup en CSS, die beter kan</h2>
+
+                        <div class="embed" style="padding-bottom: 20%;">
+                            <iframe src="buttonsVoorbeelden/nietZoHandig.html" frameborder="0"
+                                style="height: 6em;"></iframe>
+                        </div>
+                        
+                            <div class="zoomIn"><script src="https://gist.github.com/Theo-denBlanken/3b613cd0f1d33c0b6e254f57d6bdcb1f.js">
+                            </script></div>
+                        <p>De CSS is hier niet zo handig georganiseerd: minder functioneel opgebouwd en onhandige
+                            herhaling</p>
+                        
+                        <p>Regel voor ontwikkelen: <br>
+                            <strong>DRY</strong>: <small>Don't repeat yourself</small> <br>
+                            De site wordt dan moeilijker in het onderhoud</p>
+                    </div>
+                    <div class="embed column zoomIn slow" style="height: 100vh;">
+                        <script src="https://gist.github.com/Theo-denBlanken/76bb11fe7e414d8946264e3225528e2d.js">
+                        </script>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 12 verbeterd voorbeeld  -->
+            <section class="bg-apple fullscreen">
+                <div class="grid">
+                    <div class="column" style="height: 90vh;">
+                        <h2>Markup en CSS verbeterd</h2>
+
+                        <div class="embed" style="padding-bottom: 22%;">
+                            <iframe src="buttonsVoorbeelden/slimmer.html" frameborder="0"
+                                style="height: 6em;"></iframe>
+                        </div>
+                        <div class="slow">
+                            <script src="https://gist.github.com/Theo-denBlanken/ff84b558f6fea9e79491b645de4e2881.js"></script>
+                        </div>
+                        <h3>Verbeterd</h3>
+                        <ul>
+                            <li>geen herhaling;</li>
+                            <li>opdeling van verantwoordelijkheden;</li>
+                            <li>BEM</li>
+                        </ul>
+                        </div>
+                    
+                    <div class="embed column zoomIn slow" style="height: 100vh;">
+                        <script src="https://gist.github.com/Theo-denBlanken/8fc3972de99e42a2a1e88475261cf28f.js"></script>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 13 voordelen van BEM -->
+            <section class="bg-apple">
+                <h2 class="aligncenter">Voordelen  BEM</h2>
+                <div class="grid">
+                    <div class="colum">
+                        <img class="whitelogo slideInLeft" style="height: 50vh;" src="https://www.pngfind.com/pngs/b/204-2047278_bem-blocks-elements-and-modifiers-bem-css-logo.png" alt="BEM logo">
+                    </div>
+                    <div class="flexblock reasons aligncenter column fadeInUp">
+                        <ul>
+                            <li>werken met BEM voorkomt problemen uit specificiteit</li>
+                            <li>aan de class-selector kun je beter zien waar het over gaat</li>
+                            <li>werken met BEM voorkomt dat CSS regels in het ene blok elders effecten hebben: <br> goed onderhoudbaar en eenvoudig taken te verdelen</li>
+                            <li>BEM nodigt uit tot modulair development in samenwerking</li>
+                        </ul>
+                    </div>
+                </div>  
+            </section>
+
+            <!-- dia 14 een extra BEM voorbeeld  -->
+            <section class="fullscreen bg-apple">
+                <div class="wrap">
+                    <h2 class="aligncenter">Nog een BEM voorbeeld</h2>
+                    <p>
+                        
+                        <img src="https://miro.medium.com/max/1400/1*Buz2ehP8ELECMdgo4xbKUg.png" alt="2 opties">
+                    </p>
+                    
+                    <script src="https://gist.github.com/THEozmic/9616ce23bdf3f69ab491011b83b43e4a.js"></script>
+                </div>
+            </section>
+
+            <!-- dia 15 met Sass kun je prima BEM-men  -->
+            <section class="bg-apple fullscreen">
+                <div class="grid">
+                    <div class="column">
+                        <h2>Met Sass kun je prima BEM-men </h2>
+                        <img src="https://miro.medium.com/max/3063/1*iomkT1ZCdXb3qraM5Rob0w.png" alt="BEM en Sass">
+                        <p>door gebruik te maken van de &.  <br>
+                            Deze verwijst daar altijd naar de parent selector als er sprake is van nesting.
+                            <br>
+                            <div class="embed" style="padding-bottom: 22%;">
+                                <iframe src="buttonsVoorbeelden/slimmer.html" frameborder="0"
+                                    style="height: 6em;"></iframe>
+                            </div>   
+                        </p>
+                    </div>
+                    <div class="column" style="height: 100vh;">
+                        <div class="slow">
+                            <script src="https://gist.github.com/Theo-denBlanken/2e0d344750276cae791f0d1e7078d7c8.js"></script>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="embed column zoomIn slow" style="height: 100vh;">
+                        <script src="https://gist.github.com/Theo-denBlanken/8fc3972de99e42a2a1e88475261cf28f.js"></script>
+                    </div>
+                </div>
+            </section>
+
+            <!--  dia 16 de opdracht  -->
+            <section class="fullscreen bg-apple">
+                <h2 class="aligncenter"><strong>Opdracht</strong></h2>
+                <div class="flexblock reasons">
+                    
+                    <ul>
+                        <li>Kies 1 pagina van een uitwerking van vorig jaar <br>
+                        <small>Eventueel via het kopiëren van de broncode van een pagina en de bijpassende CSS. <br>
+                             Vanzelfsprekend is de Bootstrap-opdracht niet geschikt. 
+                             Projecten en portfolio kunnen echter wel.</small></li>
+                        <li><span>Plaats deze code in een nieuwe repo op GitHub <i style="padding-left: 1em; font-size: 1.5em;" class="fab fa-github"></i></span></li>
+                        <li>Pas de mark-up aan naar BEM-naamconventie en maak de CSS kloppend om hetzelfde resultaat te krijgen.</li>
+                        <li><span>Update GitHub liefst met meerdere commits <i class="fab fa-github" style="padding-left: 1em; font-size: 1.5em;"></i></span></li>
+                        <li><span>Plaats resultaat online, URL in de README.md <i class="fab fa-github" style="padding-left: 1em; font-size: 1.5em;"></i></span></li>
+                        <li><span>Lever de GitHub link in Magister <i class="fab fa-github" style="padding-left: 1em; font-size: 1.5em;"></i></span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!--  dia 17 bonus opdracht  -->
+            <section class="fullscreen bg-apple">
+                <div class="wrap aligncenter">
+                    <div class="content-left slideInLeft">
+                        <h2>Bonus opdracht</h2>
+                        <p><strong>+<span style="opacity: 0;">+</span></strong> 
+                            voer de BEM-aanpassing van de CSS uit in Sass <br>
+                        <strong>++</strong> extra bonus als je het uitvoert in .sass-bestanden</p>
+                    </div>
+                    <div class="content-right slideInRight">                        
+                        <img src="https://miro.medium.com/max/3063/1*iomkT1ZCdXb3qraM5Rob0w.png" alt="BEM en Sass">                    
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 18 afsluitende opmerking  -->
+            <section class="fullscreen bg-apple">
+                <h2 class="aligncenter">Afsluiting bij code <a href="#slide=11">in dia 11</a>. </h2>
+                <p class="aligncenter">Er is daar sprake van BEM, maar er zitten meer  sterke punten in de code:</p>
+                <div class="wrap flexblock reasons">
+                    <ul>
+                        <li>Er is een aanzet tot functionele CSS. Zie ook: <a href="https://www.youtube.com/watch?v=aCQj7ry4Sns">https://www.youtube.com/watch?v=aCQj7ry4Sns</a></li>
+                        <li>Werken met een class voor de horizontale knoppen kan goed ingezet worden bij A/B testing.   </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- laatste dia: credits  -->
+        <section class="slide-bottom">
+            <div class="wrap zoomIn">
+                <div class="content-right">
+                    <h3>Credits</h3>
+                    <p>Deze presentatie is gemaakt met gebruik van:</p>
+                    <ol class="flexblock reasons">
+                        <li>
+                            <a href="https://github.com/webslides/WebSlides">WebSlides</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=uE1m21Umn0s&list=LLrGLVN889769Dfa1kzliUxQ&index=3&t=0s">Video tutorial Web Slides Brad Traversy</a>
+                        </li>
+                        <li>
+                            <a href="https://webslides.tv/demos/classes#slide=2">documentatie WebSlides</a>
+                        </li>
+                    </ol>
+                </div> 
+            </div>  <!-- einde van de wrap die heb je nodig om de inhoud rechtsonder te plaatsen -->
+        </section>
+            
+
+        </article>
+    </main>
+
+    <script src="js/webslides.min.js"></script>
+    <script>
+        window.ws = new WebSlides();
+    </script>
+</body>
+
+</html>

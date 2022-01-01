@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versiebeheer | Git op de Mac</title>
+    <link rel="stylesheet" href="css/webslides.css">
+    <style>
+        nav .alignright a {
+            padding: 0 .3em;
+        }
+    </style>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/1a91c75a80.js"></script>
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="navigation">
+            <span>Online versiebeheer | GitHub</span>
+            <span class="alignright">
+                <a href="#slide=2"><img
+                        src="https://cdn3.androidworld.nl/1fa5702da8/media/images/2018/06/04/github-256.png"
+                        alt="GitHub"></a>
+                <a href="../index.html"><img src="https://blanken5.home.xs4all.nl/afb/logotheo.jpg"
+                        alt="logo Theo den Blanken"></a>
+                <a href="https://welkombijma.nl/" target="_blank"><img
+                        src="https://welkombijma.nl/wp-content/themes/welkombijma/public/img/logo.svg"
+                        alt="logo Mediacollege Amsterdam"></a>
+            </span>
+        </nav>
+    </header>
+
+    <main role="main">
+        <article id="webslides" class="horizontal">
+            <!-- dia 1  -->
+            <section class="fullscreen">
+
+                <div class="wrap">
+                    <div class="card-50 bg-white">
+                        <figure>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/GitHub_font_awesome.svg"
+                                alt="GitHub">
+                            <figcaption>Online versiebeheer <i class="fab fa-github"></i></figcaption>
+                        </figure>
+                        <div class="flex-content">
+                            <h1><strong>Online versiebeheer</strong></h1>
+                            <p class="text-intro ">
+                                <strong>GitHub <i class="fab fa-github"></i></strong>
+                            </p>
+                            <p>
+                                <a href="#slide=2" class="button zoomIn">
+                                    naar de slides &nbsp;&nbsp;|&nbsp;&nbsp;<i class="fab fa-github"></i> </a>
+                            </p>
+                            Terug naar <a
+                                href="https://teams.microsoft.com/l/file/2E250F20-6FEF-4753-9E01-7925C8362345?tenantId=8e600f92-30df-4667-b7c0-3f2595f3f12b&fileType=pptx&objectUrl=https%3A%2F%2Fmediacollegeamsterdam.sharepoint.com%2Fteams%2FHelloYou%2FGedeelde%20documenten%2FProgrammeursvaardigheden%2FLesmateriaal%2Fles%2004%20github.pptx&baseUrl=https%3A%2F%2Fmediacollegeamsterdam.sharepoint.com%2Fteams%2FHelloYou&serviceName=teams&threadId=19:9b4ab4a7e61e4587bf3255375af4afb2@thread.tacv2&groupId=01a0e9a1-1d50-457c-8b76-3332db729e5c">de
+                                instructie voor Windowsgebruikers</a>
+                            <br>
+                            Terug naar <a href="git.html">de vorige les Git <i class="fab fa-git-alt"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- einde van wrap  -->
+            </section>
+
+            <!-- dia 2 inhoudsopgave  -->
+            <section>
+                <div class="wrap">
+                    <h2 class="aligncenter">Inhoudsopgave </h2>
+                    <div class="grid">
+
+                        <div class="column fadeInUp">
+
+                            <ul class="description">
+                                <li><a href="#slide=3">Leerdoelen les</a></li>
+                                <li><a href="#slide=4">Opfrissen Git <i class="fab fa-git-alt"></i> & CLI <i
+                                            class="fas fa-terminal"></i> </a></li>
+                                <li><a href="#slide=5">Overzicht stappen Git + remote</a></li>
+                                <li><a href="#slide=6">Met branches verschillende versies</a></li>
+                            </ul>
+                        </div>
+                        <div class="column fadeInUp slow">
+                            <h4>Om mee te doen:</h4>
+                            <ul class="description">
+                                <li><a href="#slide=7">Herhalingsopdracht Git repo</a></li>
+                                <li><a href="#slide=8">Werk op GitHub plaatsen</a></li>
+                                <li><a href="#slide=9">Markdown aanpassen</a></li>
+                                <li><a href="#slide=10">Aanpassingen bijwerken op GitHub</a></li>
+                                <li><a href="#slide=11">Inleveren opdracht</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="column zoomIn">
+
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54 54"
+                                style="enable-background:new 0 0 54 54;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0 {
+                                        fill: none;
+                                    }
+                                </style>
+                                <g>
+                                    <rect x="-0.2" y="0.1" class="st0" width="53.8" height="53.4" />
+                                    <path d="M15.9,7.7c3.3-1.9,6.9-2.9,10.8-2.9c3.9,0,7.5,1,10.8,2.9s5.9,4.5,7.8,7.8c1.9,3.3,2.9,6.9,2.9,10.8
+		c0,4.7-1.4,8.9-4.1,12.6c-2.7,3.7-6.2,6.3-10.6,7.7c-0.5,0.1-0.9,0-1.1-0.2c-0.2-0.2-0.4-0.5-0.4-0.8c0-0.1,0-0.8,0-2.1
+		s0-2.6,0-3.8c0-1.8-0.5-3.1-1.5-4c1.1-0.1,2-0.3,2.9-0.5c0.8-0.2,1.7-0.6,2.6-1.1c0.9-0.5,1.7-1.1,2.3-1.9c0.6-0.7,1.1-1.7,1.5-2.9
+		s0.6-2.6,0.6-4.2c0-2.2-0.7-4.1-2.2-5.7c0.7-1.7,0.6-3.6-0.2-5.7c-0.5-0.2-1.3-0.1-2.3,0.3c-1,0.4-1.8,0.8-2.6,1.2L32,15.9
+		c-1.7-0.5-3.5-0.7-5.4-0.7c-1.8,0-3.6,0.2-5.4,0.7c-0.3-0.2-0.7-0.5-1.2-0.8c-0.5-0.3-1.3-0.7-2.3-1.1c-1.1-0.4-1.9-0.5-2.4-0.4
+		c-0.8,2.1-0.9,4-0.2,5.7C13.7,21,13,22.9,13,25.1c0,1.6,0.2,3,0.6,4.2c0.4,1.2,0.9,2.2,1.5,2.9c0.6,0.7,1.3,1.4,2.2,1.9
+		c0.9,0.5,1.8,0.9,2.6,1.1c0.8,0.2,1.8,0.4,2.9,0.5c-0.7,0.7-1.2,1.6-1.4,2.9c-0.4,0.2-0.8,0.3-1.3,0.4c-0.4,0.1-1,0.1-1.6,0.1
+		s-1.2-0.2-1.8-0.6c-0.6-0.4-1.1-1-1.5-1.7c-0.4-0.6-0.8-1.1-1.4-1.5c-0.5-0.4-1-0.6-1.4-0.7l-0.6-0.1c-0.4,0-0.7,0-0.8,0.1
+		c-0.1,0.1-0.2,0.2-0.1,0.3s0.1,0.3,0.3,0.4c0.1,0.1,0.2,0.2,0.4,0.3l0.2,0.1c0.4,0.2,0.8,0.5,1.2,1.1c0.4,0.5,0.7,1,0.9,1.4
+		l0.3,0.6c0.2,0.7,0.7,1.3,1.2,1.7c0.6,0.4,1.2,0.7,1.9,0.8c0.7,0.1,1.3,0.2,1.9,0.2c0.6,0,1.1,0,1.5-0.1l0.6-0.1c0,0.7,0,1.5,0,2.5
+		c0,0.9,0,1.4,0,1.5c0,0.3-0.1,0.6-0.4,0.8c-0.2,0.2-0.6,0.3-1.1,0.2c-4.3-1.4-7.8-4-10.6-7.7s-4.1-7.9-4.1-12.6
+		c0-3.9,1-7.5,2.9-10.8C10,12.2,12.6,9.6,15.9,7.7z M13.3,35.6c0.1-0.1,0-0.2-0.2-0.3c-0.2-0.1-0.3,0-0.4,0.1
+		c-0.1,0.1,0,0.2,0.2,0.3C13.1,35.8,13.3,35.8,13.3,35.6z M14.2,36.6c0.1-0.1,0.1-0.2-0.1-0.4c-0.2-0.2-0.3-0.2-0.4-0.1
+		c-0.1,0.1-0.1,0.2,0.1,0.4C13.9,36.7,14.1,36.7,14.2,36.6z M15,37.8c0.2-0.1,0.2-0.3,0-0.5c-0.1-0.2-0.3-0.3-0.5-0.2
+		c-0.2,0.1-0.2,0.3,0,0.5S14.9,37.9,15,37.8z M16.2,39c0.1-0.1,0.1-0.3-0.1-0.5c-0.2-0.2-0.4-0.3-0.6-0.1c-0.2,0.1-0.1,0.3,0.1,0.5
+		C15.9,39.1,16.1,39.1,16.2,39z M17.8,39.7c0.1-0.2-0.1-0.4-0.4-0.4c-0.3-0.1-0.5,0-0.5,0.2c-0.1,0.2,0,0.3,0.4,0.4
+		C17.5,40,17.7,39.9,17.8,39.7z M19.6,39.8c0-0.2-0.2-0.3-0.5-0.3c-0.3,0-0.4,0.1-0.4,0.3c0,0.2,0.2,0.3,0.5,0.3
+		C19.4,40.1,19.6,40,19.6,39.8z M21.2,39.5c0-0.2-0.2-0.3-0.5-0.3c-0.3,0.1-0.4,0.2-0.4,0.4c0,0.2,0.2,0.3,0.5,0.2
+		C21.1,39.9,21.2,39.7,21.2,39.5z" fill="royalblue" />
+                                </g>
+                            </svg>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </section>
+
+            <!-- dia 3 leerdoelen  -->
+            <section class="fullscreen bg-apple">
+                <div class="card-40">
+                    <figure class="fadeInUp">
+
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="10 0 29 54"
+                            style="enable-background:new 0 0 54 54;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0 {
+                                    fill: none;
+                                }
+                            </style>
+                            <g>
+                                <rect x="-0.2" y="0.1" class="st0" width="53.8" height="53.4" />
+                                <path d="M15.9,7.7c3.3-1.9,6.9-2.9,10.8-2.9c3.9,0,7.5,1,10.8,2.9s5.9,4.5,7.8,7.8c1.9,3.3,2.9,6.9,2.9,10.8
+		c0,4.7-1.4,8.9-4.1,12.6c-2.7,3.7-6.2,6.3-10.6,7.7c-0.5,0.1-0.9,0-1.1-0.2c-0.2-0.2-0.4-0.5-0.4-0.8c0-0.1,0-0.8,0-2.1
+		s0-2.6,0-3.8c0-1.8-0.5-3.1-1.5-4c1.1-0.1,2-0.3,2.9-0.5c0.8-0.2,1.7-0.6,2.6-1.1c0.9-0.5,1.7-1.1,2.3-1.9c0.6-0.7,1.1-1.7,1.5-2.9
+		s0.6-2.6,0.6-4.2c0-2.2-0.7-4.1-2.2-5.7c0.7-1.7,0.6-3.6-0.2-5.7c-0.5-0.2-1.3-0.1-2.3,0.3c-1,0.4-1.8,0.8-2.6,1.2L32,15.9
+		c-1.7-0.5-3.5-0.7-5.4-0.7c-1.8,0-3.6,0.2-5.4,0.7c-0.3-0.2-0.7-0.5-1.2-0.8c-0.5-0.3-1.3-0.7-2.3-1.1c-1.1-0.4-1.9-0.5-2.4-0.4
+		c-0.8,2.1-0.9,4-0.2,5.7C13.7,21,13,22.9,13,25.1c0,1.6,0.2,3,0.6,4.2c0.4,1.2,0.9,2.2,1.5,2.9c0.6,0.7,1.3,1.4,2.2,1.9
+		c0.9,0.5,1.8,0.9,2.6,1.1c0.8,0.2,1.8,0.4,2.9,0.5c-0.7,0.7-1.2,1.6-1.4,2.9c-0.4,0.2-0.8,0.3-1.3,0.4c-0.4,0.1-1,0.1-1.6,0.1
+		s-1.2-0.2-1.8-0.6c-0.6-0.4-1.1-1-1.5-1.7c-0.4-0.6-0.8-1.1-1.4-1.5c-0.5-0.4-1-0.6-1.4-0.7l-0.6-0.1c-0.4,0-0.7,0-0.8,0.1
+		c-0.1,0.1-0.2,0.2-0.1,0.3s0.1,0.3,0.3,0.4c0.1,0.1,0.2,0.2,0.4,0.3l0.2,0.1c0.4,0.2,0.8,0.5,1.2,1.1c0.4,0.5,0.7,1,0.9,1.4
+		l0.3,0.6c0.2,0.7,0.7,1.3,1.2,1.7c0.6,0.4,1.2,0.7,1.9,0.8c0.7,0.1,1.3,0.2,1.9,0.2c0.6,0,1.1,0,1.5-0.1l0.6-0.1c0,0.7,0,1.5,0,2.5
+		c0,0.9,0,1.4,0,1.5c0,0.3-0.1,0.6-0.4,0.8c-0.2,0.2-0.6,0.3-1.1,0.2c-4.3-1.4-7.8-4-10.6-7.7s-4.1-7.9-4.1-12.6
+		c0-3.9,1-7.5,2.9-10.8C10,12.2,12.6,9.6,15.9,7.7z M13.3,35.6c0.1-0.1,0-0.2-0.2-0.3c-0.2-0.1-0.3,0-0.4,0.1
+		c-0.1,0.1,0,0.2,0.2,0.3C13.1,35.8,13.3,35.8,13.3,35.6z M14.2,36.6c0.1-0.1,0.1-0.2-0.1-0.4c-0.2-0.2-0.3-0.2-0.4-0.1
+		c-0.1,0.1-0.1,0.2,0.1,0.4C13.9,36.7,14.1,36.7,14.2,36.6z M15,37.8c0.2-0.1,0.2-0.3,0-0.5c-0.1-0.2-0.3-0.3-0.5-0.2
+		c-0.2,0.1-0.2,0.3,0,0.5S14.9,37.9,15,37.8z M16.2,39c0.1-0.1,0.1-0.3-0.1-0.5c-0.2-0.2-0.4-0.3-0.6-0.1c-0.2,0.1-0.1,0.3,0.1,0.5
+		C15.9,39.1,16.1,39.1,16.2,39z M17.8,39.7c0.1-0.2-0.1-0.4-0.4-0.4c-0.3-0.1-0.5,0-0.5,0.2c-0.1,0.2,0,0.3,0.4,0.4
+		C17.5,40,17.7,39.9,17.8,39.7z M19.6,39.8c0-0.2-0.2-0.3-0.5-0.3c-0.3,0-0.4,0.1-0.4,0.3c0,0.2,0.2,0.3,0.5,0.3
+		C19.4,40.1,19.6,40,19.6,39.8z M21.2,39.5c0-0.2-0.2-0.3-0.5-0.3c-0.3,0.1-0.4,0.2-0.4,0.4c0,0.2,0.2,0.3,0.5,0.2
+		C21.1,39.9,21.2,39.7,21.2,39.5z" fill="lightblue" />
+                            </g>
+                        </svg>
+
+                        <figcaption style="color: black;"><i class="fab fa-github"></i> GitHub</figcaption>
+                    </figure>
+                    <div class="flex-content flexblock reasons">
+                        <h2 class="aligncenter">Leerdoelen <i class="fab fa-github"></i></h2>
+                        <ul>
+                            <li>
+                                Verder inoefenen Git
+                            </li>
+                            <li>Versiebeheer op GitHub</li>
+                            <li>Kennismaken Markdown</li>
+                            <li><code>git remote</code></li>
+                            <li><code>git push</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 4 opfrissen Git  -->
+            <section class="fullscreen">
+                <div class="wrap">
+                    <h2 class="aligncenter">CLI opdrachten voor Git &nbsp;<i class="fab fa-git-alt"></i></h2>
+                    <ul class="flexblock steps">
+
+                        <li>
+                            <div>
+                                <h3>Programma</h3>
+                                <code><strong>git</strong></code> <br>
+                                <code><strong>git</strong></code> <br>
+                                <code><strong>git</strong></code> <br>
+                                <code><strong>git</strong></code> <br>
+                                <code><strong>git</strong></code> <br>
+                                <code><strong>&nbsp;</strong></code><br>
+                                <code><strong>git</strong></code> <br>
+                                <code><strong>git</strong></code> <br>
+                                <code><strong>git</strong></code> <br>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3 class="aligncenter">opdracht</h3>
+                                <code><strong>init</strong></code> <br>
+                                <code><strong>add</strong></code> <br>
+                                <code><strong>add</strong></code> <br>
+                                <code><strong>status</strong></code> <br>
+                                <code><strong>commit</strong></code> <br>
+                                <code><strong>&nbsp;</strong></code> <br>
+                                <code><strong>branch</strong></code> <br>
+                                <code><strong>checkout</strong></code> <br>
+
+                                <code><strong>log</strong></code> <br>
+                            </div>
+                        <li>
+                            <div>
+                                <h3 class="aligncenter">optie</h3>
+                                <code><strong>&nbsp;</strong></code> <br>
+                                <code><strong>.</strong></code> <br>
+                                <code>naam van bestand</code> <br>
+                                <code><strong>&nbsp;</strong></code> <br>
+                                <code><strong>-m</strong></code> <br>
+                                <code><strong>&nbsp;</strong></code> <br>
+                                <code>naam van branch</code> <br>
+                                <code>naam van branch</code> <br>
+                                <code><strong>&nbsp;</strong></code> <br>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3 class="aligncenter">waarde van optie</h3>
+                                <code><strong>&nbsp;</strong></code> <br>
+                                <code><strong>&nbsp;</strong></code> <br>
+                                <code><strong>&nbsp;</strong></code> <br>
+                                <code><strong>&nbsp;</strong></code> <br>
+                                <code><strong>"beschrijving <br> commit"</strong></code><br>
+                                <code><strong>&nbsp;</strong></code> <br>
+                                <code><strong>&nbsp;</strong></code> <br>
+                                <code><strong>&nbsp;</strong></code> <br>
+                    </ul>
+                </div>
+                <hr>
+
+                </div>
+            </section>
+
+            <!-- dia 5 stappen Git  -->
+            <section class="bg-apple">
+                <div class="wrap aligncenter">
+                    <h3>Stappen in Git <i class="fab fa-git-alt"></i></h3>
+                    <svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="760.20837"
+   height="620.6449"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="git.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="329.23299"
+     inkscape:cy="460.62411"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="1026"
+     inkscape:window-x="1600"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-object-midpoints="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     gridtolerance="10"
+     objecttolerance="10"
+     guidetolerance="10"
+     fit-margin-top="20"
+     fit-margin-right="20"
+     fit-margin-bottom="20"
+     fit-margin-left="20">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3006"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="270.51782,452.02747"
+       id="guide4714" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="272.02797,351.64736"
+       id="guide4716" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-33.038086,-72.217262)">
+    <rect
+       style="fill:#d4feff;fill-opacity:1;stroke:#000000;stroke-linejoin:round;stroke-opacity:1"
+       id="rect3004"
+       width="137.88075"
+       height="579.6449"
+       x="53.538086"
+       y="92.717262"
+       rx="10"
+       ry="10" />
+    <rect
+       style="fill:#d4feff;fill-opacity:1;stroke:#000000;stroke-linejoin:round;stroke-opacity:1"
+       id="rect3004-1"
+       width="276.26151"
+       height="578.63477"
+       x="257.5889"
+       y="93.727409"
+       rx="10"
+       ry="10" />
+    <rect
+       style="fill:#d4feff;fill-opacity:1;stroke:#000000;stroke-linejoin:round;stroke-opacity:1"
+       id="rect3004-0"
+       width="137.88075"
+       height="361.65765"
+       x="257.5889"
+       y="93.727409"
+       rx="10"
+       ry="10" />
+    <rect
+       style="fill:#f4ffff;fill-opacity:1;stroke:#000000;stroke-width:0.88747621;stroke-linejoin:round;stroke-opacity:1"
+       id="rect3004-9"
+       width="239.45233"
+       height="578.63477"
+       x="533.3504"
+       y="93.727409"
+       rx="10.008191"
+       ry="7.8696947" />
+    <rect
+       style="fill:#e5feff;fill-opacity:1;stroke:#000000;stroke-width:0.88747621;stroke-linejoin:round;stroke-opacity:1"
+       id="rect3004-01"
+       width="143.2424"
+       height="174.98715"
+       x="532.90668"
+       y="497.37503"
+       rx="10.008191"
+       ry="7.8696947" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="612.47821"
+       y="125.08517"
+       id="text3833-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3835-0"
+         x="612.47821"
+         y="125.08517">Werk bestanden</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="602.91382"
+       y="521.57513"
+       id="text3833-4-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3835-0-4"
+         x="602.91382"
+         y="521.57513">Stage</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="463.53305"
+       y="128.36365"
+       id="text3833-4-7-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3835-0-4-4"
+         x="463.53305"
+         y="128.36365">Branches</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="324.78082"
+       y="129.80971"
+       id="text3833-4-7-5-2"
+       sodipodi:linespacing="125%"
+       inkscape:transform-center-y="-7.7392578"><tspan
+         sodipodi:role="line"
+         id="tspan3835-0-4-4-2"
+         x="324.78082"
+         y="129.80971">Clone</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="125.22962"
+       y="130.09291"
+       id="text3833-4-7-5-2-9"
+       sodipodi:linespacing="125%"
+       inkscape:transform-center-y="-7.7392578"><tspan
+         sodipodi:role="line"
+         id="tspan3835-0-4-4-2-8"
+         x="125.22962"
+         y="130.09291">Remote</tspan></text>
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#545454;stroke-opacity:1"
+       d="m 123.23861,297.01808 181.82745,-0.25 22.22336,22.22336 -22.22336,22.22336 -181.82745,0.25 z"
+       id="rect3141-2-35"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="228.92435"
+       y="325.12836"
+       id="text3912-3-0"
+       sodipodi:linespacing="125%"
+       inkscape:transform-center-y="7.7392578"><tspan
+         sodipodi:role="line"
+         id="tspan3914-6-6"
+         x="228.92435"
+         y="325.12836">fetch</tspan></text>
+    <path
+       style="fill:#ffff99;fill-opacity:1;stroke:#545454;stroke-opacity:1"
+       d="m 738.16644,585.67171 -84.34266,0 -22.22336,-22.22336 22.22336,-22.22336 84.34266,0 z"
+       id="rect3141-2-5-6-9-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="685.1568"
+       y="570.5968"
+       id="text3912-1-0-4-6-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3914-2-5-7-3-2"
+         x="685.1568"
+         y="570.5968">add</tspan></text>
+    <path
+       style="fill:#ffff99;fill-opacity:1;stroke:#545454;stroke-opacity:1"
+       d="m 579.30728,585.67171 -92.42388,0 -22.22336,-22.22336 22.22336,-22.22336 92.42388,0 z"
+       id="rect3141-2-5-6-9-2-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="526.29767"
+       y="570.5968"
+       id="text3912-1-0-4-6-7-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3914-2-5-7-3-2-0"
+         x="526.29767"
+         y="570.5968">commit</tspan></text>
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#545454;stroke-opacity:1"
+       d="m 122.22846,151.36861 531.69718,-0.0625 22.22336,22.22336 -22.22336,22.22336 -531.69718,0.0625 z"
+       id="rect3141-2-0-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="415.68628"
+       y="180.98553"
+       id="text3912-3-2-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="415.68628"
+         y="180.98553"
+         id="tspan4376">pull</tspan></text>
+    <path
+       style="fill:#ff99ff;fill-opacity:1;stroke:#545454;stroke-opacity:1"
+       d="m 396.46967,585.42171 -251.92251,0.125 -22.22336,-22.22336 22.22336,-22.22336 251.92251,-0.125 z"
+       id="rect3141-2-59-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="259.39673"
+       y="568.84094"
+       id="text3912-1-0-4-6-7-5-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3914-2-5-7-3-2-0-9"
+         x="259.39673"
+         y="568.84094">push</tspan></text>
+    
+    <path
+       style="fill:#ffff99;fill-opacity:1;stroke:#545454;stroke-opacity:1"
+       d="m 464.66004,219.23633 189.26568,-0.4375 22.22336,22.22336 -22.22336,22.22336 -189.26568,0.4375 z"
+       id="rect3141-2-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="563.98248"
+       y="248.66574"
+       id="text3912-1-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3914-2-3"
+         x="563.98248"
+         y="248.66574">checkout</tspan></text>
+      
+    
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#545454;stroke-opacity:1"
+       d="m 465.16004,435.37772 188.76568,-0.4375 22.22336,22.22336 -22.22336,22.22336 -188.76568,0.4375 z"
+       id="rect3141-2-9-6-1-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="570.73621"
+       y="464.83838"
+       id="text3912-1-9-8-3-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3914-2-3-0-5-5"
+         x="570.73621"
+         y="464.83838">merge</tspan></text>
+    
+  </g>
+</svg>
+                </div>
+            </section>
+
+
+            <!-- dia 6 Met branches verschillende versies in je repo -->
+            <section >
+                <div class="wrap size-80"><h2><i class="fab fa-git-alt"></i> Met branches verschillende versies in je repo</h2>
+                <p>het lijkt wel toveren als je tussen de branches overstapt</p>
+                Directe link naar <a href="https://www.youtube.com/watch?v=guVT5BoUuxA" target="_blank">de video op
+                YouTube (00:01:10)</a>
+                <hr>
+                <div class="embed zoomIn ">
+                <!-- <iframe src="https://www.youtube.com/embed/guVT5BoUuxA" data-youtube-id="guVT5BoUuxA" data-autoplay> -->
+                <div data-youtube data-youtube-id="guVT5BoUuxA" data-autoplay></div>
+                </iframe>
+                </div></div>
+            </section>
+
+<!-- dia 7 doe mee: een git repo -->
+<section>
+    <div class="wrap size-60"><h2><i class="fab fa-git-alt"></i> Doe mee: een Git repo</h2>
+        <p>met een README.md bestand voor GitHub</p>
+        Directe link naar <a href="https://www.youtube.com/watch?0RI7-yCJQ08" target="_blank">de video op
+        YouTube (00:04:00)</a>
+        <hr>
+        <div class="embed zoomIn">
+            <iframe src="https://www.youtube.com/embed/0RI7-yCJQ08">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+
+            <!-- dia 8 op GitHub plaatsen -->
+            <section >
+                <div class="grid" style="width: 90vw;">
+                    <div class="column"><h2> Doe mee: op GitHub plaatsen</h2>
+                    <p>met een README.md bestand voor GitHub <i class="fab fa-github"></i></p>
+                    Directe link naar <a href="https://www.youtube.com/watch?tYOGiTRouh0" target="_blank">de video op
+                    YouTube (00:03:31)</a></div>
+                    <div class="column">
+                        <ol>
+                            <li>Op GitHub repo aanmaken <i class="fab fa-github"></i></li>
+                            <li><code><strong>git remote</strong> adres-van-de-repo.git</code></li>
+                            <li><code><strong>git push -u origin master</strong></code></li>
+                        </ol>
+                    </div>
+            </div>
+                <hr>
+                <div class="wrap size-60"><div class="embed zoomIn">
+                <iframe src="https://www.youtube.com/embed/tYOGiTRouh0">
+                </iframe>
+                </div></div>
+            </section>
+
+            <!-- dia 9 Markdown aanpassen -->
+            <section >
+                <div class="grid" style="width: 90vw;">
+                    <div class="column"><h2>Markdown aanpassen</h2>
+                    <p>met een README.md bestand voor GitHub <i class="fab fa-github"></i></p>
+                    Directe link naar <a href="https://www.youtube.com/watch?Gr2jFfshW0o" target="_blank">de video op
+                    YouTube (00:05:17)</a></div>
+                    <div class="column">
+                        <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/205_Markdown_logo_logos-512.png" alt="markdown"
+                        style="width: 4em;">
+                        <ol>
+                            <li>Ga naar <a href="https://markdownlivepreview.com/" target="_blank">https://markdownlivepreview.com/</a></li>
+                            <li>Verbeter evt. je Markdown en voeg zelf elementen toe</li>
+                            <li>Wordt jouw Markdown straks de interessantst?</li>
+                        </ol>
+                    </div>
+            </div>
+                
+                <div class="wrap size-70"><div class="embed zoomIn">
+                <iframe src="https://www.youtube.com/embed/Gr2jFfshW0o">
+                </iframe>
+                </div></div>
+            </section>
+
+            
+
+            <!-- dia 10 Wijzigingen op GitHub bijwerken -->
+            <section >
+                <div class="grid" style="width: 90vw;">
+                    <div class="column"><h2><i class="fab fa-github"></i> Wijzigingen op GitHub bijwerken</h2>
+                    Directe link naar <a href="https://www.youtube.com/watch?35Tn4Ny-CUE" target="_blank">de video op
+                    YouTube (00:01:30)</a></div>
+                    <div class="column">
+                        <p>met inmiddels bekende stappen:</p>
+                        <ol>
+                            <li>wijzigingen opslaan</li>
+                            <li><code><strong>git add .</strong></code> om de bestanden op de stage te plaatsen</li>
+                            <li><code><strong>git commit -m</strong> "beschrijving wijziging"</code></li>
+                            <li><code><strong>git push -u origin master</strong></code></li>
+                        </ol>
+                    </div>
+            </div>
+                
+                <div class="embed zoomIn wrap size-60">
+                    <!-- <iframe src="https://www.youtube.com/embed/35Tn4Ny-CUE">
+                    </iframe> -->
+                    <div data-youtube data-youtube-id="35Tn4Ny-CUE"></div>
+                </div>
+            </section>
+
+            <!-- dia 11 opdracht  -->
+            <section class="fullscreen bg-apple">
+                <div class="grid">
+                    <div class="wrap flexblock reasons column">
+
+                <h2 class="aligncenter"><strong><i class="fab fa-github"></i> &nbsp; opdracht </strong></h2>
+                        <ul>
+                            <li>Breid je README.md aan met meerder commits aan</li>
+                            <li>
+                                Push de bijwerkingen en aanvullingen telkens weer op GitHub.
+                            </li>
+                            
+                            <li>
+                                Lever een linkje naar jouw repo op GitHub in op Magister.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <figure class="fadeInUp">
+
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54 54"
+                                style="enable-background:new 0 0 54 54;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0 {
+                                        fill: none;
+                                    }
+                                </style>
+                                <g>
+                                    <rect x="-0.2" y="0.1" class="st0" width="53.8" height="53.4" />
+                                    <path d="M15.9,7.7c3.3-1.9,6.9-2.9,10.8-2.9c3.9,0,7.5,1,10.8,2.9s5.9,4.5,7.8,7.8c1.9,3.3,2.9,6.9,2.9,10.8
+            c0,4.7-1.4,8.9-4.1,12.6c-2.7,3.7-6.2,6.3-10.6,7.7c-0.5,0.1-0.9,0-1.1-0.2c-0.2-0.2-0.4-0.5-0.4-0.8c0-0.1,0-0.8,0-2.1
+            s0-2.6,0-3.8c0-1.8-0.5-3.1-1.5-4c1.1-0.1,2-0.3,2.9-0.5c0.8-0.2,1.7-0.6,2.6-1.1c0.9-0.5,1.7-1.1,2.3-1.9c0.6-0.7,1.1-1.7,1.5-2.9
+            s0.6-2.6,0.6-4.2c0-2.2-0.7-4.1-2.2-5.7c0.7-1.7,0.6-3.6-0.2-5.7c-0.5-0.2-1.3-0.1-2.3,0.3c-1,0.4-1.8,0.8-2.6,1.2L32,15.9
+            c-1.7-0.5-3.5-0.7-5.4-0.7c-1.8,0-3.6,0.2-5.4,0.7c-0.3-0.2-0.7-0.5-1.2-0.8c-0.5-0.3-1.3-0.7-2.3-1.1c-1.1-0.4-1.9-0.5-2.4-0.4
+            c-0.8,2.1-0.9,4-0.2,5.7C13.7,21,13,22.9,13,25.1c0,1.6,0.2,3,0.6,4.2c0.4,1.2,0.9,2.2,1.5,2.9c0.6,0.7,1.3,1.4,2.2,1.9
+            c0.9,0.5,1.8,0.9,2.6,1.1c0.8,0.2,1.8,0.4,2.9,0.5c-0.7,0.7-1.2,1.6-1.4,2.9c-0.4,0.2-0.8,0.3-1.3,0.4c-0.4,0.1-1,0.1-1.6,0.1
+            s-1.2-0.2-1.8-0.6c-0.6-0.4-1.1-1-1.5-1.7c-0.4-0.6-0.8-1.1-1.4-1.5c-0.5-0.4-1-0.6-1.4-0.7l-0.6-0.1c-0.4,0-0.7,0-0.8,0.1
+            c-0.1,0.1-0.2,0.2-0.1,0.3s0.1,0.3,0.3,0.4c0.1,0.1,0.2,0.2,0.4,0.3l0.2,0.1c0.4,0.2,0.8,0.5,1.2,1.1c0.4,0.5,0.7,1,0.9,1.4
+            l0.3,0.6c0.2,0.7,0.7,1.3,1.2,1.7c0.6,0.4,1.2,0.7,1.9,0.8c0.7,0.1,1.3,0.2,1.9,0.2c0.6,0,1.1,0,1.5-0.1l0.6-0.1c0,0.7,0,1.5,0,2.5
+            c0,0.9,0,1.4,0,1.5c0,0.3-0.1,0.6-0.4,0.8c-0.2,0.2-0.6,0.3-1.1,0.2c-4.3-1.4-7.8-4-10.6-7.7s-4.1-7.9-4.1-12.6
+            c0-3.9,1-7.5,2.9-10.8C10,12.2,12.6,9.6,15.9,7.7z M13.3,35.6c0.1-0.1,0-0.2-0.2-0.3c-0.2-0.1-0.3,0-0.4,0.1
+            c-0.1,0.1,0,0.2,0.2,0.3C13.1,35.8,13.3,35.8,13.3,35.6z M14.2,36.6c0.1-0.1,0.1-0.2-0.1-0.4c-0.2-0.2-0.3-0.2-0.4-0.1
+            c-0.1,0.1-0.1,0.2,0.1,0.4C13.9,36.7,14.1,36.7,14.2,36.6z M15,37.8c0.2-0.1,0.2-0.3,0-0.5c-0.1-0.2-0.3-0.3-0.5-0.2
+            c-0.2,0.1-0.2,0.3,0,0.5S14.9,37.9,15,37.8z M16.2,39c0.1-0.1,0.1-0.3-0.1-0.5c-0.2-0.2-0.4-0.3-0.6-0.1c-0.2,0.1-0.1,0.3,0.1,0.5
+            C15.9,39.1,16.1,39.1,16.2,39z M17.8,39.7c0.1-0.2-0.1-0.4-0.4-0.4c-0.3-0.1-0.5,0-0.5,0.2c-0.1,0.2,0,0.3,0.4,0.4
+            C17.5,40,17.7,39.9,17.8,39.7z M19.6,39.8c0-0.2-0.2-0.3-0.5-0.3c-0.3,0-0.4,0.1-0.4,0.3c0,0.2,0.2,0.3,0.5,0.3
+            C19.4,40.1,19.6,40,19.6,39.8z M21.2,39.5c0-0.2-0.2-0.3-0.5-0.3c-0.3,0.1-0.4,0.2-0.4,0.4c0,0.2,0.2,0.3,0.5,0.2
+            C21.1,39.9,21.2,39.7,21.2,39.5z" fill="fuchsia" />
+                                </g>
+                            </svg>
+    
+                            <figcaption style="color: black;"><i class="fab fa-github"></i> GitHub</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+        </article>
+    </main>
+
+    <script src="js/webslides.min.js"></script>
+    <script>
+        window.ws = new WebSlides();
+    </script>
+</body>
+
+</html>

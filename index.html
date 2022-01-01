@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Lessen Frontend MD</title>
+    <meta name="keywords" content="MD, IV, lessen, tutorials,  HTML, CSS, JavaScript, jQuery, Wordpress">
+    <meta name="description" content="Lessen web-techniek voor mediadevelopers">
+    <meta name="author" content="Theo den Blanken">
+    <meta name="google-site-verification" content="fnBAFl6tIlRpDyXC78clhfDnJj7wh-u_hdGjl4jWV10" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    :root {
+      --tegelachtergrond: #eee;
+      --basiskleur: #4555ae;
+      --basiskleurHover: #084c90;
+      --steunKleur: #75a7d8;
+      --achtergondHover: #fff;
+      /* kleurset 2018 */
+       /* --tegelachtergrond: #ddd;
+       --basiskleur: #45558e;
+       --basiskleurHover: rgb(38,77, 228);
+       --steunKleur: #afb8cf;
+       --achtergondHover: #fff; */
+
+          /* kerst kleuren  */
+       /* --tegelachtergrond: #fff;
+       --basiskleur: #900;
+       --basiskleurHover: #f33;
+       --steunKleur: #600;
+       --achtergondHover: #c00; */
+    }
+
+    body {
+       background: #ddd;
+       margin: 0;
+       min-height: 100vh;
+       display: grid;
+       grid-template-rows: 1fr auto;
+       font-family: Verdana, Helvetica, sans-serif;
+    }
+    .wrapper {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-gap: 0.15em .6em;
+       grid-auto-flow: dense;
+       align-content: center;
+       padding: 0 10vw;
+    }
+    @media screen and (min-width:500px) {
+       .wrapper {
+          grid-template-columns: repeat(4, 1fr);
+          grid-row-gap: .1em;  /* er zitten dan 4 verborgen inhouden tussen maar die hebben ook gap */
+       }
+    }
+    .tegel {
+       background: var(--tegelachtergrond);
+       border-radius: .6em;
+       transition: background .6s ease-in-out;
+       position: relative;
+       -webkit-box-shadow: inset 3px 5px 5px 0px rgba(255,255,255,1),inset -3px -5px 5px 0px rgba(73,71,73,1);
+      -moz-box-shadow: inset 3px 5px 5px 0px rgba(255,255,255,1),inset -3px -5px 5px 0px rgba(73,71,73,1);
+      box-shadow: inset 3px 5px 5px 0px rgba(255,255,255,1),inset -3px -5px 5px 0px rgba(73,71,73,1);
+    }
+    .tegel:hover,
+    .tegel--active {
+       background: var(--achtergondHover);
+    }
+    .animatiering {
+       stroke-width: 12px;
+       stroke: var(--basiskleurHover);
+       fill: transparent;
+       stroke-dasharray: 1383;
+       stroke-dashoffset: 1383;
+       transition: stroke-dashoffset 1s ease-in-out;
+       transform-origin: center;
+    }
+    .tegel:hover .animatiering,
+    .tegel--active .animatiering {
+       stroke-dashoffset: 0;
+    }
+    .buitenring, .binnenring {
+       fill: none;
+       stroke: var(--basiskleur);
+       stroke-miterlimit:10;
+       transition: stroke .6s ease-in-out;
+    }
+    .buitenring {
+       stroke-width:3px;
+       fill: transparent;
+    }
+
+    .binnenring {
+       stroke-width:10px;
+    }
+    /* homeknop */
+    .cls-1 {
+      fill: var(--steunKleur);
+      stroke: var(--basiskleur);
+      stroke-width: 10px;
+      transition: fill .9s ease-out;
+    }
+    .tegel:hover .cls-1 {
+      fill: var(--basiskleur);
+    }
+    .cls-3{
+       fill: var(--basiskleur);
+       transition: fill .9s ease-out;
+       }
+     .cls-4{
+          fill: var(--steunKleur);}
+     .cls-5{fill: var(--tegelachtergrond); }
+     .cls-6{fill: var(--achtergondHover);}
+     .wp-ring {
+        fill: none;
+        stroke: var(--basiskleur);
+        stroke-width: 8.5px;
+    }
+    .tegel:hover {
+       fill: #fff;
+       cursor: pointer;
+    }
+     .buitenring:hover ~ .cls-3,
+     .cls-3:hover {
+        fill: var(--basiskleurHover);
+     }
+     .buitenring:hover ~ .wp-ring {
+        stroke: var(--basiskleurHover);
+        stroke-width: 12px;
+    }
+     /* Ma-logo in oorspronkelijke kleuren Mediacollege bij hover  */
+     .tegel:hover .Ma-rechthoek,
+     .tegel--active .Ma-rechthoek {
+        fill: black;
+    }
+    .tegel:hover .Ma-m,
+    .tegel--active .Ma-m {
+       fill: #E62686;
+    }
+    .tegel:hover .Ma-a,
+    .tegel--active .Ma-a {
+       fill: white;
+    }
+
+     /* animatie van de ringen in eigen logo  */
+     @keyframes cirkelAnimatie {
+        0% {fill: #45558e;}
+        50% {fill: #afb8cf;}
+        100% {fill: #45558e;}
+    }
+    .tegel:hover .c1 {
+        animation: cirkelAnimatie .5s alternate ;
+    }
+    .tegel:hover .c2 {
+        animation: cirkelAnimatie .5s alternate .1s;
+    }
+    .tegel:hover .c3 {
+        animation: cirkelAnimatie .5s alternate .2s;
+    }
+    .tegel:hover .c4 {
+        animation: cirkelAnimatie .5s alternate .3s;
+    }
+    .tegel:hover .c5 {
+        animation: cirkelAnimatie .5s alternate .4s;
+    }
+    .tegel:hover .c6 {
+        animation: cirkelAnimatie .5s alternate .5s;
+    }
+    .tegel:hover .c7 {
+        animation: cirkelAnimatie .5s alternate .6s;
+    }
+    .tegel:hover .c8 {
+        animation: cirkelAnimatie .5s alternate .7s;
+    }
+    .tegel:hover .tegel__t-ringen .cls-5 {
+       fill: var(--achtergondHover);
+    }
+
+          /* de inhoud van de tegels  */
+    .tegel__inhoud {
+       line-height: 0;
+       font-size: 0;
+       height: 0;
+       grid-column: 1/-1;
+       transition: all 1s ease-in-out;
+       position: relative;
+       padding: 0;
+    }
+
+    .tegel__inhoud--active {
+       line-height: normal;
+       font-size: 1em;
+       height: auto;
+       background: var(--achtergondHover);
+       padding: 1em;
+    }
+    .tegel__kop {
+       font-variant: small-caps;
+       text-align: center;
+       letter-spacing: .2em;
+       color: var(--basiskleur);
+    }
+    .tegel__opsomming {
+       padding: 0;
+       list-style-type: none;
+    }
+    @media screen and (min-width: 700px) {
+       .tegel__opsomming {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 2em;
+       }
+    }
+    .tegel__opsomming li {
+       background: var(--basiskleur);
+       border-radius: .5em;
+       margin: .5em 0;
+    }
+    .tegel__opsomming li:hover {
+       background: var(--basiskleurHover);
+       cursor: pointer;
+    }
+    .tegel__opsomming a {
+       display: block;
+       color: var(--tegelachtergrond);
+       text-decoration: none;
+       padding: .5em;
+    }
+    .tegel__opsomming li:hover a,
+    .tegel__opsomming li:hover .icon--github {
+       color: var(--achtergondHover);
+       fill: var(--achtergondHover);
+    }
+    .sluitknop {
+       width: 3em;
+       float: right;
+    }
+    .vormSluitknop {
+       fill: var(--basiskleur);
+    }
+    .sluitknop:hover .vormSluitknop {
+       fill: var(--basiskleurHover);
+       cursor: pointer;
+    }
+    /*      de pijl       de pijl      de pijl      de pijl      de pijl                */
+    .tegel::after {
+        content: "";
+        position: absolute;
+        bottom: -0em;
+        opacity: 0;
+        left: .5em;
+        border-top: 1em solid var(--tegelachtergrond);
+        border-right: 1em solid transparent;
+        border-left: 1em solid transparent;
+        -webkit-transition: bottom 1s;
+        -moz-transition: bottom 1s;
+        -o-transition: bottom 1s;
+        transition: all 1s;
+        z-index: 70;
+    }
+
+    .tegel--active::after {
+       bottom: -1em;
+       opacity: 1;
+       border-top: 1em solid var(--basiskleur);
+    }
+    @media screen and (min-width: 700px) {
+       .tegel::after {
+          left: 2.5em;
+          border-top: 2em solid var(--basiskleur);
+          border-right: 2em solid transparent;
+          border-left: 2em solid transparent;
+       }
+       .tegel--active::after {
+          bottom: -2em;
+       }
+    }
+    footer {
+       color: var(--tegelachtergrond);
+       background: #333;
+       text-align: center;
+    }
+    .footer__blok {
+       display: inline-block;
+       vertical-align: middle;
+       padding: 0.5em 2em;
+    }
+
+    /* icons dmv svg's */
+    .icon {
+       height: 1.5em;
+       margin: 0 .5em;
+    }
+    .icon path {
+       fill: var(--tegelachtergrond);
+    }
+    .icon:hover path {
+       fill: var(--achtergondHover);
+    }
+     /* de kerstengel*/
+    /* #path3927 {
+      animation: engelomtrekken 9s infinite;
+    }
+     @keyframes engelomtrekken {
+      0% {stroke-dashoffset: 192;}
+      70% {stroke-dashoffset: 0;}
+      100% {stroke-dashoffset: 0;}
+    }  */
+    /* de mijter  */
+    /* .mijter {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    -webkit-animation: tekenen 14s linear infinite;
+    animation: tekenen 24s linear infinite;
+}
+    @-webkit-keyframes tekenen {
+        from {stroke-dashoffset: 600}
+        to {stroke-dashoffset: 0}
+    }
+    @keyframes tekenen {
+        from {stroke-dashoffset: 600}
+        to {stroke-dashoffset: 0}
+    } */
+   /* einde de mijter    */
+    </style>
+  </head>
+
+  <body lang="nl">
+
+    <div class="wrapper">
+      <div class="tegel">
+
+        <svg class="tegel__home"  style="position:relative" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480">
+          <!-- de kerstengel -->
+            <!-- <g
+               id="engel"
+               style=" position: absolute; transform: scale(2)">
+              <path
+                 d="m 22.054348,39.628209 c 2.670802,-1.686282 4.090738,-4.139044 4.984745,-8.581489 0.65535,-3.256534 0.319841,-6.839151 0.319841,-6.839151 0,0 -2.689822,0.0924 -5.239067,0.813837 -2.292542,0.648788 -5.298441,1.895737 -7.629711,3.560531 -0.278937,-1.229928 -0.290214,-3.771935 0.254322,-5.798578 0.696935,-2.593829 1.826306,-5.26345 4.925258,-8.045254 2.754159,-2.472299 6.171724,-3.328548 7.485739,-3.48639 1.392313,-0.167247 3.607689,-0.396558 5.03561,0.44313 1.601563,0.941798 2.950466,2.59642 3.157926,3.763991 0.420975,2.369225 0.0024,4.599771 -1.69782,5.939178 -1.886167,1.485895 -3.001077,1.417614 -4.200773,1.453455 -1.021557,0.03052 -2.464025,-0.395607 -3.32689,-2.05615 -0.789959,-1.520235 -0.262132,-3.706322 0.769,-4.688178 1.436669,-1.368014 3.5487,-1.397963 4.702833,-0.5871 1.164519,0.818159 1.879955,2.174146 1.816477,3.346732 -0.07845,1.449206 -0.762971,3.204478 -2.187184,3.66226 -1.424213,0.457783 -3.538777,0.576498 -5.169238,-0.726758 -2.014747,-1.610425 -2.582043,-3.92349 -2.371679,-5.580468 0.19272,-1.517991 1.492324,-3.628644 2.963092,-4.374368 1.364769,-0.69198 4.005981,-1.113793 6.461539,-0.451753 2.813928,0.758657 5.805896,2.525661 7.170209,3.910556 1.208077,1.226302 3.609129,4.48597 4.17091,7.52798 0.436414,1.905875 0.529327,3.799979 0.203457,5.798581 0,0 -2.187187,-1.83113 -4.069177,-2.594104 -1.881997,-0.76297 -4.221776,-1.271619 -6.103769,-1.525941 -1.881996,-0.254323 -2.157879,-0.254323 -2.157879,-0.254323 0,0 -0.33505,3.193418 -0.06552,5.645987 0.286225,2.60444 1.331986,5.739127 2.769975,7.661608 0.625115,0.835735 2.113039,2.081145 2.113039,2.081145 0,0 -3.711897,1.815825 -6.576202,1.875965 -3.584717,0.07527 -6.571016,-0.792277 -8.249552,-1.758707"
+                 id="path3927"
+                 style="fill:none; stroke: var(--steunKleur);
+                 stroke-width:3px;
+                 stroke-linecap:butt;
+                 stroke-linejoin:miter;
+                 stroke-opacity:1;
+                 stroke-dasharray: 192,192;
+                 stroke-dashoffset: 192;
+                 " />
+            </g> -->
+          <!-- einde kerstengel  -->
+
+          <!-- de mijter -->
+      
+  <!-- <g
+     id="layer2"
+     style="display:inline; transform: scale(2);">
+
+    <path class="mijter"
+       d="m 31.545156,23.383227 c 0.109851,0.826898 0.315923,1.636862 0.153917,2.511614 0,0 -4.348522,-1.160694 -9.295041,0.587306 -6.697893,2.366901 -8.532372,6.754046 -8.532372,6.754046 l -1.620672,-3.439947 c 0,0 6.11318,-4.840076 9.00904,-5.285775 0.14026,-2.037977 -1.521039,-7.608201 -2.049678,-8.683775 -2.94074,0.330098 -7.408207,3.61676 -7.276243,4.960192 -0.646328,-1.602274 -0.01679,-3.701675 -0.01679,-3.701675 0,0 3.76393,-3.249725 6.10136,-3.481899 -0.256292,-2.107233 -3.252734,-6.3741127 -3.252734,-6.3741127 -0.04551,-0.881212 1.957169,-1.194061 2.484664,-0.507647 0.229667,0.769937 2.85065,4.8043527 3.106448,5.8873437 1.164766,-0.253284 5.768027,-0.464886 6.813665,0.155404 0.49886,0.397599 1.264863,2.749255 1.407864,2.959006 -0.882174,-0.898947 -5.983886,-1.11318 -6.698888,-0.735625 -0.715003,0.377557 2.122177,6.727611 2.001275,8.567531 2.318117,-0.94877 6.128423,-0.636552 7.664184,-0.306078 C 31.801128,22.699344 30.908084,14.739215 29.220394,12.764302 25.097905,8.3019523 20.904968,4.9110563 14.443662,3.6994533 11.655761,8.5982103 8.7949986,16.224058 9.8676416,20.94467 c 0.6673364,2.726787 3.1383414,7.576031 2.9979534,8.293791 -0.465079,0.225626 -0.256332,0.445653 -0.816785,0.433118 C 10.885458,28.766264 8.4827256,22.921675 8.2469676,21.406126 7.9089966,19.233509 8.9775046,11.700639 9.1526386,10.792623 9.3453426,9.7935053 10.868646,6.7653663 10.868646,6.7653663 l 1.648879,0.319636"
+       id="path3896"
+       style="fill:none;stroke:rgba(255,0,0, 1);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g> -->
+<!-- einde de mijter  -->
+          <g>
+            <circle class="animatiering" cx="240" cy="240" r="220"/>
+            <circle class="buitenring" cx="240" cy="240" r="218.5"/>
+            <circle class="binnenring" cx="240" cy="240" r="207.5"/>
+            <path d="M332.4,188.7v-46.2h-30.8V163L240,116.8L86,240h30.8v123.2h141.8V260.5h61.6v102.7h43V240H394L332.4,188.7z M227,332h-71
+v-73h71V332z" class="cls-1"  />
+          </g>
+        </svg>
+      </div><article class="tegel__inhoud">
+        <svg class="sluitknop" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480"><path
+          class="vormSluitknop"
+          d="M240,21.5C119.33,21.5,21.5,119.33,21.5,240S119.33,458.5,240,458.5,458.5,360.67,458.5,240,360.67,21.5,240,21.5Zm147.08,292-73.54,73.54L240,313.54l-73.54,73.54L92.92,313.54,166.46,240,92.92,166.46l73.54-73.54L240,166.46l73.54-73.54,73.54,73.54L313.54,240Z"/></svg>
+        <h2 class="tegel__kop">Wat Theo weet</h2>
+        <p>lessen voor Mediavormgevers en Mediadevelopers. Je vindt hier van alles over het maken van sites.</p>
+      </article>
+
+      <div class="tegel">
+        <svg class="tegel__html5" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480">
+          <g>
+            <circle class="animatiering" cx="240" cy="240" r="220"/>
+            <circle class="buitenring" cx="240" cy="240" r="218.5"/>
+            <circle class="binnenring" cx="240" cy="240" r="207.5"/>
+            <path class="cls-3" d="M142.24,71h15.65V86h13.68V71h15v45h-15V101H157.89v15H142.24m63.88-30h-13V71H234.8V86H221.11v30h-15m35.2-45h15.19l9.65,15.84L275.8,71h15.71v45h-15V93.68l-10.43,16.17L255.66,93.68V116H241.32m58-45h15v30h21.51v15H299.33"/><path class="cls-3" d="M142,378.27,120.51,136.84H357l-21.51,241.3L238.56,405"/><path class="cls-4" d="M238.71,384.53V156.39h96.67l-18.45,206"/><path class="cls-5" d="M164.4,185.72h74.31v29.34H196.42l2.76,30.63h39.53V275H172.23m1.3,15h30l2.09,23.66,33.11,8.86v30.9L178,336.49"/>
+            <path class="cls-6" d="M312.37,186.37H238.71v29.34h71m-2.6,30H238.71V275h36.18l-3.42,38.12-32.76,8.79v30.5l60.09-16.67"/>
+          </g>
+        </svg>
+      </div><article class="tegel__inhoud">
+        <svg class="sluitknop" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480"><path
+          class="vormSluitknop"
+          d="M240,21.5C119.33,21.5,21.5,119.33,21.5,240S119.33,458.5,240,458.5,458.5,360.67,458.5,240,360.67,21.5,240,21.5Zm147.08,292-73.54,73.54L240,313.54l-73.54,73.54L92.92,313.54,166.46,240,92.92,166.46l73.54-73.54L240,166.46l73.54-73.54,73.54,73.54L313.54,240Z"/></svg>
+        <h2 class="tegel__kop">Tutorials HTML</h2>
+        <ul class="tegel__opsomming">
+          <li>
+            <a href="webSlidesPresentaties/htmlIntro.html">Introductie HTML</a>
+          </li>
+          <li>
+            <a href="webSlidesPresentaties/attributen.html">Attributen en inleiding CSS</a>
+          </li>
+          <li>
+            <a href="webSlidesPresentaties/div-padding-marge.html">div | span | padding | marge</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/theorieDisplayTypes.html">theorie: display-types van elementen</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/formulieren.html">formulieren in HTML</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/tabelMaken.html">een tabel maken</a>
+          </li>
+          <!-- <li><a href="http://blanken5.home.xs4all.nl/quizMaken.html">een complete quiz maken</a></li> -->
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/animatiesBanner.html">banner met CSS-animaties (gestart met JS)</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/iconFonts.html">een eigen icon-font maken</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/resposvMenGrid.html">een responsive menu met animatie</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/digitaleHandtekening.html">digitale handtekening</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/nieuwsbrief.html">een elektronische nieuwsbrief maken</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/gitHubKennismaking.html">kennismaken met GitHub
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480">
+                <path class="icon--github"
+                  d="M240,17.69c-125.86,0-227.93,102.05-227.93,228,0,100.7,65.31,186.13,155.89,216.28,11.4,2.09,15.56-4.95,15.56-11,0-5.41-.2-19.75-.31-38.77-63.4,13.78-76.78-30.55-76.78-30.55-10.37-26.33-25.31-33.34-25.31-33.34-20.69-14.15,1.57-13.86,1.57-13.86,22.87,1.61,34.91,23.49,34.91,23.49,20.33,34.83,53.35,24.77,66.34,18.94,2.07-14.73,7.95-24.78,14.47-30.47-50.62-5.76-103.83-25.31-103.83-112.66,0-24.88,8.88-45.23,23.46-61.16-2.34-5.77-10.16-28.94,2.24-60.32,0,0,19.14-6.13,62.68,23.36a216.12,216.12,0,0,1,114.13,0c43.51-29.49,62.62-23.36,62.62-23.36,12.43,31.38,4.61,54.55,2.26,60.32,14.61,15.93,23.43,36.28,23.43,61.16,0,87.57-53.29,106.84-104.07,112.48,8.19,7,15.48,20.95,15.48,42.21,0,30.47-.28,55.06-.28,62.53,0,6.09,4.1,13.19,15.67,11,90.5-30.2,155.75-115.58,155.75-216.25C467.94,119.74,365.87,17.69,240,17.69Z"/>
+              </svg></a>
+          </li>
+          <li>
+            <a href="webSlidesPresentaties/bem.html">BEM: Block - Element - Modifier
+              </a>
+          </li>
+          <!-- <li><a href="webedit/index.htm">algemene informatie over HTML en delen van mijn oude website</a></li> -->
+          <!-- <li><a href="http://www.handleidinghtml.nl/" target="_blank">basiskennis HTML</a></li>-->
+        </ul>
+      </article>
+      <div class="tegel">
+        <svg class="tegel__css3" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480">
+          <g>
+            <circle class="animatiering" cx="240" cy="240" r="220"/>
+            <circle class="buitenring" cx="240" cy="240" r="218.5"/>
+            <circle class="binnenring" cx="240" cy="240" r="207.5"/>
+            <polygon class="cls-3" points="367.34 135.64 344.34 393.33 240.94 422 137.82 393.38 114.84 135.64 367.34 135.64"/>
+            <polygon class="cls-4" points="324.65 376.93 344.3 156.72 241.09 156.72 241.09 400.09 324.65 376.93"/>
+            <polygon class="cls-5" points="167.52 252.3 170.36 283.91 241.09 283.91 241.09 252.3 167.52 252.3"/><polygon id="polygon2995" class="cls-5" points="241.09 188.32 240.98 188.32 161.83 188.32 164.7 219.94 241.09 219.94 241.09 188.32"/>
+            <polygon class="cls-5" points="241.09 367.29 241.09 334.4 240.96 334.44 205.75 324.93 203.5 299.72 186.39 299.72 171.77 299.72 176.2 349.35 240.95 367.33 241.09 367.29"/>
+            <path class="cls-3" d="M174.27,65.6h38.28v16H190.28v16h22.27v16H174.27Z"/>
+            <path class="cls-3" d="M220.21,65.6H258.5V79.52H236.22v2.79H258.5v32H220.21V99.71h22.28V96.92H220.21Z"/>
+            <path class="cls-3" d="M266.15,65.6h38.29V79.52H282.16v2.79h22.28v32H266.15V99.71h22.28V96.92H266.15Z"/>
+            <polygon
+              class="cls-6"
+              points="279.91 283.91 276.24 324.91 240.98 334.43 240.98 367.31 305.79 349.35 306.26 344.01 313.69 260.79 314.46 252.3 320.17 188.32 240.98 188.32 240.98 219.94 285.53 219.94 282.65 252.3 240.98 252.3 240.98 283.91 279.91 283.91"/>
+          </g>
+        </svg>
+      </div><article class="tegel__inhoud">
+        <svg class="sluitknop" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480"><path
+          class="vormSluitknop"
+          d="M240,21.5C119.33,21.5,21.5,119.33,21.5,240S119.33,458.5,240,458.5,458.5,360.67,458.5,240,360.67,21.5,240,21.5Zm147.08,292-73.54,73.54L240,313.54l-73.54,73.54L92.92,313.54,166.46,240,92.92,166.46l73.54-73.54L240,166.46l73.54-73.54,73.54,73.54L313.54,240Z"/></svg>
+        <h2 class="tegel__kop">Tutorials CSS</h2>
+        <ul class="tegel__opsomming">
+          <li>
+            <a href="opdrachtPaddMarg.html">opdracht layout met padding en marge</a>
+          </li>
+          <!-- <li>
+            <a href="naastElkaar.html">elementen naast elkaar: experimenten display-types</a>
+          </li> -->
+          <li>
+            <a href="naastElkaar.html">elementen naast elkaar: experimenten display-types</a>
+          </li>
+          <li>
+            <a href="webSlidesPresentaties/verschuiven.html">positioning en maateenheden</a>
+          </li>
+          <li>
+            <a href="experimenten.html">experimenten display, positioning en maten</a>
+          </li>
+
+          <li>
+            <a href="webSlidesPresentaties/bootstrap5Layouten.html">lay-outs met Bootstrap 5</a>
+          </li>
+          <li>
+            <a href="theorieDisplayTypes.html">theorie: display-types van elementen</a>
+          </li>
+
+          <!-- <li><a href="http://blanken5.home.xs4all.nl/cssLayout.html">een layout met CSS3</a></li> -->
+          <li>
+            <a href="webSlidesPresentaties/menu.html">oefening met menu, webfonts en W3C</a>
+          </li>
+          <li>
+            <a href="responsiveGrid.html">responsive layout met CSS Grid</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/cdCovers.html">CD-covers: met CSS-animaties</a>
+          </li>
+          <li>
+            <a href="maakRipple.html">Maak een ripple-effect met CSS en JS</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/galerij.html">Fotogalerij met CSS Grid</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/animatiesBanner.html">banner met CSS-animaties (gestart met JS)</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/formulierOpmaak.html">een inlog-formulier vormgeven</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/resposvMenGrid.html">een responsive menu met animatie</a>
+          </li>
+          <li>
+            <a href="smoothScrollCSS.html">horizontaal smooth scrolling met CSS</a>
+          </li>
+          <li>
+            <a href="gridAreas.html">responsive lay-out met CSS Grid en grid-areas</a>
+          </li>
+          <!-- <li><a href="http://blanken5.home.xs4all.nl/grid960.html">layout met 960 Grid-system</a></li> -->
+          <li>
+            <a href="bootstrap.html">een responsive webpagina met Bootstrap</a>
+          </li>
+          <!-- <li><a href="html5css3site.html">een webpagina in HTML5 en CSS3</a></li>-->
+          <!-- <li><a href="http://blanken5.home.xs4all.nl/cssFlexbox.html">lay-out met CSS Flexbox</a></li> -->
+          <!-- <li><a href="responsiveDsgn.html">een responsive webpagina maken</a></li>-->
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/inhoudOpzij_vMenu.html">de inhoud voor het menu opzij schuiven</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/sass.html">introductie Sass</a>
+          </li>
+          <!-- <li><a href="pagina3koloms/paginaMaken.html">een website met 3 kolommen en extern stylesheet</a></li>-->
+          <!-- <li>
+            <a href="http://blanken5.home.xs4all.nl/CSS_JSanimatie.html">CSS transitions getriggerd met JS</a>
+          </li> -->
+          <li>
+            <a href="CSS_JS_animatie.html">CSS transitions getriggerd met JS</a>
+          </li>
+        </ul>
+      </article>
+
+      <div class="tegel">
+        <svg class="tegel__js" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480">
+          <g>
+            <circle class="animatiering" cx="240" cy="240" r="220"/>
+            <circle class="buitenring" cx="240" cy="240" r="218.5"/>
+            <circle class="binnenring" cx="240" cy="240" r="207.5"/>
+            <path
+              class="cls-3"
+              d="M112,112V368H368V112ZM251.38,311.56c0,24.91-14.56,36.24-35.8,36.24-19.2,0-30.31-10-36-22L199.13,314c3.76,6.7,7.19,12.37,15.43,12.37,7.87,0,12.84-3.09,12.84-15.12v-81.8h24Zm56.9,36.22c-22.34,0-36.77-10.65-43.84-24.61L284,311.82c5.16,8.42,11.87,14.61,23.73,14.61,10,0,16.34-5,16.34-11.87,0-8.25-6.54-11.17-17.51-16l-6-2.58c-17.36-7.4-28.89-16.66-28.89-36.25,0-18,13.75-31.77,35.23-31.77,15.3,0,26.29,5.32,34.22,19.26l-18.74,12c-4.12-7.4-8.57-10.31-15.48-10.31s-11.51,4.47-11.51,10.31c0,7.21,4.47,10.13,14.79,14.6l6,2.58c20.44,8.77,32,17.7,32,37.79C348.14,335.91,331.13,347.78,308.28,347.78Z"/>
+          </g>
+        </svg>
+      </div><article class="tegel__inhoud">
+        <svg class="sluitknop" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480"><path
+          class="vormSluitknop"
+          d="M240,21.5C119.33,21.5,21.5,119.33,21.5,240S119.33,458.5,240,458.5,458.5,360.67,458.5,240,360.67,21.5,240,21.5Zm147.08,292-73.54,73.54L240,313.54l-73.54,73.54L92.92,313.54,166.46,240,92.92,166.46l73.54-73.54L240,166.46l73.54-73.54,73.54,73.54L313.54,240Z"/>
+       </svg>
+        <h2 class="tegel__kop">JavaScript</h2>
+        <ul class="tegel__opsomming">
+
+            <!-- <a href="http://blanken5.home.xs4all.nl/javascriptCursus.html">intro JS</a> -->
+
+          <!-- <li><a href="http://blanken5.home.xs4all.nl/varen.html">varen: animatie met JS</a></li> -->
+          <li>
+            <a href="webSlidesPresentaties/objectEigenschappen.html">Eigenschappen van objecten uitvoeren</a>
+          </li>
+          <li>
+            <a href="webSlidesPresentaties/importJSON.html">JSON data importeren</a>
+          </li>
+          <li>
+            <a href="/donuChartSVG.html">donut-chart met SVG</a>
+          </li>
+          <li>
+            <a href="presReveal/opdrachtFunctionsThisDonaldDuck.html">Oefening this-keyword bij JS events</a>
+          </li>
+          <li>
+            <a href="modaalJS.html">modaal venster met JS</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/CSS_JSanimatie.html">CSS transitions getriggerd met JS</a>
+          </li>
+          <!-- <li><a href="http://blanken5.home.xs4all.nl/fotoShow.html">Fotoshow met JS</a></li> -->
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/quotesJS.html">citaten genereren met JavaScript</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/trainingFormulieren.html">Formulieren met JS</a>
+          </li>
+          <!-- <li>
+            <a href="https://blanken5.home.xs4all.nl/sorteerJSON.html">JSON-data sorteren</a>
+          </li> -->
+          <li>
+            <a href="jsonData.html">JSON-data importeren en uitvoeren</a>
+          </li>
+          <!-- <li>
+            <a href="https://blanken5.home.xs4all.nl/jsonBeterUItvoeren.html">JSON-data beter uitvoeren</a>
+          </li> -->
+          <li>
+            <a href="jsonData.html#localStorage">bestelformulier met Local Storage</a>
+          </li>
+          <li>
+            <a href="https://blanken5.home.xs4all.nl/intersectionObserver.html">Intersection Observer</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/ratingJS.html">een waarderingssysteem met sterren *****</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/kubusInstructie.html">interactieve kubus met interactie</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/menuInschuiven.html">een bijschuivend menu</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/fotoMuur.html">een fotomuur met JavaScript</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/modaalJS.html">een modaal venster JavaScript</a>
+          </li>
+          <!-- <li><a href="http://blanken5.home.xs4all.nl/binarioMaken.html">een puzzel maken</a></li> -->
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/kaartDraaien.html">kaarten draaien met JS</a>
+          </li>
+          <li>
+            <a href="webSlidesPresentaties/modaalObjPresentatie.html">modaal venster met JS object</a>
+          </li>
+          <li>
+            <a href="webSlidesPresentaties/GoogleMapsAPI.html">Google Maps API</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/SVGlijnAnimatie.html">lijnanimatie met JS</a>
+          </li>
+          <!-- <li>
+            <a href="http://blanken5.home.xs4all.nl/objectOrient.html">object geori&euml;renteerd JS</a>
+          </li> -->          
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/muisvolgers.html">muisvolgers met JS</a>
+          </li>
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/arrays.html">array's in JS</a>
+          </li>
+          <li>
+            <a href="presReveal/vueIntro.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1024px-Vue.js_Logo_2.svg.png" alt="logo Vue.js" style="width:1em; background: #ddd; padding:.1em; margin-right: 1em;">Introductie Vue.js </a>
+          </li>
+        </ul>
+      </article>
+
+      <div class="tegel">
+        <svg class="tegel__jQ" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480">
+          <g>
+            <circle class="animatiering" cx="240" cy="240" r="220"/>
+            <circle class="buitenring" cx="240" cy="240" r="218.5"/>
+            <circle class="binnenring" cx="240" cy="240" r="207.5"/>
+            <path
+              id="jQ-1"
+              class="cls-3"
+              d="M249.25,91.34l-4.69,6.44c-6.26,9.22-6.85,20.66-2.51,30.84A43.4,43.4,0,0,0,267,151.93c.46.17.91.32,1.37.47l.61.2a19,19,0,0,0,2,.56c30.28,5.85,38.49-15.53,40.68-18.68-7.2,10.36-19.3,12.83-34.13,9.23-1.17-.29-2.45-.69-3.57-1.09a43.23,43.23,0,0,1-4.27-1.79,44,44,0,0,1-7.47-4.57c-13.27-10.07-21.54-29.27-12.88-44.92Zm-34.35,7.5-8.68,12.24c-10.62,15.29-10,35.75-1.75,51.92a69,69,0,0,0,4.68,7.84,38.15,38.15,0,0,0,5.49,6.83c.77.84,1.56,1.67,2.37,2.48l.65.61c.79.77,1.59,1.52,2.42,2.26l.09.08,0,0c.92.81,1.88,1.58,2.85,2.34l.64.51c1,.74,2,1.48,3,2.17l.09.08c.44.32.91.6,1.36.9l.64.42c.73.46,1.46.9,2.21,1.33l.3.2,2,1.09.7.36,1.37.7.19.11c.94.46,1.89.89,2.85,1.31l.64.25c.77.32,1.53.65,2.31.95l1,.36c.7.26,1.43.51,2.14.75l1,.31a23.7,23.7,0,0,0,3.09.89C303.34,207.25,316,165,316,165c-11.41,16.44-33.52,24.27-57.1,18.15-1.06-.28-2.1-.57-3.13-.89l-.92-.31c-.73-.24-1.45-.49-2.17-.75l-1-.37c-.79-.3-1.57-.62-2.34-.94l-.64-.26c-1-.42-1.91-.87-2.85-1.33l-1.45-.73-.8-.42c-.62-.33-1.25-.68-1.84-1l-.42-.25c-.75-.44-1.48-.87-2.21-1.34l-.67-.44-1.42-.95c-1-.7-2-1.44-2.95-2.18l-.67-.5A66.17,66.17,0,0,1,211,138.57c-4.08-13.1-3.19-27.79,3.88-39.73Zm-42.8,15.48-11.46,14.55C146,150,147.77,177.45,159,199.89c.27.53.56,1.06.84,1.59.17.34.32.68.5,1l.33.59c.19.36.39.68.59,1,.35.62.72,1.23,1.09,1.84.2.34.38.67.58,1,.41.66.83,1.31,1.26,2l.53.8c.58.88,1.19,1.74,1.81,2.6l0,.08.3.42c.54.74,1.09,1.46,1.65,2.17l.61.79c.5.62,1,1.24,1.54,1.86l.55.7c.7.81,1.4,1.61,2.12,2.4l.06.05.08.09c.7.76,1.42,1.51,2.15,2.26l.67.69c.56.57,1.15,1.12,1.73,1.68l.69.67c.78.72,1.55,1.45,2.35,2.14l0,0,.39.36c.7.61,1.43,1.2,2.15,1.79l.86.69c.59.47,1.18.94,1.79,1.4l1,.72c.66.49,1.33,1,2,1.45l.73.51.19.14c.64.43,1.31.85,2,1.28l.83.56c1,.63,2,1.26,3,1.86l.84.48c.75.43,1.49.87,2.26,1.28.41.23.86.42,1.28.64s1.06.56,1.62.84l.39.19.64.31c.85.41,1.72.81,2.59,1.2l.56.25c1,.44,2,.85,3,1.25l.72.28c.95.36,1.9.73,2.85,1.06l.36.14c1,.37,2.11.7,3.18,1l.75.23a31.13,31.13,0,0,0,3.27.92c71,12.95,91.67-42.69,91.67-42.69-17.32,22.58-48.08,28.54-77.23,21.91-1.11-.24-2.19-.6-3.26-.92l-.81-.25c-1.05-.32-2.09-.64-3.13-1l-.41-.17c-.93-.32-1.85-.67-2.76-1l-.78-.31c-1-.39-2-.79-3-1.22l-.61-.25c-.85-.39-1.67-.77-2.51-1.18l-.73-.36c-.65-.31-1.28-.64-1.92-1l-1.31-.7c-.79-.43-1.57-.86-2.34-1.31l-.78-.42c-1-.6-2-1.23-3-1.87l-.81-.56c-.73-.46-1.46-.93-2.18-1.42l-.67-.5c-.69-.49-1.39-1-2.06-1.48l-.89-.67c-.62-.47-1.23-1-1.84-1.45l-.84-.67c-.77-.63-1.53-1.26-2.28-1.92l-.26-.19c-.81-.72-1.63-1.47-2.42-2.21l-.67-.67c-.59-.56-1.16-1.12-1.73-1.7l-.7-.67c-.72-.74-1.42-1.49-2.12-2.25l-.11-.12c-.73-.8-1.44-1.62-2.14-2.45l-.56-.67c-.53-.63-1.05-1.28-1.56-1.92l-.56-.7c-.61-.79-1.24-1.6-1.81-2.4-16.18-22.07-22-52.52-9.06-77.51Z"/>
+            <path
+              id="jQuery-2"
+              class="cls-3"
+              d="M275.78,258c-32.57,0-46.73,23.46-52.12,48.95-5.4,25.69,1.67,48.2,34.06,48l25.79,1.38,24.26-.09a2.32,2.32,0,0,0,2.11-1.63l4.18-15.93a1.26,1.26,0,0,0-1.28-1.66l-4-1.38-4.6,0a1,1,0,0,1-1.13-1.18l.11-.37s9-21.91,11.06-34.56C317,282.57,308.54,258,275.78,258Zm-2.66,19.74c18.24-.52,21.82,13,17.19,28.63l-.47,1.63v0l-3.66,13-3.67,13a2.41,2.41,0,0,1-2.17,1.65H260.93c-14.73,0-18.33-11.53-14.74-28.53,3.58-17.38,10.62-28.19,25.12-29.28C271.93,277.8,272.53,277.76,273.12,277.74Zm-74.19,0a2.23,2.23,0,0,0-2.08,1.66l-1.81,8-1.81,8a1.3,1.3,0,0,0,1.32,1.66h19.22a2.21,2.21,0,0,0,2.06-1.65l1.76-8,1.76-8a1.31,1.31,0,0,0-1.34-1.66Zm-5.27,24.83a2.22,2.22,0,0,0-2.06,1.66L189,315.79l-2.61,11.58c-.21.91-.54,2.41-.73,3.32l-2.51,11.82-2.52,11.82c-.19.91-.6,2.39-.9,3.28,0,0-3.48,10.34-9.32,10.22h-.73l-5.06-.1a2.21,2.21,0,0,0-2.08,1.62l-1.94,8.11-1.92,8.11a1.31,1.31,0,0,0,1.3,1.69c3.31,0,10.73.12,15.23.12,14.6,0,22.3-8.11,27.24-31.39l5.77-26.72,5.42-25.06a1.32,1.32,0,0,0-1.35-1.66Z"/>
+          </g>
+        </svg>
+      </div><article class="tegel__inhoud">
+        <svg class="sluitknop" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480"><path
+          class="vormSluitknop"
+          d="M240,21.5C119.33,21.5,21.5,119.33,21.5,240S119.33,458.5,240,458.5,458.5,360.67,458.5,240,360.67,21.5,240,21.5Zm147.08,292-73.54,73.54L240,313.54l-73.54,73.54L92.92,313.54,166.46,240,92.92,166.46l73.54-73.54L240,166.46l73.54-73.54,73.54,73.54L313.54,240Z"/>
+       </svg>
+        <h2 class="tegel__kop">jQuery</h2>
+        <ul class="tegel__opsomming">
+          <li>
+            <a href="kennismakenjQuery.html">kennismaken met jQuery</a>
+          </li>
+
+          <li>
+            <a href="sliderMaken.html">een eenvoudige slider maken</a>
+          </li>
+          <li>
+            <a href="lightbox.html">een lightbox</a>
+          </li>
+          <li>
+            <a href="highlights.html">delen van een afbeelding uitlichten met jQuery</a>
+            <a href="highlights2.html">Deel 2 uitlichten</a>
+          </li>
+          <li>
+            <a href="tabPanelen_jQuery.html">Tab-panelen in jQuery</a>
+          </li>
+          <li>
+            <a href="easing_jQui.html">Easing met jQuery UI</a>
+          </li>
+          <li>
+            <a href="formulierOpmaak.html">een inlog-formulier laden</a>
+          </li>
+          <!-- <li><a href="modaalvenster.html">een modaal venster</a></li> -->
+          <li>
+            <a href="stickyMenu.html">een sticky menu</a>
+          </li>
+          <li>
+            <a href="dragdrop.html">Drag &amp; drop (vormgevers)</a>
+          </li>
+          <li>
+            <a href="dragdrop2.html">Drag &amp; drop (developers)</a>
+          </li>
+          <li>
+            <a href="parallaxScrollen.html">parallax achtergronden</a>
+          </li>
+          <li>
+            <a href="jQ_mobile.html">een mobile site met jQuery Mobile</a>
+          </li>
+          <li>
+            <a href="jsonFotos.html">foto's ophalen met AJAX en JSON</a>
+          </li>
+          <li>
+            <a href="interactieveBeweging.html">interactieve afbeelding</a>
+          </li>
+          <li>
+            <a href="canvasAnimaties.html">animatie op canvas</a>
+          </li>
+        </ul>
+      </article>
+
+      <div class="tegel">
+        <svg class="tegel__wp" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480">
+          <g>
+            <circle class="animatiering" cx="240" cy="240" r="220"/>
+            <circle class="buitenring" cx="240" cy="240" r="218.5"/>
+            <circle class="binnenring" cx="240" cy="240" r="207.5"/>
+            <path class="cls-3" d="M92.38,239.5a147.14,147.14,0,0,0,82.91,132.4L105.11,179.63A146.56,146.56,0,0,0,92.38,239.5Z"/>
+            <path
+              class="cls-3"
+              d="M338.8,232.07c0-18.18-6.53-30.77-12.13-40.57-7.46-12.12-14.45-22.38-14.45-34.5,0-13.52,10.26-26.11,24.71-26.11.65,0,1.27.08,1.9.12A147.08,147.08,0,0,0,116.57,158.7c3.45.1,6.71.17,9.47.17,15.39,0,39.21-1.86,39.21-1.86,7.93-.47,8.86,11.18.94,12.11,0,0-8,.94-16.84,1.41l53.57,159.35,32.2-96.56-22.92-62.8c-7.92-.46-15.43-1.4-15.43-1.4-7.93-.47-7-12.59.93-12.12,0,0,24.3,1.87,38.75,1.87,15.39,0,39.21-1.87,39.21-1.87,7.93-.47,8.87,11.18.94,12.12,0,0-8,.94-16.84,1.4l53.17,158.14,14.67-49C334,259.28,338.8,244.67,338.8,232.07Z"/>
+            <path class="cls-3" d="M242.07,252.36,197.93,380.62a147.1,147.1,0,0,0,90.41-2.34,13.85,13.85,0,0,1-1-2Z"/>
+            <path class="cls-3" d="M368.57,168.92a111.45,111.45,0,0,1,1,15.12c0,14.93-2.79,31.71-11.19,52.7L313.44,366.66a147.11,147.11,0,0,0,55.13-197.74Z"/>
+            <circle class="wp-ring" cx="240" cy="240" r="167"/>
+          </g>
+        </svg>
+      </div><article class="tegel__inhoud">
+        <svg class="sluitknop" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480"><path
+          class="vormSluitknop"
+          d="M240,21.5C119.33,21.5,21.5,119.33,21.5,240S119.33,458.5,240,458.5,458.5,360.67,458.5,240,360.67,21.5,240,21.5Zm147.08,292-73.54,73.54L240,313.54l-73.54,73.54L92.92,313.54,166.46,240,92.92,166.46l73.54-73.54L240,166.46l73.54-73.54,73.54,73.54L313.54,240Z"/>
+       </svg>
+        <h2 class="tegel__kop">WordPress</h2>
+        <ul class="tegel__opsomming">
+          <li>
+            <a href="http://blanken5.home.xs4all.nl/WPinstallerenMacloud.html" title="WordPress installeren op hosts.ma-cloud">WordPress installeren op hosts.ma-cloud</a>
+          </li>
+          <li>
+            <a href="WP_themaMaken.html#instructie" title="WordPress installeren op je local host">WordPress installeren op jouw local host (1 instructie uit een hele reeks)</a>
+          </li>
+          <li>
+            <a href="wordPressInstructies.html" title="werken met WordPress ">een site met WordPress</a>
+          </li>
+          <li>
+            <a href="WP_themaMaken.html" title="een WP-thema maken">een thema maken vanaf de bodem</a>
+          </li>
+          <li>
+            <a href="wordPressChild.html" title="Een childtheme maken voor WordPress">Een childtheme maken</a>
+          </li>
+          <li>
+            <a href="http://bla.hosts.ma-cloud.nl/?s=wordpress">blogposts over WordPress</a>
+          </li>
+        </ul>
+      </article>
+
+      <div class="tegel">
+        <svg class="tegel__ma" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480">
+          <g>
+            <circle class="animatiering" cx="240" cy="240" r="220"/>
+            <circle class="buitenring" cx="240" cy="240" r="218.5"/>
+            <circle class="binnenring" cx="240" cy="240" r="207.5"/>
+            <rect class="cls-3 Ma-rechthoek" x="114" y="115" width="252" height="252"/>
+            <path class="cls-4 Ma-m" d="M161.25,241h37l17.88,81.91h.28L234.89,241h36.6V351.25H247.66V265.63h-.29l-20,85.62H205.09l-20.57-85.62h-.29v85.62h-23Z"/>
+            <path
+              class="cls-5 Ma-a"
+              d="M350.38,335.93v15.32H330.76a29.64,29.64,0,0,1-1.52-7.59h0c-3.59,5.8-14.05,9.52-20.74,9.52-14.08,0-24.56-7.73-24.56-21.81,0-17.66,14.21-23.87,37.67-27.18l7.74-1.1V297c0-5.52-4.29-7.86-10.09-7.86-6.9,0-10.21,2.48-11.31,9.8h-20.7c.69-21.12,20.28-23.05,30.22-23.05,20,0,32.78,4.69,32.91,21.25Zm-21-20.42-14.49,4.14c-5.38,1.52-10.35,3.58-10.35,9.52,0,5.79,4.83,8.28,10.07,8.28,8.42,0,14.77-5.66,14.77-16.84Z"/>
+          </g>
+        </svg>
+      </div><article class="tegel__inhoud">
+        <svg class="sluitknop" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480"><path
+          class="vormSluitknop"
+          d="M240,21.5C119.33,21.5,21.5,119.33,21.5,240S119.33,458.5,240,458.5,458.5,360.67,458.5,240,360.67,21.5,240,21.5Zm147.08,292-73.54,73.54L240,313.54l-73.54,73.54L92.92,313.54,166.46,240,92.92,166.46l73.54-73.54L240,166.46l73.54-73.54,73.54,73.54L313.54,240Z"/>
+       </svg>
+        <h2 class="tegel__kop">Mediacollege Amsterdam</h2>
+        <ul class="tegel__opsomming">
+          <li>
+            <a href="https://www.ma-net.nl/default.aspx">site van Ma</a>
+          </li>
+          <li>
+            <a href="https://mediacollegeamsterdam.sharepoint.com/">Sharepoint Ma</a>
+          </li>
+          <li>
+            <a href="https://webmail.ma-web.nl/owa/auth/logon.aspx?url=https://webmail.ma-web.nl/owa/&amp;reason=0">webmail</a>
+          </li>
+          <li>
+            <a href="http://mamedia.nl">Ma-media</a>
+          </li>
+          <li>
+            <a href="https://mediacollege.magister.net/">Magister</a>
+          </li>
+           <li>
+              <a href="https://mediacollegeint.swp.nl/5.7.29.1/Magister.aspx">Magister intern</a>
+           </li>
+          <li>
+            <a href="http://welkombijma.nl/opleidingen/media-en-gamedeveloper/">Welkom bij Ma: Mediadeveloper</a>
+          </li>
+          <li>
+            <a href="http://mamd.sites.ma-cloud.nl/">site Mediadeveloper</a>
+          </li>
+          <li>
+            <a href="https://www.ma-plein.nl/">Ma plein</a>
+          </li>
+        </ul>
+
+      </article>
+
+      <div class="tegel">
+        <svg class="tegel__t-ringen" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480">
+          <g>
+            <circle class="animatiering" cx="240" cy="240" r="220"/>
+            <circle class="buitenring" cx="240" cy="240" r="218.5"/>
+            <circle class="binnenring" cx="240" cy="240" r="207.5"/>
+            <path class="cls-3 c1" d="M238,221.72A22.28,22.28,0,1,0,260,244,22.15,22.15,0,0,0,238,221.72Zm0,32.57A10.29,10.29,0,1,1,248.17,244,10.23,10.23,0,0,1,238,254.29Z"/>
+            <path class="cls-3 c2" d="M238,202.34c-22.74,0-41.18,18.65-41.18,41.66s18.44,41.66,41.18,41.66S279.18,267,279.18,244,260.74,202.34,238,202.34ZM238,271a27,27,0,1,1,26.64-27A26.8,26.8,0,0,1,238,271Z"/>
+            <path class="cls-3 c3" d="M238,182a62,62,0,1,0,62,62A62,62,0,0,0,238,182Zm0,108a46,46,0,1,1,46-46A46,46,0,0,1,238,290Z"/>
+            <path class="cls-3 c4" d="M238,160.68A83.32,83.32,0,1,0,321.32,244,83.32,83.32,0,0,0,238,160.68Zm0,149.2A65.88,65.88,0,1,1,303.88,244,65.87,65.87,0,0,1,238,309.88Z"/>
+            <path class="cls-3 c5" d="M238,138.4A105.6,105.6,0,1,0,343.6,244,105.6,105.6,0,0,0,238,138.4Zm0,192.8A87.2,87.2,0,1,1,325.2,244,87.2,87.2,0,0,1,238,331.2Z"/>
+            <path class="cls-3 c6" d="M238,117.57A126.43,126.43,0,1,0,364.43,244,126.42,126.42,0,0,0,238,117.57Zm0,235.48A109.05,109.05,0,1,1,347.05,244,109,109,0,0,1,238,353.05Z"/>
+            <path class="cls-3 c7" d="M238,96.74A147.26,147.26,0,1,0,385.26,244,147.26,147.26,0,0,0,238,96.74Zm0,277.55A130.29,130.29,0,1,1,368.29,244,130.3,130.3,0,0,1,238,374.29Z"/>
+            <path class="cls-3 c8" d="M238,73A171,171,0,1,0,409,244,171,171,0,0,0,238,73Zm0,322.29A151.29,151.29,0,1,1,389.29,244,151.3,151.3,0,0,1,238,395.29Z"/>
+            <path
+              class="cls-5"
+              d="M154.26,263.11Q138.63,277.95,130.33,308c0,.53-.73.79-2.18.79s-2.18-.39-2.18-1.18q1.59-15.44,3.56-39.76t2-36.58c0-1.32.73-2,2.18-2s2.17.66,2.17,2q0,8.7,22.15,8.7,34,1.18,79.51,1.19,23.32,0,49.44-.8l26.89-.39q15,0,22-2t8.9-7.91c.25-1.05,1.05-1.58,2.37-1.58s2,.53,2,1.58q-1.2,12.27-2.38,37.18t-1.18,40.35c0,.79-.73,1.18-2.18,1.18s-2.31-.39-2.57-1.18q-4-30.47-18.59-44.9t-39.55-14.43q-11.08,0-16.42,2a11.31,11.31,0,0,0-7.12,6.93q-1.77,4.95-1.78,15.62V414H218.93V272c0-6.86-.67-11.87-2-15a12.05,12.05,0,0,0-7.12-6.73q-5.15-2-15.82-2Q169.88,248.28,154.26,263.11Z"/>
+          </g>
+        </svg>
+      </div><article class="tegel__inhoud">
+         <svg class="sluitknop" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480"><path
+           class="vormSluitknop"
+           d="M240,21.5C119.33,21.5,21.5,119.33,21.5,240S119.33,458.5,240,458.5,458.5,360.67,458.5,240,360.67,21.5,240,21.5Zm147.08,292-73.54,73.54L240,313.54l-73.54,73.54L92.92,313.54,166.46,240,92.92,166.46l73.54-73.54L240,166.46l73.54-73.54,73.54,73.54L313.54,240Z"/>
+        </svg>
+        <h2 class="tegel__kop">
+           Blog
+        </h2>
+        <a href="http://bla.hosts1.ma-cloud.nl/blog/" title="naar het WordPress-blog van Theo">
+
+          <div style="position: relative; overflow: hidden; width: 25em;">
+            <svg class="tegel__t-ringen" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480">
+                <circle class="animatiering" cx="240" cy="240" r="220"/>
+                <circle class="buitenring" cx="240" cy="240" r="218.5"/>
+                <circle class="binnenring" cx="240" cy="240" r="207.5"/>
+                <path class="cls-3 c1" d="M238,221.72A22.28,22.28,0,1,0,260,244,22.15,22.15,0,0,0,238,221.72Zm0,32.57A10.29,10.29,0,1,1,248.17,244,10.23,10.23,0,0,1,238,254.29Z"/>
+                <path class="cls-3 c2" d="M238,202.34c-22.74,0-41.18,18.65-41.18,41.66s18.44,41.66,41.18,41.66S279.18,267,279.18,244,260.74,202.34,238,202.34ZM238,271a27,27,0,1,1,26.64-27A26.8,26.8,0,0,1,238,271Z"/>
+                <path class="cls-3 c3" d="M238,182a62,62,0,1,0,62,62A62,62,0,0,0,238,182Zm0,108a46,46,0,1,1,46-46A46,46,0,0,1,238,290Z"/>
+                <path class="cls-3 c4" d="M238,160.68A83.32,83.32,0,1,0,321.32,244,83.32,83.32,0,0,0,238,160.68Zm0,149.2A65.88,65.88,0,1,1,303.88,244,65.87,65.87,0,0,1,238,309.88Z"/>
+                <path class="cls-3 c5" d="M238,138.4A105.6,105.6,0,1,0,343.6,244,105.6,105.6,0,0,0,238,138.4Zm0,192.8A87.2,87.2,0,1,1,325.2,244,87.2,87.2,0,0,1,238,331.2Z"/>
+                <path class="cls-3 c6" d="M238,117.57A126.43,126.43,0,1,0,364.43,244,126.42,126.42,0,0,0,238,117.57Zm0,235.48A109.05,109.05,0,1,1,347.05,244,109,109,0,0,1,238,353.05Z"/>
+                <path class="cls-3 c7" d="M238,96.74A147.26,147.26,0,1,0,385.26,244,147.26,147.26,0,0,0,238,96.74Zm0,277.55A130.29,130.29,0,1,1,368.29,244,130.3,130.3,0,0,1,238,374.29Z"/>
+                <path class="cls-5 c8" d="M238,73A171,171,0,1,0,409,244,171,171,0,0,0,238,73Zm0,322.29A151.29,151.29,0,1,1,389.29,244,151.3,151.3,0,0,1,238,395.29Z"/>
+                <path class="cls-5"
+                  d="M154.26,263.11Q138.63,277.95,130.33,308c0,.53-.73.79-2.18.79s-2.18-.39-2.18-1.18q1.59-15.44,3.56-39.76t2-36.58c0-1.32.73-2,2.18-2s2.17.66,2.17,2q0,8.7,22.15,8.7,34,1.18,79.51,1.19,23.32,0,49.44-.8l26.89-.39q15,0,22-2t8.9-7.91c.25-1.05,1.05-1.58,2.37-1.58s2,.53,2,1.58q-1.2,12.27-2.38,37.18t-1.18,40.35c0,.79-.73,1.18-2.18,1.18s-2.31-.39-2.57-1.18q-4-30.47-18.59-44.9t-39.55-14.43q-11.08,0-16.42,2a11.31,11.31,0,0,0-7.12,6.93q-1.77,4.95-1.78,15.62V414H218.93V272c0-6.86-.67-11.87-2-15a12.05,12.05,0,0,0-7.12-6.73q-5.15-2-15.82-2Q169.88,248.28,154.26,263.11Z"/>
+            </svg>
+          </div>
+          Naar mijn blog op hosts.ma-cloud.
+        </a>
+      </article>
+    </div>
+    <!-- einde wrapper -->
+    <footer>
+      <span class="footer__blok">
+         Theo den Blanken
+         <a href="https://github.com/Theo-denBlanken?tab=repositories" target="_blank" title="werk op Github">
+           <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480"><path
+             class="icon--github"
+             d="M240,17.69c-125.86,0-227.93,102.05-227.93,228,0,100.7,65.31,186.13,155.89,216.28,11.4,2.09,15.56-4.95,15.56-11,0-5.41-.2-19.75-.31-38.77-63.4,13.78-76.78-30.55-76.78-30.55-10.37-26.33-25.31-33.34-25.31-33.34-20.69-14.15,1.57-13.86,1.57-13.86,22.87,1.61,34.91,23.49,34.91,23.49,20.33,34.83,53.35,24.77,66.34,18.94,2.07-14.73,7.95-24.78,14.47-30.47-50.62-5.76-103.83-25.31-103.83-112.66,0-24.88,8.88-45.23,23.46-61.16-2.34-5.77-10.16-28.94,2.24-60.32,0,0,19.14-6.13,62.68,23.36a216.12,216.12,0,0,1,114.13,0c43.51-29.49,62.62-23.36,62.62-23.36,12.43,31.38,4.61,54.55,2.26,60.32,14.61,15.93,23.43,36.28,23.43,61.16,0,87.57-53.29,106.84-104.07,112.48,8.19,7,15.48,20.95,15.48,42.21,0,30.47-.28,55.06-.28,62.53,0,6.09,4.1,13.19,15.67,11,90.5-30.2,155.75-115.58,155.75-216.25C467.94,119.74,365.87,17.69,240,17.69Z"/>
+           </svg>
+         </a>
+         <a href="https://twitter.com/theodenblanken/" target="_blank" title="naar de Twitter-pagina van Theo">
+           <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480 480"><path
+             class="icon--twitter"
+             d="M465.09,100.38a184.78,184.78,0,0,1-53,14.55,92.6,92.6,0,0,0,40.61-51.1A184.9,184.9,0,0,1,394,86.24a92.45,92.45,0,0,0-157.38,84.24A262.2,262.2,0,0,1,46.25,74,92.45,92.45,0,0,0,74.83,197.29,92,92,0,0,1,33,185.73c0,.39,0,.78,0,1.17a92.43,92.43,0,0,0,74.09,90.56A92.49,92.49,0,0,1,65.37,279a92.44,92.44,0,0,0,86.28,64.14A186.33,186.33,0,0,1,14.91,381.42a261.4,261.4,0,0,0,141.58,41.5c169.88,0,262.78-140.73,262.78-262.78q0-6-.27-11.95a187.58,187.58,0,0,0,46.09-47.81Z"/></svg>
+         </a>
+      </span>
+      <span class="footer__blok"><a href="http://validator.w3.org/check?uri=referer" target="_blank">
+           <img src="https://blanken5.home.xs4all.nl/afb/valid-html5-blue.png" alt="Valide HTML5"></a>
+         <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+           <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valide CSS"></a>
+        </span>
+    </footer>
+    <script>
+    // pak de animatieringen om ze willekeurig te draaien
+    let animatieringen = document.querySelectorAll('.animatiering');
+
+    for (let i = 0; i < animatieringen.length; i++) {
+       hoek = Math.floor(360 * Math.random());
+       animatieringen[i].style.transform = 'rotate(' + hoek + 'deg)';
+    }
+
+    // als er op een tegel wordt geklikt, moet het article daaropvolgend de class tegel__inhoud--active krijgen
+    let alleTegels = document.querySelectorAll('.tegel');
+
+    const verwijderActiveClass = () => {
+       for (let i = 0; i < alleTegels.length; i++) {
+          let deInhoud = alleTegels[i].nextSibling;
+          if (deInhoud.classList.length > 1) {
+             alleTegels[i].classList.remove('tegel--active');
+             deInhoud.classList.remove('tegel__inhoud--active');
+          }
+       }
+    }
+
+
+    const voegActivesToe = (e) => {
+       verwijderActiveClass();
+       e.currentTarget.classList.add('tegel--active');
+       e.currentTarget.nextElementSibling.classList.add('tegel__inhoud--active');
+    }
+
+    for (let i = 0; i < alleTegels.length; i++) {
+       alleTegels[i].addEventListener('click', voegActivesToe, false);
+    }
+
+    // ook een klik op de sluitknop verwijdert de active classes
+    let sluitknoppen = document.querySelectorAll('.sluitknop');
+    for (let i = 0; i < sluitknoppen.length; i++) {
+       sluitknoppen[i].addEventListener('click', verwijderActiveClass);
+    }
+
+    // Google analitics
+    (function(i, s, o, g, r, a, m) {
+       i['GoogleAnalyticsObject'] = r;
+       i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+       }, i[r].l = 1 * new Date();
+       a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+       a.async = 1;
+       a.src = g;
+       m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-45793530-1', 'xs4all.nl');
+    ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

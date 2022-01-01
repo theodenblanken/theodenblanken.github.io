@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8">
+  <title>Frontend | SVG voor presentatie van data: donut-chart</title>
+  <meta name="keywords" content="Frontend, HTML, CSS, JS">
+  <meta name="description" content="Lessen front-end voor mediadevelopers">
+  <meta name="author" content="Theo den Blanken">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/stijlTheo.css">
+  <script crossorigin="anonymous" src="https://kit.fontawesome.com/1a91c75a80.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <h1 id="paginaKop" class="paginaKop">Kop 1</h1>
+    <div class="tagline" id="tagline">tagline</div>
+    <svg id="ringen" class="ringen"></svg>
+  </header>
+
+  <nav class="nav" id="nav">
+    <label for="menu-toggle" class="nav__label"><span class="nav__labelText">&#xf0c9;</span></label>
+    <input type="checkbox" id="menu-toggle" class="nav__cb" checked>
+    <ul class="nav__list">
+      <li>
+        <a class="nav__item nav__item--active" href=index.html>home</a>
+      </li>
+      <li>
+        <a class="nav__item nav__item--active" href=#>inleiding</a>
+      </li>
+      <li>
+        <a class="nav__item nav__item--active" href=#instructie>instructie</a>
+      </li>
+      <li>
+        <a class="nav__item nav__item--active" href=#bonus>bonusopdracht</a>
+      </li>
+      <li>
+        <a class="nav__item nav__item--active" href=#inleveren>inleveren</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+      
+    <div class="inhoud" id="inleiding">
+      <article class="inhoud__tekst">
+        
+          <h3>Leerdoelen</h3>
+          <p>In dit project wordt veel met data gewerkt. <br>
+            In deze reeks leer je hoe data in een donut-chart kunt plaatsen die je zelf helemaal van scratch hebt opgebouwd.</p>
+          <ul>
+            <li> SVG met eigenschappen van cirkels, met name de <code>stroke-dasharray</code></li>
+            <li><span class="fab fa-js"></span>stijlen met JavaScript</li>
+            <li><span class="fab fa-js"></span> animatie in JavaScript met <code>setInterval()</code></li>
+            <li><span class="fab fa-js"></span>herhaling arrow-functie-notatie</li>
+          </ul>
+          
+      </article>
+      <div class="inhoud__tekst" style="padding-top: 3em;">
+        <p>
+          <img src="http://bla.hosts1.ma-cloud.nl/blog/wp-content/uploads/2018/02/svg-logo.png" alt="logo SVG" style="width: 8em; float: left; margin-right: 1em;"> <br>
+          Bronnen / Credits: </p>
+          <ul>
+            <li><a href="https://medium.com/@heyoka/scratch-made-svg-donut-pie-charts-in-html5-2c587e935d72">https://medium.com/@heyoka/scratch-made-svg-donut-pie-charts-in-html5-2c587e935d72</a></li>
+            <li><a href="https://javascript.info/js-animation">https://javascript.info/js-animation</a></li>
+          </ul>
+          
+          
+        
+      </div>
+    </div>
+
+
+
+
+    <div class="inhoud" id="opdracht">
+      <article class="inhoud__tekst">
+        <h3>Donutchart met SVG stap 0: het resultaat
+          (00:01:38)</h3>
+        <p>Een donutchart is een manier om groottes van en waarde weer te geven. Je ziet de rand van een cirkel groeien naarmate de waarde in het midden toeneemt. <br>
+          Het gat in de donut blijkt transparant te zijn. <br>
+          De oplossing is met SVG's gedaan inclusief de tekst in het midden. Dat maakt het mogelijk de chart flexibel in te zetten: hij past zijn grootte gemakkelijk aan, ook die van de tekst in het midden, die selecteerbaar is.</p>
+      </article>
+      <div class="inhoud__IF-houder">
+        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/hEjZRRyd7sI?rel=0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+    <div class="inhoud">
+      <article class="inhoud__tekst">
+        <h3>Donutchart met SVG stap 1: cirkels met SVG
+          (00:09:38)</h3>
+        <p>Een donut chart laat door een boogsegment zien hoe groot een waarde is. <br>
+          Daarvoor zijn cirkels met SVG een goede oplossing: ze schalen goed en lijnen (stroke) in SVG kunnen met stippellijnen een boog beschrijven. Met het attribuut <code>stroke-dasharray</code> kun je de lengte van een streepje in de stippellijn aangeven, maar met een tweede waarde ook de tussenruimte tussen twee streepjes. <br>
+          De strategie is er dan om twee cirkels weer te geven boven op elkaar. De onderste is compleet rond en de bovenste wordt, het streepje van de stippellijn zo lang dat je de gewenste boog krijgt. 
+        </p>
+        <p>De slimmigheid is hier ook dat je de omtrek van de cirkel op 100 stelt en deze verdeelt in een deel streep en een deel tussenruimte. <br>
+          In SVG beschrijf je de cirkel door met <code>cx</code> en <code>cy</code> het middelpunt neer te zetten en met <code>r</code> de straal van de cirkel. <br>
+          Deze straal is voor een omtrek van 100 dus 100 gedeeld door 2 keer &pi; en dat is 15.91549430918954. De <code>fill</code> is de vulkleur, en die maken we transparant. De stroke heeft natuurlijk een kleur maar ook een dikte, die je als attribuut meegeeft. <br>
+          Het attribuut <code>stroke-dashoffset</code> is 75 en die bepaalt hoever het begin van de streep wordt verplaatst. Dat is driekwart van 100, zodat de boog onderin begint en linksom draait.</p>
+      </article>
+      <div class="inhoud__IF-houder">
+        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/Bf5mMOv3OKw?rel=0"  allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+
+
+    <div class="inhoud">
+      <article class="inhoud__tekst">
+        <h3>Donutchart met SVG stap 2: tekst in het midden
+          (00:07:24)</h3>
+        <p>Een donutchart laat de waarde in het midden zien. <br>
+          daarvoor maken we de tekst met het text-element in de svg. Die kun je dan op een plek in het midden plaatsen door gebruik te maken van attributen <code>x</code> en <code>y</code>. <br>
+          We hebben een tekst voor de waarde en een voor de eenheid. <br>
+          We plaatsen binnen een groeperingselement <code>g</code>. <br>
+          Het graden symbool &deg; voor de temperatuur maak je met de HTML-entiteit <code>&amp;deg;</code> <br>
+          Met css kun je dan tekstgrootte en lettertype instellen. De tekstkleur met de css-eigenschap bij svg: <code>fill</code>. <br>
+          Het voordeel van deze aanpak is dat het geheel mooi mee-schaalt als je de grootte van het geheel wijzigt. 
+        </p>
+      </article>
+      <div class="inhoud__IF-houder">
+        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/Lh9Y6E40Nrs?rel=0"  allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+
+    <div class="inhoud">
+      <article class="inhoud__tekst">
+        <h3>Donutchart met SVG stap 3: temperatuur uitvoeren
+          (00:10:06)</h3>
+        <p>
+          De temperatuur is nu hard-coded in de SVG en de grootte van de boog eveneens. <br>
+We maken een script met de temperatuur als variabele en een functie <code>uitvoeren()</code>, die deze 
+temperatuur weergeeft en de booglengte aanpast. Die functie krijgt een parameter voor de temperatuur. <br>
+De tekstuitvoer van de temperatuur gaat eenvoudig door het SVG-element met zijn <code>id</code> in een DOM-variabele te stoppen en met de eigenschap <code></code> die inhoud van de temperatuur in te vullen. <br>
+Voor de lengte van de boog nemen we een maximum-temperatuur van bijvoorbeeld 25 graden. Als dat het maximum is dan is de cirkel vol. We delen dus de temperatuur door het maximum en vermenigvuldigen dat met 100. Dat doen we natuurlijk in een variabele. <br>
+Als de cirkel ook een DOM variabele is dan kun je in de functie deze ook stijlen met <code>.style.dashArray</code>. De waarde daarvan kan als string-literal worden weggeschreven met twee waarden met een spatie (komma zou ook wel mogen) ertussen. De eerste waarde is <em>de lengte</em> van boog de tweede is dan <code>100 - die lengte</code> van de boog. <br>
+De gemaakt functie kun je dan aanroepen met de temperatuur. <br>
+Check of de wijziging van de temperatuurvariabele ook het verwachte resultaat geeft.
+        </p>
+      </article>
+      <div class="inhoud__IF-houder">
+        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/zSf3uOHM4VU?rel=0"  allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+    <div class="inhoud">
+      <article class="inhoud__tekst">
+        <h3>Donutchart met SVG stap 4: een slider wijzigt de chart
+          (00:04:23)</h3>
+        <p>Die variabele in de vorige video is natuurlijk niet voor niets gemaakt. <br>
+          Je kunt nu eenvoudig een slider maken, die deze variabele wijzigt. <br>
+          We maken een slider, die van het geheel een thermostaat maakt. <br> 
+          De slider is een input-element met het type <code>range</code>. De andere attributen zijn: </p>
+          <ul>
+            <li><code>min</code> (met hier de waarde 1),</li>
+            <li><code>max</code> (met de waarde 30 en dus ook de uitvoer hierop aanpassen),</li>
+            <li><code>step</code> (het aantal tussenstappen die we bij hele graden op 1 zetten),</li>
+            <li><code>id</code> (voor het script) en</li>
+            <li><code>value</code> (voor een beginwaarde die we hier op 18 zetten).</li>
+          </ul>
+          <p>Om deze slider in het script te laten werken, geven we het DOM-element een <code>.addEventListener</code>. Het eerste argument is bij sliders <code>change</code>, die reageert dan op elke verandering, en het tweede argument een functie, die de uitvoeren-functie aanroept met de waarde van de slider als argument. 
+        </p>
+      </article>
+      <div class="inhoud__IF-houder">
+        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/VSRVpxzTm2A?rel=0"  allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+
+
+    <div class="inhoud">
+      <article class="inhoud__tekst">
+        <h3>Donutchart met SVG stap 5: animeer de chart
+          (00:08:00)</h3>
+        <p>
+          Met <code>setInterval()</code> wordt de chart geanimeerd door JavaScript. <br>
+De werkwijze met <code>setInterval()</code> is niet zo voor zware animaties geschikt, omdat het dan teveel van de verwerking van het JavaScript, maar omdat dit kleine zijn, is het wel goed in te zetten hier. <br>
+Met <code>setInterval()</code> voeren we de temperatuur voor elke graad vanaf 0 uit en verhogen die temperatuur vervolgens met 1 graad en dat herhaalt het script dan na een heel kort momentje (dat je zelf instelt) tot de beoogde temperatuur is bereikt. Is dat bereikt, dan stop je met <code>clearInterval()</code> het proces.
+        </p>
+      </article>
+      <div class="inhoud__IF-houder">
+        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/VJsPPUNbT5U?rel=0"  allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+
+
+
+
+
+
+
+    <!--
+
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3></h3>
+          <p>
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/xxxx?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+    -->
+
+    <hr>
+
+    <div class="inhoud" id="inleveren">
+      <article class="inhoud__tekst">
+        <h4>Inleveren</h4>
+        <ul>
+          <li>Plaats het resultaat op hosts.ma-cloud.nl</li>
+          <li>Plaats jouw bestanden op een GitHub-repositry <span class="fab fa-github"></span> en</li>
+          <li>Voeg de link naar de live versie toe aan de README.md</li>
+          <li>Lever de GitHub-link in ms-Teams <span class="fab fa-github"></span>
+          </li>
+        </ul>
+      </article>
+      <div id="bonus">
+          <h4>Bonusopdracht</h4>
+          Voeg en knop toe aan deze opdracht, waarbij een klik op deze knop de animatie laat herstarten.
+
+      </div>
+
+
+    </div>
+
+  </main>
+
+  <footer>
+
+    <span class="social">
+        Delen:
+        <a href="#" class="social__item social__item--facebook" id="fb_link"></a>
+        <a href="#" class="social__item social__item--google" id="gl_link"></a>
+        <a href="#" class="social__item social__item--twitter" id=twt_link></a>
+      </span>
+    <span>&copy; Theo den Blanken</span>
+    <span><a href="http://validator.w3.org/check?uri=referer" target="_blank" onclick="this.href='http://validator.w3.org/check?uri=' + document.URL">
+        <img src="afb/valid-html5-blue.png" alt="Valide HTML5" style="height: 1em; padding: 0 0 0 1em;"></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank" onclick="this.href='http://jigsaw.w3.org/css-validator/validator?uri=' + document.URL">
+        <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS" style="height: 1em; padding: 0 0 0 1em;">
+    </a></span>
+  </footer>
+
+  <script src="scripts/social.js"></script>
+  <script src="scripts/headerAnimatie.js"></script>
+  <script src="scripts/activeLink.js"></script>
+  <script src="scripts/smoothScrolling.js"></script>
+</body>
+
+</html>

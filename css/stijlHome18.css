@@ -1,0 +1,425 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-boxsizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    background-color: #555;
+    color: #444;
+    color: #0672a8;
+    font-family: sans-serif;
+/*     van http://bennettfeely.com/gradients/
+    background:
+	repeating-linear-gradient(
+		45deg,
+		#2389AA,
+		#33C7F6 1em,
+		#999 1em,
+		#0672a8 2em,
+		#fff 2em,
+		#fff 3em,
+		#7CC5D0 3em,
+		#7CC5D0 4em,
+		#00A2E1 4em,
+		#00A2E1 5em,
+		#0085C8 5em,
+		#0085C8 6em
+	),
+	repeating-linear-gradient(
+		-45deg,
+		#2389AA,
+		#33C7F6 1em,
+		#999 1em,
+		#0672a8 2em,
+		#fff 2em,
+		#fff 3em,
+		#7CC5D0 3em,
+		#7CC5D0 4em,
+		#00A2E1 4em,
+		#00A2E1 5em,
+		#0085C8 5em,
+		#0085C8 6em
+	);
+
+background-blend-mode: multiply;    */
+}
+#wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+    position: relative;
+/*    background-image: url(../afb/zwartpuntje.gif);*/
+    background-position: right;
+    background-repeat: repeat-y;
+    background-color: #eee;
+    box-shadow: inset 0 0 13px #333;
+/*    border: .5em solid #333;*/
+}
+#wrapper article {
+    vertical-align: top;
+    display: inline-block;
+    width: 50%;
+    margin-bottom: -4px;
+}
+.tegel {
+    /* width: 100%; */
+    background-color: #2389aa;
+    text-align: center;
+    padding: 9px;
+    z-index: 50;
+    box-sizing: border-box;
+    border: 1px solid red;
+    position: relative;
+/*    border: .5em solid #333;*/
+}
+.tegel svg, .tegel img {
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    max-height: 300px;
+    position: relative;
+}
+.tegel:hover {
+    background-color: #0672a8;
+}
+#svg2:hover #path3115 {
+  fill: #fff;
+}
+/*      de pijl       de pijl      de pijl      de pijl      de pijl                */
+.tegel::after {
+    content: "";
+    position: relative;
+    bottom: -15px;
+    opacity: 0;
+    left: 50px;
+    color: black;
+    border-top: 2em solid #0672a8;
+    border-right: 2em solid transparent;
+    border-left: 2em solid transparent;
+    -webkit-transition: bottom 1s;
+    -moz-transition: bottom 1s;
+    -o-transition: bottom 1s;
+    transition: bottom 1s;
+    z-index: 70;
+}
+#wrapper .info {
+    width: 150%;
+    padding: 3em 0;
+    margin: 0 10%;
+    position: relative;
+    float: left;
+    opacity: 0;
+    height: 0;
+    font-size: 0;
+}
+#wrapper .info h1 {
+    margin-bottom: .5em;
+
+}
+#wrapper .info p, section .info ul {
+    margin-bottom: 2em;
+    line-height: 140%;
+}
+#wrapper .info ul {
+    margin-left: 20px;
+}
+#wrapper .info li {
+    list-style: none;
+    line-height: 140%;
+}
+#wrapper .info h2 {
+    text-align: center;
+    font-variant: small-caps;
+    letter-spacing: 1.1em;
+    padding: 1.2em;
+}
+
+#wrapper .info ul li:first-child {
+    margin-top: -7px;
+}
+#wrapper .info li a {
+    display: block;
+    margin-top: .4em;
+    padding: .4em;
+    background: #2389aa;
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: 0.4s background-color;
+    -moz-transition: 0.4s background-color;
+    -o-transition: 0.4s background-color;
+    transition: 0.4s background-color;
+}
+#wrapper .info li:hover a {
+    background: #0672a8;
+}
+/*    elke even inhoud moet naar links worden verschoven.     */
+article:nth-child(2n+1) .info {
+    left: 0;
+}
+article:nth-child(2n+2) .info {
+    left: -100%;
+}
+
+#wrapper article:target .info {
+    height: auto;
+    font-size: 100%;
+    opacity: 1;
+    -webkit-transition: .4s opacity;
+    -moz-transition: .4s opacity;
+    -o-transition: .4s opacity;
+    transition: .4s opacity;
+}
+#wrapper article:target .tegel::after {
+    opacity: 1;
+    bottom: -3.3em;
+}
+#wrapper article:target .info {
+    background-image: url(../afb/home.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center
+}
+#wrapper article:target .tegel {
+    background-color: #0672a8;
+}
+#wrapper #htmlcss .info {
+    background-image: url(../afb/htmlCss1.svg);
+}
+#wrapper #jquery .info {
+    background-image: url(../afb/jQuery.svg);
+    background-position: center 20%;
+}
+#wrapper #javascript .info {
+    background-image: url(../afb/js.svg);
+}
+#wrapper #servma .info {
+    background-image: url(../afb/ma.svg);
+}
+#wrapper #wordpress .info {
+    background-image: url(../afb/wp.svg);
+}
+
+/*    de sluitknop   de sluitknop   de sluitknop   de sluitknop     */
+#wrapper a.sluitKnop {
+    display: block;
+/*    margin-top: .4em;*/
+/*    padding: .2em;*/
+    color: #fff;
+    text-decoration: none;
+    background: #2389aa;
+    -webkit-transition: 0.4s background-color;
+    -moz-transition: 0.4s background-color;
+    -o-transition: 0.4s background-color;
+    transition: 0.4s background-color;
+    display: inline-block;
+    width: auto;
+    padding: .5em .8em ;
+    border: .3em solid #fff;
+    border-radius: 1.3em;
+    font-weight: 600;
+    position: absolute;
+    right: 0em;
+    top: 1em;
+}
+#wrapper a.sluitKnop:hover {
+    background: #0672a8
+}
+
+/*    bij smaller venster een enkele kolom  */
+@media only screen and (min-width: 700px) {
+        section .info ul {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+
+
+/*    nu voor brede pagina's  3 kolommen naast elkaar   */
+
+@media only screen and (min-width: 600px) {
+    #wrapper article {
+        width: 33.33333%
+    }
+    #wrapper article:nth-child(3n+1) .info {
+        left: 0;
+    }
+    #wrapper article:nth-child(3n+2) .info {
+        left: -100%;
+    }
+    #wrapper article:nth-child(3n+3) .info {
+        left: -200%;
+    }
+    #wrapper .info {
+        width: 250%;
+    }
+    #wrapper article:target .info {
+        background-size:cover;
+    }
+}
+
+/* de social icons stylen */
+
+
+@font-face {
+  font-family: "socicon";
+  src:url("../fonts/sociocon/socicon.eot");
+  src:url("../fonts/sociocon/socicon.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/sociocon/socicon.woff") format("woff"),
+    url("../fonts/sociocon/socicon.ttf") format("truetype"),
+    url("../fonts/sociocon/socicon.svg#socicon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "socicon" !important;
+/*  content: attr(data-icon);*/
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="socicon-"]:before,
+[class*=" socicon-"]:before {
+  font-family: "socicon" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*     -----------     de icons  -------------  */
+.socicon-slideshare:before {
+  content: "\e017";
+}
+.socicon-buffer:before {
+  content: "\e018";
+}
+.socicon-disqus:before {
+  content: "\e019";
+}
+.socicon-whatsapp:before {
+  content: "\e01b";
+}
+.socicon-pocket:before {
+  content: "\e01e";
+}
+.socicon-mail:before {
+  content: "\e01f";
+}
+.socicon-blogger:before {
+  content: "\e020";
+}
+.socicon-technorati:before {
+  content: "\e021";
+}
+.socicon-reddit:before {
+  content: "\e022";
+}
+.socicon-dribbble:before {
+  content: "\e023";
+}
+.socicon-stumbleupon:before {
+  content: "\e024";
+}
+.socicon-digg:before {
+  content: "\e025";
+}
+.socicon-behance:before {
+  content: "\e027";
+}
+.socicon-wikipedia:before {
+  content: "\e02d";
+}
+.socicon-apple:before {
+  content: "\e02e";
+}
+.socicon-github:before {
+  content: "\e030";
+}
+.socicon-twitter:before {
+  content: "\e040";
+}
+.socicon-googleplus:before {
+  content: "\e042";
+}
+.socicon-pinterest:before {
+  content: "\e043";
+}
+.socicon-linkedin:before {
+  content: "\e049";
+}
+.socicon-youtube:before {
+  content: "\e051";
+}
+.socicon-vimeo:before {
+  content: "\e052";
+}
+.socicon-wordpress:before {
+  content: "\e058";
+}
+.socicon-tumblr:before {
+  content: "\e059";
+}
+
+
+#socialIcons {
+	background-color: #333;
+	text-align: right;
+    padding: .8em .8em .4em 0;
+	border: 1px solid transparent;
+    font-size: .8em;
+    color: #eee;
+   overflow: hidden;
+}
+#nav a span {
+    text-decoration: none;
+    color: #fff;
+    font-size: 19px;
+}
+#socialIcons a:hover {
+	text-decoration: none;
+	text-shadow: 0 0 10px #fff;
+}
+a .icon {
+    padding-left: .5em;
+   padding-right: .5em;
+}
+
+#socialIcons a  {
+    color: #ddd;
+    font-size: 1.5em;
+    text-decoration: none;
+	-moz-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	border: 0;
+
+}
+#validatie {
+   float: right;
+}
+#validatie img {
+   height: 1em;
+   width: auto;
+   border: 0;
+   margin-left: .5em;
+   margin-right: .3em;
+}

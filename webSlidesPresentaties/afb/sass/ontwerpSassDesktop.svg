@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1280 800" style="enable-background:new 0 0 1280 800;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#2859BC;}
+	.st2{fill:none;}
+	.st3{font-family:'MyriadPro-Regular';}
+	.st4{font-size:71px;}
+	.st5{font-size:42px;}
+	.st6{font-size:29px;}
+	.st7{fill:#81D742;}
+	.st8{font-family:'MyriadPro-BoldCond';}
+	.st9{fill:none;stroke:#4F82FF;stroke-width:10;stroke-miterlimit:10;}
+	.st10{fill:#4F82FF;}
+	.st11{font-size:30px;}
+	.st12{font-size:16px;}
+	.st13{fill:#48592D;}
+	.st14{font-size:20px;}
+	.st15{font-family:'Webdings';}
+	.st16{font-size:63px;}
+	.st17{fill:none;stroke:#FF652A;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<g id="achtergrond">
+	<rect x="0" class="st0" width="1280" height="800"/>
+</g>
+<g id="desktop">
+	<rect y="74" class="st1" width="1280" height="313"/>
+	<rect y="748" class="st1" width="1280" height="52"/>
+	<rect x="6" y="151.1" class="st2" width="1263" height="139.9"/>
+	<text transform="matrix(1 0 0 1 445.2349 201.5122)"><tspan x="0" y="0" class="st0 st3 st4">Site met Sass</tspan><tspan x="-8.5" y="50.4" class="st0 st3 st5">een oefening voor FRO</tspan></text>
+	<rect x="499" y="319" class="st2" width="183" height="42"/>
+	<text transform="matrix(1 0 0 1 559.1367 339.5898)" class="st0 st3 st6">meer</text>
+	<g>
+		<rect x="548.5" y="302" class="st7" width="183" height="63"/>
+		<rect x="548.5" y="323" class="st2" width="183" height="42"/>
+		<text transform="matrix(1 0 0 1 608.6367 343.5898)" class="st0 st3 st6">meer</text>
+	</g>
+	<g>
+		<rect x="0" class="st7" width="189" height="74"/>
+		<rect x="6" y="34" class="st2" width="183" height="42"/>
+		<text transform="matrix(1 0 0 1 49.3613 54.0674)" class="st0 st8 st6">LOGO Site</text>
+	</g>
+	<line class="st9" x1="0" y1="389" x2="1280" y2="386"/>
+	<g>
+		<text transform="matrix(1 0 0 1 477.5674 54.1099)" class="st10 st3 st11">Home</text>
+		<text transform="matrix(1 0 0 1 667.6244 54.1099)" class="st10 st3 st11">Over ons</text>
+		<text transform="matrix(1 0 0 1 880.9765 54.1099)" class="st10 st3 st11">Aanbod</text>
+		<text transform="matrix(1 0 0 1 1089.4678 54.1099)" class="st10 st3 st11">Contact</text>
+	</g>
+	<text transform="matrix(1 0 0 1 106.104 773.5723)" class="st0 st3 st12">Theo den Blanken</text>
+	<rect x="498.9" y="508.6" class="st2" width="301.9" height="213.4"/>
+	<text transform="matrix(1 0 0 1 498.9189 519.9473)"><tspan x="0" y="0" class="st13 st3 st12">Lorem ipsum dolor sit amet, consectetur </tspan><tspan x="0" y="20" class="st13 st3 st12">adipiscing elit.  Sed elementum finibus orci, </tspan><tspan x="0" y="40" class="st13 st3 st12">nec dignissim ipsum faucibus ac. Fusce sed </tspan><tspan x="0" y="60" class="st13 st3 st12">commodo ipsum, id sollicitudin mi. Duis </tspan><tspan x="0" y="80" class="st13 st3 st12">tempor vulputate nibh, at vehicula nibh </tspan><tspan x="0" y="100" class="st13 st3 st12">dapibus feugiat. Aenean maximus metus </tspan><tspan x="0" y="120" class="st13 st3 st12">vitae dolor posuere rutrum. Sed suscipit im</tspan><tspan x="285.3" y="120" class="st13 st3 st12">-</tspan><tspan x="0" y="140" class="st13 st3 st12">perdiet quam. </tspan></text>
+	<g>
+		<rect x="574.9" y="676" class="st10" width="100" height="32"/>
+		<rect x="577.2" y="683" class="st2" width="95.4" height="21.9"/>
+		<text transform="matrix(1 0 0 1 603.2304 697.2284)" class="st0 st3 st14">meer</text>
+	</g>
+	<g>
+		<rect x="891.4" y="508.6" class="st2" width="301.9" height="213.4"/>
+		<text transform="matrix(1 0 0 1 891.4189 519.9473)"><tspan x="0" y="0" class="st13 st3 st12">Sed elementum finibus orci, nec dignissim </tspan><tspan x="0" y="20" class="st13 st3 st12">ipsum faucibus ac. Fusce sed commodo </tspan><tspan x="0" y="40" class="st13 st3 st12">ipsum, id sollicitudin mi. Duis tempor vulpu</tspan><tspan x="288.8" y="40" class="st13 st3 st12">-</tspan><tspan x="0" y="60" class="st13 st3 st12">tate nibh, at vehicula nibh dapibus feugiat. </tspan><tspan x="0" y="80" class="st13 st3 st12">Aenean maximus metus vitae dolor posuere </tspan><tspan x="0" y="100" class="st13 st3 st12">rutrum. Sed suscipit imperdiet quam. </tspan></text>
+		<g>
+			<rect x="992.4" y="676" class="st10" width="100" height="32"/>
+			<rect x="994.7" y="683" class="st2" width="95.4" height="21.9"/>
+			<text transform="matrix(1 0 0 1 1020.7304 697.2279)" class="st0 st3 st14">meer</text>
+		</g>
+	</g>
+	<rect x="499.1" y="450.6" class="st2" width="301.9" height="65"/>
+	<text transform="matrix(1 0 0 1 618.5596 491.1602)" class="st13 st15 st16"></text>
+	<rect x="891.1" y="437.6" class="st2" width="301.9" height="65"/>
+	<text transform="matrix(1 0 0 1 1010.5596 478.1602)" class="st13 st15 st16"></text>
+	<g>
+		<g>
+			<rect x="106.4" y="508.6" class="st2" width="301.9" height="205.4"/>
+			<text transform="matrix(1 0 0 1 106.4189 519.9473)"><tspan x="0" y="0" class="st13 st3 st12">Lorem ipsum dolor sit amet, consectetur </tspan><tspan x="0" y="20" class="st13 st3 st12">adipiscing elit. Sed faucibus, metus at </tspan><tspan x="0" y="40" class="st13 st3 st12">aliquam imperdiet, ante nunc imperdiet ex, </tspan><tspan x="0" y="60" class="st13 st3 st12">quis maximus erat eros in lorem. Sed ele</tspan><tspan x="266.8" y="60" class="st13 st3 st12">-</tspan><tspan x="0" y="80" class="st13 st3 st12">mentum finibus orci, nec dignissim ipsum </tspan><tspan x="0" y="100" class="st13 st3 st12">faucibus ac. Fusce sed commodo ipsum, id </tspan><tspan x="0" y="120" class="st13 st3 st12">sollicitudin mi. Duis tempor vulputate nibh, </tspan><tspan x="0" y="140" class="st13 st3 st12">at vehicula nibh dapibus feugiat.</tspan></text>
+			<g>
+				<rect x="207.4" y="676" class="st10" width="100" height="32"/>
+				<rect x="209.7" y="683" class="st2" width="95.4" height="21.9"/>
+				<text transform="matrix(1 0 0 1 235.7299 697.2279)" class="st0 st3 st14">meer</text>
+			</g>
+		</g>
+		<rect x="106.1" y="449.6" class="st2" width="301.9" height="65"/>
+		<text transform="matrix(1 0 0 1 225.5596 490.1602)" class="st13 st15 st16"></text>
+	</g>
+	<line class="st17" x1="477" y1="59" x2="556" y2="59"/>
+</g>
+</svg>

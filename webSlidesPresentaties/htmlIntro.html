@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 | een introductie</title>
+    <link rel="stylesheet" href="css/webslides.css">
+    <style>
+        nav .alignright a {
+            padding: 0 .3em;
+        }
+    </style>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/1a91c75a80.js"></script>
+    <link rel="stylesheet" href="../highlight/styles/atelier-estuary-light.css">
+<script  charset="UTF-8" src="../highlight/highlight.pack.js"></script>
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="navigation">
+            <span>Intro HTML5</span>
+            <span class="alignright">
+                <a href="#slide=2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/600px-HTML5_Badge.svg.png" alt="HTML5 logo"></a>
+                <a href="../index.html"><img src="https://blanken5.home.xs4all.nl/afb/logotheo.jpg"
+                        alt="logo Theo den Blanken"></a>
+                <a href="https://welkombijma.nl/" target="_blank"><img
+                        src="https://welkombijma.nl/wp-content/themes/welkombijma/public/img/logo.svg"
+                        alt="logo Mediacollege Amsterdam"></a>
+            </span>
+        </nav>
+    </header>
+
+    <main role="main">
+        <article id="webslides" class="horizontal" style="font-size: 1.5em;">
+            
+            <!-- dia 1  -->
+            <section class="bg-apple">
+
+                <span class="background dark" style="background-image:url('https://blog.udacity.com/wp-content/uploads/2020/06/HTML_Blog-scaled.jpeg')"></span>
+                <div class="wrap aligncenter">
+                    <h2 class="text-landing">HTML</h2>
+                    <p class="text-subtitle">
+                    Introductie van een opmaaktaal
+                    </p>
+                    <hr>
+                    <div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/600px-HTML5_Badge.svg.png" alt="HTML5 logo"  style="height: 20vh;">
+                    </div>
+                    <p class="text-intro">
+                    Binnen no-time een eigen HTML-pagina online
+                    </p>
+                    <p>
+                        <a href="#slide=2" class="button zoomIn">
+                            naar de slides &nbsp;&nbsp;|&nbsp;&nbsp; <strong> <span class="fab fa-html5"></span> </strong> </a>
+                    </p>
+                </div>
+            </section>
+
+            <!-- dia 2 inhoudsopgave  -->
+            <section class="bg-apple">
+
+                <span class="background dark" style="background-image:url('https://blog.udacity.com/wp-content/uploads/2020/06/HTML_Blog-scaled.jpeg')"></span>
+                <div class="wrap">
+                    <h2 class="text-landing aligncenter">Inhoudsopgave <span class="fab fa-html5"></span></h2>
+                    <div class="grid sm">
+
+                        <div class="column fadeInUp">
+                            <ul class="description">
+                                <li><a href="#slide=3">Leerdoelen les<span class="toc-page">3</span></a></li>
+                                <li><a href="#slide=4">Basisstructuur HTML-document<span class="toc-page">4</span></a></li>
+                                <li><a href="#slide=6">HTML-element<span class="toc-page">6</span></a></li>
+                                <li><a href="#slide=8">Lijsten in HTML<span class="toc-page">8</span></a></li>
+                                <li><a href="#slide=10">Naslag en spiekbrieven <span class="fab fa-html5"></span><span class="toc-page">10</span></a></li>
+                                <li><a href="#slide=11">Visual Studio Code<span class="toc-page">11</span></a></li>
+                                <li><a href="#slide=13">Terminal in VS Code<span class="toc-page">13</span></a></li>
+                                <li><a href="#slide=14">FTP: FileZilla<span class="toc-page">14</span></a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="column zoomIn">
+                            <div>
+                                <img src="https://global-uploads.webflow.com/5bf64c08cc98dd2c68779d68/5bf64c08cc98ddd6a577ab9b_html5_developer.jpg" alt="HTML5 logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+
+            <!-- dia 3 leerdoelen  -->
+            <section class="fullscreen bg-apple">
+
+                <span class="background dark" style="background-image:url('https://blog.udacity.com/wp-content/uploads/2020/06/HTML_Blog-scaled.jpeg')"></span>
+                <div class="card-70">
+                    <figure class="fadeInUp">
+                        <img src="https://webvana.eu/wp-content/uploads/2019/04/maschinenlesbares-semantisches-html5-markup.jpg" alt="HTML 5">
+                        <figcaption style="color: black;">HTML5 mark-up</figcaption>
+                    </figure>
+                    <div class="flex-content flexblock reasons">
+                        <h2 class="text-landing">Leerdoelen <strong><span class="fab fa-html5"></span></strong></h2>
+                        
+                        <ul>
+                            <li>Structuur van HTML begrijpen</li>
+                            <li>Enkele HTML-elementen</li>
+                            <li>Weten wat een HTML-element is</li>
+                            <li>
+                                Een eenvoudige pagina maken
+                            </li>
+                            <li>lijsten in HTML</li>
+                            <li>Installatie van Visual Studio Code </li>
+                            <li>Installatie van FileZilla (FTP) voor je hosts-ma-cloud.nl</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+          
+            <!-- dia 4 basisstructuur HTML document  -->
+            <section class="aligncenter bg-apple">
+                <h2 class="text-landing">basisstructuur HTML-document </h2>
+                <hr>
+                <div class="grid ">
+                    <div class="content-left column">
+                        <h3 class="aligncenter">De mark-up <span class="fab fa-html5"></span></h3>
+                        <hr>
+<pre><code class="html" style="font-size: 1.3em;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Welkom in het LAM&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;h1&gt;Welkom in het LAM&lt;/h1&gt;
+        &lt;p&gt;Een fantastisch museum voor iedereen&lt;/p&gt;
+        &lt;h3&gt;Coronamaatregelen&lt;/h3&gt;
+        &lt;p&gt;In deze tijd zijn bezoekersaantallen beperkt.&lt;br&gt;
+        Reserveer daarom voor u ons komt bezoeken.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                            
+                      </code>
+                        </pre>
+                    </div>
+                    
+                    <div class="content-left column">
+                        <h3>In een HTML-document worden <strong>tags</strong> gebruikt</h3>
+                        <hr>
+                    <ol class="content-left column text-intro">
+                        <li>
+                            <code>&lt;!DOCTYPE html&gt;</code> declareert het document-type
+                        </li> 
+                        <li>
+                            <code>&lt;html&gt;</code> en <code>&lt;/html&gt;</code> omvatten het document
+                        </li>
+                        <li>
+                            <code>&lt;head&gt;</code> en <code>&lt;/head&gt;</code> omvatten informatie <strong>over</strong> het document
+                        </li>
+                        <li>
+                            <code>&lt;body&gt;</code> en <code>&lt;/body&gt;</code> omvatten alle inhoud het document
+                        </li>
+                    </ol>                                     
+                </div>
+            </section>
+
+            <!-- dia 5 basisstructuur HTML document resultaat  -->
+            <section class="aligncenter bg-apple">
+                <h2 class="text-landing">basisstructuur HTML-document </h2>
+                <hr>
+                <div class="grid ">
+                    <div class="content-left column">
+                        <h3 class="aligncenter zoomIn">De mark-up <span class="fab fa-html5"></span></h3>
+                        <hr>
+<pre><code class="html" style="font-size: 1.3em;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Welkom in het LAM&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;h1&gt;Welkom in het LAM&lt;/h1&gt;
+        &lt;p&gt;Een fantastisch museum voor iedereen&lt;/p&gt;
+        &lt;h3&gt;Coronamaatregelen&lt;/h3&gt;
+        &lt;p&gt;In deze tijd zijn bezoekersaantallen beperkt.&lt;br&gt;
+        Reserveer daarom voor u ons komt bezoeken.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                            
+                      </code>
+                        </pre>
+                    </div>
+                    
+                    <div class="content-left column">
+                        <h3 class="aligncenter fadeInUp slow">Het resultaat</h3>
+                        <hr>
+                        <div class="embed bg-white" style="width: 40vw;">
+                            <iframe src="afb/introHTML/lam1.html">
+                            </iframe>
+                        </div>       
+                        <p>
+                            Resultaat <a href="afb/introHTML/lam1.html" target="_blank">in apart venster</a>
+                        </p>                      
+                </div>
+            </section>
+
+            <!-- dia 6 een element -->
+            <section class="aligncenter">
+                <div class="wrap">
+                    <h2 class="text-landing">Element</h2>
+                    <p>Als voorbeeld een p-element</p>
+                    <img src="https://www.codeinbook.com/images/element-and-tag-graphics.png" alt="voorbeeld van een p-element" class="zoomIn">
+                </div>
+            </section>
+
+            <!-- dia 7 basisstructuur HTML document resultaat  -->
+            <section class="aligncenter bg-apple">
+                <span class="background dark" style="background-image:url('https://images.wehkamp.nl/i/wehkamp/599787_pb_01/fair-trade-original-baboesjka-set-van-5-8718683018893.jpg?w=2048')"></span>
+
+                <h2 class="text-landing">Alle elementen hebben familieverbanden</h2>
+                <hr>
+                <div class="grid ">
+                    <div class="content-left column" style="width: 40vw">
+                        <h3 class="aligncenter">De mark-up <span class="fab fa-html5"></span></h3>
+                        <hr>
+<pre><code class="html" style="font-size: 1.3em;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Welkom in het LAM&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;h1&gt;Welkom in het LAM&lt;/h1&gt;
+        &lt;p&gt;Een fantastisch museum voor iedereen&lt;/p&gt;
+        &lt;h3&gt;Coronamaatregelen&lt;/h3&gt;
+        &lt;p&gt;In deze tijd zijn bezoekersaantallen beperkt.&lt;br&gt;
+        Reserveer daarom voor u ons komt bezoeken.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                            
+                      </code>
+                        </pre>
+                    </div>
+                    
+                    <div class="content-left column fadeInUp">
+                        <p>
+                            Het html-element is de <em>parent</em> van
+                        </p>
+                            <ul style="margin: -1.5em 0 1.5em 1em;">
+                                <li>het head-element</li>
+                                <li>het body-element</li>
+                            </ul>
+                        <p>
+                            Het body-element is <em>parent</em> van
+                        </p>
+                            <ul style="margin: -1.5em 0 1.5em 1em;">
+                                <li>het h1-element</li>
+                                <li>het h3-element</li>
+                                <li>beide p-elementen</li>
+                            </ul>
+                        <p>
+                            Het h1-element is een <em>child</em> van het body element
+                        </p>
+                        <p>
+                            Het h1-element, het h3-element en de beide p-elementen zijn:
+                        </p>
+                            <ul style="margin: -1.5em 0 1.5em 1em;">
+                                <li><em>siblings</em> van elkaar</li>
+                                <li><em>children</em> van het body-element</li>
+                                <li><em>descedants</em> van het body-element en het html-element</li>
+                            </ul>
+                </div>
+            </section>
+
+            <!-- dia 8 basisstructuur HTML geordende lijst -->
+            <section class="aligncenter bg-apple">
+                <h2 class="text-landing">geordende lijst</h2>
+                <hr>
+                <div class="grid ">
+                    <div class="content-left column" style="width: 40vw">
+                        <h3 class="aligncenter">De mark-up <span class="fab fa-html5"></span></h3>
+                        <hr>
+<pre><code class="html" style="font-size: 1.3em;">
+...
+&lt;h2&gt;Het LAM in het kort&lt;/h2&gt;
+<strong>&lt;ol&gt;</strong>
+    &lt;li&gt;Een nieuwe kunstbelevenis in 45 minuten&lt;/li&gt;
+    &lt;li&gt;Hét foodart museum&lt;/li&gt;
+    &lt;li&gt;Internationale topcollectie&lt;/li&gt;
+    <strong>&lt;li&gt;</strong>Voor álle leeftijden <strong>&lt;/li&gt;</strong>
+    &lt;li&gt;VIP ontvangst & begeleiding voor alle bezoekers&lt;/li&gt;
+    &lt;li&gt;Anders kijken – in het museum én thuis&lt;/li&gt;
+    &lt;li&gt;Dé plek om jezelf te ontwikkelen&lt;/li&gt;
+    &lt;li&gt;Bijzondere architectuur&lt;/li&gt;
+    &lt;li&gt;Op Landgoed Keukenhof&lt;/li&gt;
+    &lt;li&gt;Uitsluitend tickets met starttijd&lt;/li&gt;
+    &lt;li&gt;Jij bepaalt wie er betaalt**&lt;/li&gt;
+&lt;/ol&gt;
+...                            
+                      </code>
+                        </pre>
+                    </div>
+                    <div class="content-left column">
+                        <h3 class="aligncenter fadeInUp slow">Het resultaat</h3>
+                        <hr>
+                        <div class="embed bg-white" style="width: 40vw; min-height: 40vh">
+                            <iframe src="afb/introHTML/lamOL.html">
+                            </iframe>
+                        </div>       
+                        <p>
+                            Resultaat <a href="afb/introHTML/lamOL.html" target="_blank">in apart venster</a>
+                        </p>                      
+                </div>
+            </section>
+
+             <!-- dia 9 basisstructuur HTML ongeordende lijst -->
+             <section class="aligncenter bg-apple">
+                <h2 class="text-landing"> <strong>on</strong>geordende lijst</h2>
+                <hr>
+                <div class="grid ">
+                    <div class="content-left column" style="width: 40vw;">
+                        <h3 class="aligncenter">De mark-up <span class="fab fa-html5"></span></h3>
+                        <hr>
+<pre><code class="html" style="font-size: 1.3em;">
+...
+&lt;h2&gt;Het LAM in het kort&lt;/h2&gt;
+<strong>&lt;ul&gt;</strong>
+    &lt;li&gt;Een nieuwe kunstbelevenis in 45 minuten&lt;/li&gt;
+    &lt;li&gt;Hét foodart museum&lt;/li&gt;
+    &lt;li&gt;Internationale topcollectie&lt;/li&gt;
+    &lt;li&gt;Voor álle leeftijden &lt;/li&gt;
+    &lt;li&gt;VIP ontvangst & begeleiding voor alle bezoekers&lt;/li&gt;
+    &lt;li&gt;Anders kijken – in het museum én thuis&lt;/li&gt;
+    &lt;li&gt;Dé plek om jezelf te ontwikkelen&lt;/li&gt;
+    <strong>&lt;li&gt;</strong>Bijzondere architectuur<strong>&lt;/li&gt;</strong>
+    &lt;li&gt;Op Landgoed Keukenhof&lt;/li&gt;
+    &lt;li&gt;Uitsluitend tickets met starttijd&lt;/li&gt;
+    &lt;li&gt;Jij bepaalt wie er betaalt**&lt;/li&gt;
+<strong>&lt;/ul&gt;</strong>
+...                            
+                      </code>
+                        </pre>
+                    </div>
+                    <div class="content-left column">
+                        <h3 class="aligncenter fadeInUp slow">Het resultaat</h3>
+                        <hr>
+                        <div class="embed bg-white" style="width: 40vw; min-height: 40vh">
+                            <iframe src="afb/introHTML/lamUL.html">
+                            </iframe>
+                        </div>       
+                        <p>
+                            Resultaat <a href="afb/introHTML/lamUL.html" target="_blank">in apart venster</a>
+                        </p>                      
+                </div>
+            </section>
+
+            <!-- dia 10 spiekbrieven HTML  -->
+
+            <section class="bg-apple aligncenter">
+                <span class="background dark" style="background-image:url('https://blog.udacity.com/wp-content/uploads/2020/06/HTML_Blog-scaled.jpeg')"></span>
+
+                <div class="grid">
+                    
+                    <div class="column">
+                        <h2 class="text-landing">spiekbrieven en naslag <span class="fab fa-html5"></span></h2>
+                        <ul class="flexblock reasons">
+                        <li>
+                        <a href="https://www.w3schools.com/html/">W3 Schools</a>
+                        </li>
+                        <li><a href="https://developer.mozilla.org/nl/docs/Learn/HTML">MDN Webbdocs (Mozilla)</a></li>
+                        <li><a href="https://cssauthor.com/html-and-css-cheat-sheets/#HTML">Een verzameling van HTML5 spiekbrieven</a>
+                        <em>Eentje uitzoeken om uit te printen?</em>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <img src="https://cssauthor.com/wp-content/uploads/2015/07/HTML5-Cheat-Sheet.jpg" alt="cheatsheets HTML5">
+                    </div>
+                
+                
+                    
+            </div>
+            </section>
+
+            <!-- dia 11 Code code-editor https://youtu.be/UhKDfLAq8Dk  5:20 -->
+            <section class="bg-apple" >
+                <span class="background dark" style="background-image:url('https://blog.udacity.com/wp-content/uploads/2020/06/HTML_Blog-scaled.jpeg')"></span>
+                
+                <h2 class="text-landing aligncenter">De code-editor</h2>
+                <p class="text-intro aligncenter">In deze voorbeelden wordt met <a href="https://code.visualstudio.com/">Visual Studio Code</a> gewerkt</p>
+                <div class="grid ms">
+                    <div class="column">
+                        <h4>Opdracht</h4>
+                        <ul class="flexblock specs">
+                            <li>
+                                <a href="https://code.visualstudio.com/" class="inline">Ga naar https://code.visualstudio.com/</a> 
+                            </li>
+                                <li><a href="https://code.visualstudio.com/">Download en installeer VS Code</a></li>
+                                <li style="display: block;">Maak een map met de naam <code>siteMa-cloud</code> <br>
+                                    Hierin komen alle sites, die online geplaatst worden.</li>
+                                <li style="display: block;">Maak hierin een map <code>F1M2Ontwerp</code></li>
+                                <li>Sleep deze map in Visual Studio Code. <br>
+                                Hierdoor zullen de gemaakte bestanden vanzelf in de map van de site geplaatst worden.</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" alt="logo VS Code" class="fadeInUp">
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 12 Code code-editor https://youtu.be/UhKDfLAq8Dk  5:20 -->
+            <section class="bg-apple" >
+                <span class="background dark" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png')"></span>
+
+                <h2 class="text-landing aligncenter">Visual Studio Code uitbreiden met Emmet</h2>
+                <div class="grid">
+                    
+                    <div class="column">
+                        <h3>Start VS Code met Emmet (00:05:20)</h3>
+                        <hr>
+                        <ul class="flexblock reasons">
+                            <li>
+                              Breid VS Code uit met Emmet 
+                            </li>
+                            <li>
+                              Voeg elementen toe met de element-naam en de TAB-toets 
+                            </li>
+                            <li>
+                              Voeg tags aan een selectie toe met CTRL+SHIFT+P (⌘+Shift+P)
+                            </li>
+                        </ul>
+                    </div>
+ 
+                    <div class="column fadeInUp">
+                     <iframe src="https://www.youtube.com/embed/UhKDfLAq8Dk" width=640 height="450">
+                     </iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 13 Code code-editor https://youtu.be/13_-keIzhtg-->
+            <section class="bg-apple" >
+                <span class="background dark" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png')"></span>
+
+                <h2 class="text-landing aligncenter">Terminalvenster (CLI) in VS Code</h2>
+                <div class="grid">
+                    
+                    <div class="column">
+                        
+                        <ul class="flexblock reasons">
+                            <li>
+                              Open een terminalvenster in VS Code 
+                            </li>
+                            <li>
+                              Maak een Git repo aan 
+                            </li>
+                            <li>
+                              Maak een eerste commit
+                            </li>
+                            <li>Plaats je repo op GitHub </li>
+                        </ul>
+                        <p class="aligncenter">
+                            <span class="fab fa-github aligncenter" style="font-size: 3em;"></span>
+                        </p>
+                    </div>
+ 
+                    <div class="column fadeInUp">
+                     <iframe src="https://www.youtube.com/embed/13_-keIzhtg" width=640 height="450">
+                     </iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 14 Code code-editor https://youtu.be/aPdUsutyQkA-->
+            <section class="bg-apple" >
+                <span class="background dark" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png')"></span>
+
+                <h2 class="text-landing aligncenter">FTP: zet je site online op hosts Ma-cloud</h2>
+                <div class="grid">
+                    
+                    <div class="column">
+                        
+                        <ul class="flexblock reasons">
+                            <li>
+                              Open Controlpanel
+                              <a href="https://panel.ma-cloud.nl/" target="_blank">https://panel.ma-cloud.nl/</a> 
+                            </li>
+                            <li>
+                              Installeer FileZilla Client
+                              <a href="https://filezilla-project.org/">https://filezilla-project.org/</a>
+                            </li>
+                            <li>
+                              Stel FileZilla in en zet jouw HTML-document bij
+                            </li>
+                            <li>Werk je README.md op GitHub bij met de online link</li>
+                            <li>Lever je GitHub link in</li>
+                        </ul>
+                        <p class="aligncenter">
+                            <span class="fab fa-github aligncenter" style="font-size: 3em;"></span>
+                        </p>
+                    </div>
+ 
+                    <div class="column fadeInUp">
+                     <iframe src="https://www.youtube.com/embed/aPdUsutyQkA" width=640 height="450">
+                     </iframe>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+             <!-- laatste dia: credits  -->
+        <section class="slide-bottom bg-apple">
+            <div class="wrap zoomIn">
+                <div class="content-right">
+                    <h3>Credits</h3>
+                    <p>Deze presentatie is gemaakt met gebruik van:</p>
+                    <ol class="flexblock reasons">
+                        <li>
+                            <a href="https://github.com/webslides/WebSlides">WebSlides</a>
+                        
+                            <a href="https://webslides.tv/demos/classes#slide=2">documentatie WebSlides</a>
+                        </li>
+                        <li><a href="https://mothereff.in/html-entities">Omzetten van HTML-tags naar entiteiten</a></li>
+                        <li><a href="https://highlightjs.org/">Highlight.js om de code te markeren</a></li>
+                    </ol>
+                    <div class="aligncenter"><a href="attributen.html" class="button zoomIn">
+                    naar les 2: attributen en intro CSS<span class="fab fa-css3-alt"></span> </strong> </a></div>
+                </div> 
+            </div>  <!-- einde van de wrap die heb je nodig om de inhoud rechtsonder te plaatsen -->
+        </section>
+
+
+        </article>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});
+    </script>
+
+    <script src="js/webslides.min.js"></script>
+    <script>
+        window.ws = new WebSlides();
+    </script>
+</body>
+
+</html>

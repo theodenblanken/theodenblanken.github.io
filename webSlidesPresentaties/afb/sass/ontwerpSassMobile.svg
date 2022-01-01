@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 750 1850" style="enable-background:new 0 0 750 1850;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#81D742;}
+	.st2{fill:none;}
+	.st3{font-family:'MyriadPro-BoldCond';}
+	.st4{font-size:29px;}
+	.st5{fill:#4F82FF;}
+	.st6{font-family:'MyriadPro-Regular';}
+	.st7{font-size:30px;}
+	.st8{fill:#2859BC;}
+	.st9{font-size:71px;}
+	.st10{font-size:42px;}
+	.st11{fill:none;stroke:#4F82FF;stroke-width:10;stroke-miterlimit:10;}
+	.st12{fill:#48592D;}
+	.st13{font-size:27px;}
+	.st14{font-size:29.5843px;}
+	.st15{font-family:'Webdings';}
+	.st16{font-size:83px;}
+	.st17{fill:none;stroke:#3B592B;stroke-miterlimit:10;}
+	.st18{font-size:21px;}
+</style>
+<g id="achtergrond">
+	<rect class="st0" width="750" height="1850"/>
+</g>
+<g id="mobiel">
+	<g>
+		<rect class="st1" width="189" height="74"/>
+		<rect x="6" y="34" class="st2" width="183" height="42"/>
+		<text transform="matrix(1 0 0 1 49.3613 54.0674)" class="st0 st3 st4">LOGO Site</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 608.9922 54.1099)" class="st5 st6 st7">menu</text>
+	</g>
+	<rect y="74" class="st8" width="750" height="313"/>
+	<rect x="6" y="151.1" class="st2" width="744" height="139.9"/>
+	<text transform="matrix(1 0 0 1 185.7349 201.5122)"><tspan x="0" y="0" class="st0 st6 st9">Site met Sass</tspan><tspan x="-8.5" y="50.4" class="st0 st6 st10">een oefening voor FRO</tspan></text>
+	<line class="st11" x1="0" y1="389" x2="750" y2="387"/>
+	<g>
+		<rect x="283.5" y="302" class="st1" width="183" height="63"/>
+		<rect x="283.5" y="323" class="st2" width="183" height="42"/>
+		<text transform="matrix(1 0 0 1 343.6367 343.5898)" class="st0 st6 st4">meer</text>
+	</g>
+	<g>
+		<rect x="77.5" y="553.6" class="st2" width="594.9" height="241.4"/>
+		<text transform="matrix(1.0003 0 0 1 77.5295 572.7798)"><tspan x="0" y="0" class="st12 st6 st13">Lorem ipsum dolor sit amet, consectetur adipiscing </tspan><tspan x="0" y="30" class="st12 st6 st13">elit. Sed faucibus, metus at aliquam imperdiet, ante </tspan><tspan x="0" y="60" class="st12 st6 st13">nunc imperdiet ex, quis maximus erat eros in lorem. </tspan><tspan x="0" y="90" class="st12 st6 st13">Sed elementum finibus orci, nec dignissim ipsum </tspan><tspan x="0" y="120" class="st12 st6 st13">faucibus ac. Fusce sed commodo ipsum, id sollicitu</tspan><tspan x="570.2" y="120" class="st12 st6 st13">-</tspan><tspan x="0" y="150" class="st12 st6 st13">din mi. Duis tempor vulputate nibh, at vehicula nibh </tspan><tspan x="0" y="180" class="st12 st6 st13">dapibus feugiat.</tspan></text>
+		<g>
+			<rect x="308.5" y="790.9" class="st5" width="148" height="47.3"/>
+			<rect x="311.9" y="801.4" class="st2" width="141.1" height="32.4"/>
+			<text transform="matrix(1.0003 0 0 1 350.4821 822.373)" class="st0 st6 st14">meer</text>
+		</g>
+		<rect x="232.5" y="458.6" class="st2" width="301.9" height="65"/>
+		<text transform="matrix(1.0003 0 0 1 341.9577 512.0693)" class="st12 st15 st16"></text>
+	</g>
+	<g>
+		<rect x="77.5" y="1033.6" class="st2" width="594.9" height="241.4"/>
+		<text transform="matrix(1 0 0 1 77.5295 1052.7798)"><tspan x="0" y="0" class="st12 st6 st13">Lorem ipsum dolor sit amet, consectetur adipiscing </tspan><tspan x="0" y="32" class="st12 st6 st13">elit.  Sed elementum finibus orci, nec dignissim </tspan><tspan x="0" y="64" class="st12 st6 st13">ipsum faucibus ac. Fusce sed commodo ipsum, id </tspan><tspan x="0" y="96" class="st12 st6 st13">sollicitudin mi. Duis tempor vulputate nibh, at vehic</tspan><tspan x="579.7" y="96" class="st12 st6 st13">-</tspan><tspan x="0" y="128" class="st12 st6 st13">ula nibh dapibus feugiat. Aenean maximus metus </tspan><tspan x="0" y="160" class="st12 st6 st13">vitae dolor posuere rutrum. Sed suscipit imperdiet </tspan><tspan x="0" y="192" class="st12 st6 st13">quam. </tspan></text>
+		<g>
+			<rect x="308.5" y="1270.9" class="st5" width="148" height="47.3"/>
+			<rect x="311.9" y="1281.4" class="st2" width="141.1" height="32.4"/>
+			<text transform="matrix(1.0003 0 0 1 350.4821 1302.373)" class="st0 st6 st14">meer</text>
+		</g>
+		<rect x="232.5" y="938.6" class="st2" width="301.9" height="65"/>
+		<text transform="matrix(1 0 0 1 341.9704 992.0693)" class="st12 st15 st16"></text>
+	</g>
+	<line class="st17" x1="85.5" y1="886" x2="664.5" y2="888"/>
+	<line class="st17" x1="94" y1="1386" x2="673" y2="1388"/>
+	<g>
+		<rect x="77.5" y="1508.6" class="st2" width="594.9" height="167.4"/>
+		<text transform="matrix(1 0 0 1 77.53 1527.7803)"><tspan x="0" y="0" class="st12 st6 st13">Sed elementum finibus orci, nec dignissim ipsum </tspan><tspan x="0" y="30" class="st12 st6 st13">faucibus ac. Fusce sed commodo ipsum, id sollicitu</tspan><tspan x="570.2" y="30" class="st12 st6 st13">-</tspan><tspan x="0" y="60" class="st12 st6 st13">din mi. Duis tempor vulputate nibh, at vehicula nibh </tspan><tspan x="0" y="90" class="st12 st6 st13">dapibus feugiat. Aenean maximus metus vitae dolor </tspan><tspan x="0" y="120" class="st12 st6 st13">posuere rutrum. Sed suscipit imperdiet quam. </tspan></text>
+		<g>
+			<rect x="308.5" y="1705.9" class="st5" width="148" height="47.3"/>
+			<rect x="311.9" y="1716.4" class="st2" width="141.1" height="32.4"/>
+			<text transform="matrix(1.0003 0 0 1 350.4821 1737.373)" class="st0 st6 st14">meer</text>
+		</g>
+		<rect x="232.5" y="1413.6" class="st2" width="301.9" height="65"/>
+		<text transform="matrix(1 0 0 1 341.9704 1467.0693)" class="st12 st15 st16"></text>
+	</g>
+	<rect y="1798" class="st8" width="750" height="52"/>
+	<text transform="matrix(1 0 0 1 80.104 1823.5723)" class="st0 st6 st18">Theo den Blanken</text>
+</g>
+</svg>

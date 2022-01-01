@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introductie Sass</title>
+    <link rel="stylesheet" href="css/webslides.css">
+    <style>
+        nav .alignright a {
+            padding: 0 .3em;
+        }
+    </style>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/1a91c75a80.js"></script>
+</head>
+<body>
+    <header role="banner">
+        <nav role="navigation">
+          <span>Introductie <i class="fab fa-sass" style="color: #bf4080;"></i></span>
+          <span class="alignright">
+            <a href="#slide=2"><img src="afb/sass/sass.svg" width="100px" alt="logo Sass"></a>
+            <a href="../sass.html"><img src="https://blanken5.home.xs4all.nl/afb/logotheo.jpg" alt="logo Theo den Blanken"></a>
+            <a href="https://welkombijma.nl/" target="_blank"><img src="https://welkombijma.nl/wp-content/themes/welkombijma/public/img/logo.svg" alt="logo Mediacollege Amsterdam"></a>
+          </span>
+        </nav>
+      </header>
+
+      
+    <main role="main">
+        <article id="webslides" class="horizontal">
+            <!-- dia 1  -->
+            <section>
+                <span class="background-left-top" 
+                    style="background-image:url('afb/sass/sass.svg');">
+                </span>
+                <span class="background-right-bottom" 
+                    style="background-image:url('https://sass-lang.com/assets/img/illustrations/glasses-2087d741.svg');">
+                </span>
+                <div class="wrap grid">
+                    <div class="column">
+                        <h1><strong>Sass</strong></h1>
+                        <p class="text-intro">
+                            <span style="color: #bf4080;"><strong>S</strong></span>yntactically 
+                            <span style="color: #bf4080;"><strong>A</strong></span>wesome 
+                            <span style="color: #bf4080;"><strong>S</strong></span>tyle 
+                            <span style="color: #bf4080;"><strong>S</strong></span>heets
+                        </p>
+                        <p>
+                            <a href="https://sass-lang.com/guide" class="button zoomIn" target="_blank">
+                                <i class="fab fa-sass"></i> website Sass</a>
+                        </p>
+                    </div>
+ 
+                </div>
+            </section>
+
+            <!-- dia 2 inhoudsopgave  -->
+            <section class="fullscreen">                <div class="card-70">
+                    <div class="flexcontent flexblock reasons fadeInUp">
+                        <h2 class="aligncenter">inhoud <i class="fab fa-sass" style="color: #bf4080;"></i></h2>
+                        <ul>
+                            <li><a href="#slide=3">Leerdoelen vandaag</a></li>
+                            <li><a href="#slide=4">Wat Sass is</a></li>
+                            <li><a href="#slide=5">Sass is handig</a></li>
+                            <li><a href="#slide=6">Compileren</a></li>
+                            <li><a href="#slide=7">Codevoorbeeld variabelen</a></li>
+                            <li><a href="#slide=8">Codevoorbeeld nesting</a></li>
+                            <li><a href="#slide=9">Codevoorbeeld partials</a></li>
+                            <li><a href="#slide=10">Sass installeren met CLI</a></li>
+                            <li><a href="#slide=11"></a>De opdracht</li>
+                            <li><a href="#slide=12">Links</a></li>
+                        </ul>
+                    </div>
+                    <figure>
+                        <img src="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/09/writing_reusable_css_with_sass_web-nocdn.png" alt="een Bootstrap voorbeeld" style="object-position: left;">
+                    </figure>
+                </div>
+            </section>
+
+            <!-- dia 3 leerdoelen  -->
+            <section class="fullscreen">
+                <div class="card-70">
+                    <figure>
+                        <img src="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/09/writing_reusable_css_with_sass_web-nocdn.png" alt="een Bootstrap voorbeeld" style="object-position: left;">
+                      </figure>
+                    <div class="flexcontent flexblock reasons fadeInUp">
+                        <h2 class="aligncenter">Leerdoelen</h2>
+                        <ul>
+                            <li>installatie van Sass</li>
+                            <li>opstarten van Sass in jouw workflow</li>
+                            <li>variabelen</li>
+                            <li>SCSS versus Sass</li>
+                            <li>opdelen en importeren</li>
+                            <li>mixins</li>
+                            <li>overerving</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- dia 4 wat is Sass? --> 
+            <section>
+                <div class="grid vertical-align">
+                    <div class="column flexblock reasons">
+                        <h2>
+                            Wat is <i style="color: #bf4080;" class="fab fa-sass fa-lg"></i>?
+                        </h2>
+                        <p class="text-intro">Preprocessor</p>
+                        <p class="text-intro">
+                            <span style="color: #bf4080;"><strong>S</strong></span>yntactically 
+                            <span style="color: #bf4080;"><strong>A</strong></span>wesome 
+                            <span style="color: #bf4080;"><strong>S</strong></span>tyle 
+                            <span style="color: #bf4080;"><strong>S</strong></span>heets
+                        </p>
+                        <ul>
+                            <li>Sass maakt uit meerdere .scss-bestanden en .sass bestanden één CSS-bestand</li>
+                            <li>Kijk eens in jouw Bootstrap CSS van vorige week hoe groot dat CSS-bestand is</li>
+                            <li>De developer houdt het overzicht en maakt toch 1 CSS-bestand voor de browser</li>
+                        </ul>
+                    </div>
+                    <div class="column fadeInUp">
+                        
+                            <img src="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/09/writing_reusable_css_with_sass_web-nocdn.png" alt="bril van Sass">
+                              <p>Een pre-processor maakt van meerdere .scss- en .sass-bestanden één .css-bestand</p>        
+                            <img src="https://webski.com.au/wp-content/uploads/2015/11/sass-scss-css.jpg" alt="Sass compileert">
+                    </div>
+                </div>
+            </section>
+            <!-- dia 5 nog meer handig aan Sass? --> 
+            <section class="fullscreen">
+                <span class="background-left-top" 
+                    style="background-image:url('afb/sass/sassMetBanner.svg');">
+                </span>
+                <div class="grid">
+                    <div class="column fadeInUp">
+                        <img src="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/09/writing_reusable_css_with_sass_web-nocdn.png" alt="bril van Sass">
+                          <p>Een pre-processor maakt van meerdere .scss- en .sass-bestanden één .css-bestand</p>  
+                </div>
+                    <div class="column flexblock reasons">
+                        <h2>
+                            Wat is <strong>handig</strong> <i style="color: #bf4080;" class="fab fa-sass fa-lg"></i>?
+                        </h2>
+                        <ul>
+                            <li>opdelen van jouw CSS (vorige dia)</li>
+                            <li>werken met variabelen (aanpassingen aan huisstijlen eenvoudig!)</li>
+                            <li>rekenen met variabelen</li>
+                            <li>mixins besparen je veel herhalingen (DRY)</li>
+                            <li>overerving (bijvoorbeeld verschillende buttons)</li>
+                            <li>nesting (stijlen voor elementen in andere elementen)</li>
+                            <li>bij compilatie komt foutmelding bij fouten</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- dia 6 compileren     -->
+            <section >
+                <span class="background-left-top fadeInUp" 
+                    style="background-image:url('https://sass-lang.com/assets/img/illustrations/glasses-2087d741.svg');">
+                </span>
+                <span class="background-left-top" 
+                    style="background-image:url('afb/sass/sassMetBanner.svg');">
+                </span>
+                <span class="background-right-top " 
+                    style="background-image:url('https://media.giphy.com/media/AazZSBdhIdH9K/giphy.gif');">
+                </span>
+                <div class="wrap">
+                    <div class="aligncenter">
+                        <h2>compileren CLI <small>(commandline: opdracht-promt of Terminal)</small> </h2>
+                        <code style="font-size: 2em; background-color: rgba(255, 170, 0, 0.44); width: 100%; display: block;">sass --watch main.scss <span style="color: #bf4080;">:</span> style.css</code>
+                    </div>
+
+                </div>
+                <div class="aligncenter">
+                    <img src="afb/sass/compilerenSass.svg" alt="compileren in Sass">
+
+                </div>
+            </section>
+
+            <!-- dia 7 codevoorbeeld variabelen  -->
+            <section class="fullscreen">
+                <span class="background-right-top fadeInUp" 
+                    style="background-image:url('https://sass-lang.com/assets/img/illustrations/glasses-2087d741.svg');">
+                </span>
+                <span class="background-left-top" 
+                style="background-image:url('afb/sass/sassMetBanner.svg');">
+            </span>
+            <div class="wrapper">
+                <div>
+                    <h2 class="aligncenter">Codevoorbeeld: <strong>variabelen</strong> in SCSS/SASS</h2>
+                </div> <hr>
+                <div class="grid">
+                    <div class="column">
+                        <h4 class="aligncenter">SCSS</h4>
+                        <script src="https://gist.github.com/Theo-denBlanken/fb193304569636a745c7ff29a48fffef.js"></script>
+                    </div>
+                    <div class="column">
+                        <h4 class="aligncenter">SASS</h4>
+                        <script src="https://gist.github.com/Theo-denBlanken/880e1e6014718bbd78fb36655dc42709.js"></script>
+                    </div>
+                    <div class="column">
+                        <h4 class="aligncenter">
+                            gecompileerd naar CSS
+                        </h4>
+                        <script src="https://gist.github.com/Theo-denBlanken/f4760c14ac5ecfa20a62b7f46d385078.js"></script>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <!-- dia 8 codevoorbeeld nesting  -->
+            <section class="fullscreen">
+                <span class="background-right-top fadeInUp" 
+                    style="background-image:url('https://sass-lang.com/assets/img/illustrations/glasses-2087d741.svg');">
+                </span>
+                <span class="background-left-top" 
+                style="background-image:url('afb/sass/sassMetBanner.svg');">
+            </span>
+            <div class="wrapper">
+                <div>
+                    <h2 class="aligncenter">Codevoorbeeld: <strong>nesting</strong> in SCSS/SASS</h2>
+                </div>
+                <hr>
+                <div class="grid">
+                    <div class="column">
+                        <h4 class="aligncenter">SCSS</h4>
+                        <script src="https://gist.github.com/Theo-denBlanken/81ae3e8bf1552895b5f9fb40f6637943.js"></script>
+                    </div>
+                    <div class="column">
+                        <h4 class="aligncenter">SASS</h4>
+                        <script src="https://gist.github.com/Theo-denBlanken/f9c00018fd5fc39aca3dfdca032d5425.js"></script>
+                    </div>
+                    <div class="column">
+                        <h4 class="aligncenter">
+                            gecompileerd naar CSS
+                        </h4>
+                        <script src="https://gist.github.com/Theo-denBlanken/498f4ce7adce9ecb9fc31249741c5d94.js"></script>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+            <!-- dia 9 codevoorbeeld importeren (partials)  -->
+            <section class="fullscreen">
+                <span class="background-left-bottom fadeInUp" 
+                    style="background-image:url('https://sass-lang.com/assets/img/illustrations/glasses-2087d741.svg');">
+                </span>
+                <span class="background-left-top" 
+                style="background-image:url('afb/sass/sassMetBanner.svg');">
+                </span>
+                <div class="wrapper">
+                    <div>
+                        <h2 class="aligncenter">Codevoorbeeld: <strong>partials</strong> (importeren) in SCSS/SASS</h2>
+                    </div>
+                    <hr>
+                    <div class="grid">
+                        <div class="column">
+                            <h4 class="aligncenter">SCSS</h4>
+                            <script src="https://gist.github.com/Theo-denBlanken/804f7e2c642988ab49b4732c213c8622.js"></script>
+                        </div>
+                        <div class="column">
+                            <h4 class="aligncenter">SASS</h4>
+                            <script src="https://gist.github.com/Theo-denBlanken/804f7e2c642988ab49b4732c213c8622.js"></script>
+                        </div>
+                        <div class="column">
+                            <h4 class="aligncenter">
+                                gecompileerd naar CSS
+                            </h4>
+                            <script src="https://gist.github.com/Theo-denBlanken/63d836e92829a7940087dc307e297f09.js"></script>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 10 installatie   -->
+            <section class="aligncenter">
+                
+                <div class="wrap">
+                    <h2 class="aligncenter">Installatie via npm</h2>
+                    
+                    <div>
+                        <code style="font-size: 3em;"><span style="color:#bf4080">sudo</span> npm install -g sass</code>
+                        <p>Soms is <code>sudo</code> noodzakelijk omdat bij een 'globale' installatie beheerdersrechten noodzakelijk zijn. 
+                            <br>  Er wort dan ook naar je beheerderswachtwoord gevraagd.</p>
+                    </div>
+                    <hr>
+                    <img style="height: 40vh;" src="afb/sass/sass.svg" alt="Sass compileert">
+                    <h2>controle of Sass geïnstalleerd is</h2>
+                    <p>Feitelijk vraag je de versie van Sass op met de commandline</p>
+                    <div>
+                        <code style="font-size: 3em;">sass --version</code>
+                        <hr>
+                    </div>
+
+                </div>
+               
+            </section>
+
+            <!-- dia 11 de opdracht  -->
+            <section>
+                <div class="wrap">
+                    <div class="grid sms flexblock reasons">
+                        <div class="column">
+                            <img src="afb/sass/ontwerpSassMobile.svg" alt="ontwerp van mobile">
+                        </div>
+                        
+                        <div class="column zoomIn">
+                            <h2 class="aligncenter">De opdracht <i class="fab fa-sass" style="color: #bf4080;"></i></h2>
+                            <img src="afb/sass/ontwerpSassDesktop.svg" alt="ontwerp voor desktop">
+                        </div>
+                        <div class="column">
+                            <ul>
+                                <li>Gebruik beide schetsen hiernaast als richtlijn</li>
+                                <li>Installeer Sass</li>
+                                <li>Instructies op <small><a href="../sass.html">https://blanken5.home.xs4all.nl/sass.html</a></small></li>
+                                <li>Gebruik eigen namen voor bestanden en variabelen</li>
+                                <li>Site online <br>(exclusief sass/scss)</li>
+                                <li>Alle bestanden op GitHub (incl. sass/scss) <i class="fab fa-github"></i></li>
+                                <li>Linkje live versie in <code>README.md</code></li>
+                            </ul>
+                            
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- dia 12 links   -->
+            <section class="bg-blue aligncenter">
+                <span class="background light" 
+                    style="background-image:url('afb/sass/sass.svg');">
+                </span>
+                <div class="wrap">
+                    <h2 class="aligncenter"><strong>Links</strong></h2>
+                    <hr>
+                </div>
+                <div class="flexblock reasons">
+                    <ul><li><a href="https://sass-lang.com/guide">Syntax van Sass: zowel SCSS als SASS</a></li>
+                        <li><a href="http://bla.hosts1.ma-cloud.nl/blog/sass-crash-course/">Alternatieve crashcourse Sass (NIET namaken)</a></li>
+                        <li><a href="../sass.html">De instructies</a></li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <!-- laatste dia: credits  -->
+            <section class="slide-bottom">
+                <div class="wrap zoomIn">
+                    <div class="content-right">
+                        <h3>Credits</h3>
+                        <p>Deze presentatie is gemaakt met gebruik van:</p>
+                        <ol class="flexblock reasons">
+                            <li>
+                                <a href="https://github.com/webslides/WebSlides">WebSlides</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=uE1m21Umn0s&list=LLrGLVN889769Dfa1kzliUxQ&index=3&t=0s">Video tutorial Brad Traversy</a>
+                            </li>
+                            <li>
+                                <a href="https://webslides.tv/demos/classes#slide=2">documentatie WebSlides</a>
+                            </li>
+                        </ol>
+                    </div> 
+                </div>  <!-- einde van de wrap die heb je nodig om de inhoud rechtsonder te plaatsen -->
+            </section>
+        </article>
+    </main>
+    
+    <script src="js/webslides.min.js"></script>
+    <script>
+        window.ws = new WebSlides();
+    </script>
+</body>
+</html>

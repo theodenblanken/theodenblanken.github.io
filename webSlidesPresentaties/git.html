@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versiebeheer | Git op de Mac</title>
+    <link rel="stylesheet" href="css/webslides.css">
+    <style>
+        nav .alignright a {
+            padding: 0 .3em;
+        }
+    </style>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/1a91c75a80.js"></script>
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="navigation">
+            <span>Versiebeheer | Git op de Mac</span>
+            <span class="alignright">
+                <a href="#slide=2"><img src="https://iconape.com/wp-content/files/ni/64759/png/git-icon.png"
+                        alt="Git"></a>
+                <a href="../index.html"><img src="https://blanken5.home.xs4all.nl/afb/logotheo.jpg" alt="logo Theo den Blanken"></a>
+                <a href="https://welkombijma.nl/" target="_blank"><img
+                        src="https://welkombijma.nl/wp-content/themes/welkombijma/public/img/logo.svg"
+                        alt="logo Mediacollege Amsterdam"></a>
+            </span>
+        </nav>
+    </header>
+
+    <main role="main">
+        <article id="webslides" class="horizontal">
+            <!-- dia 1  -->
+            <section class="slide current">
+
+                <div class="wrap">
+                    <div class="card-50 bg-white">
+                        <figure>
+                            <img src="https://iconape.com/wp-content/files/ni/64759/png/git-icon.png" alt="Git" >
+                            <figcaption>Versiebeheer | Git op de Mac</figcaption>
+                        </figure>
+                        <div class="flex-content">
+                            <h1><strong>Versiebeheer</strong></h1>
+                            <p class="text-intro ">
+                                <strong>Git</strong>
+                            </p>
+                            <p>
+                                <a href="#slide=2" class="button zoomIn">
+                                    naar de slides &nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-git-alt"></i> </a>
+                            </p>
+                            Terug naar <a href="https://teams.microsoft.com/l/file/05D148EE-030E-4CC0-B3B3-794080C422E8?tenantId=8e600f92-30df-4667-b7c0-3f2595f3f12b&fileType=pptx&objectUrl=https%3A%2F%2Fmediacollegeamsterdam.sharepoint.com%2Fteams%2FHelloYou%2FGedeelde%20documenten%2FProgrammeursvaardigheden%2FLesmateriaal%2Fles%2003%20softwarecontrole.pptx&baseUrl=https%3A%2F%2Fmediacollegeamsterdam.sharepoint.com%2Fteams%2FHelloYou&serviceName=teams&threadId=19:9b4ab4a7e61e4587bf3255375af4afb2@thread.tacv2&groupId=01a0e9a1-1d50-457c-8b76-3332db729e5c">de instructie voor Windowsgebruikers</a>
+                            <br>
+                            Terug naar <a href="cli.html">de les CLI</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <!-- einde van wrap  -->
+            </section>
+
+            <!-- dia 2 inhoudsopgave  -->
+            <section >
+                <div class="wrap">
+                        <h2 class="aligncenter"><i class="fab fa-git-alt"></i> Inhoudsopgave </h2>
+                        <div class="grid">
+
+                            <div class="column fadeInUp">
+
+                                <ul class="description">
+                                    <li><a href="#slide=3">Leerdoelen les</a></li>
+                                    <li><a href="#slide=4">Opfrissen CLI</a></li>
+                                    <li><a href="#slide=5">Installatie Git</a></li>
+                                    <li><a href="#slide=6">Stappen om repo maken</a></li>
+                                    <li><a href="#slide=7">Videoinstructie commits maken</a></li>                                                                    
+                                </ul>
+                            </div>
+                            <div class="column fadeInUp slow">
+                                <ul class="description">
+                                    <li><a href="#slide=8">Branches in Git</a></li>
+                                    <li><a href="#slide=9">Voorbeeld branche</a></li> 
+                                    <li><a href="#slide=10">Videoinstructie branches</a></li>  
+                                    <li><a href="#slide=11">Woordenlijst</a></li>  
+                                    <li><a href="#slide=12">Opdracht</a></li>
+                                                                                                              
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <img src="https://iconape.com/wp-content/files/ni/64759/png/git-icon.png" alt="Git" 
+                                style="object-position: right;">
+                            </div>
+                        </div>
+
+                    
+
+                </div>
+            </section>
+
+            <!-- dia 3 leerdoelen  -->
+            <section class="fullscreen bg-apple">
+                <div class="card-40">
+                    <figure class="fadeInUp">
+                        <img src="https://iconape.com/wp-content/files/ni/64759/png/git-icon.png" alt="Git" 
+                            style="object-position: left;">
+                        <figcaption style="color: black;"><i class="fab fa-git-alt"></i> Git</figcaption>
+                    </figure>
+                    <div class="flex-content flexblock reasons">
+                        <h2 class="aligncenter">Leerdoelen <i class="fab fa-git-alt"></i></h2>
+                        <ul>
+                            <li>
+                                Initialisatie van Git-repository
+                            </li>
+                            <li>bestanden op stage plaatsen</li>
+                            <li>committen</li>
+                            <li>commits opvragen</li>
+                            <li>branches maken</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 4 opfrissen CLI  -->
+            <section class="fullscreen bg-apple">
+                <div class="wrap">
+                    <h2>Opfrissen les CLI o.a. <img src="afb/cli/cli.gif" alt="CLI" style="height: 2.5em; transform: translateY(1em);"></h2>
+                    <div class="grid">
+                        <div class="column flexblock reasons">
+                            <ul>
+                            <li>het starten van de Terminal</li>
+                            <li>directory === mapje === folder</li>
+                            <li>CLI-opdrachten worden uitgevoerd vanuit de huidige directory</li>
+                            <li><code>ls</code></li>
+                            <li><code>cd</code></li>
+                            <li><code>mkdir</code></li>
+                            <li><code>rm</code></li>
+                            <li><code>echo tekst > bestand</code></li>
+                            <li><code>open -e mijnTekst.txt</code></li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <div class="wrap">
+                                <h3><strong>Herhaalopdracht</strong></h3>
+                                <p>Maak een mapje <code>f1m1</code> en ga er met Terminal naar toe. <br>
+                                Maak daarin onderstaande directory-structuur:</p>
+                                <pre style="font-size: 1.5em; line-height: 1.5em;" class="zoomIn">
+    f1m1
+    ├── beroep
+    ├── pvaardig
+    │   ├── Les01
+    │   ├── Les02
+    │   ├── Les03
+    │   ├── Les04
+    │   ├── Les05
+    │   ├── Les06
+    │   ├── Les07
+    │   └── Les08
+    └── python
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <!-- dia 5 installatie Git  -->
+            <section class="fullscreen">
+                <div class="wrap">
+                    <h2>Git installeren</h2>
+                    <div class="grid">
+                        <div class="column fadeInUp">
+                            <a href="https://git-scm.com/download/mac" target="_blank"><img src="afb/git/instalGit.png" alt="installatie Git"></a>
+                        </div>
+                        <div class="column">
+                            <h2>Git installeren</h2>
+                            <div class="flexblock reasons">
+                                <ul>
+                                    <li>Als je Xcode al op je Mac hebt, ben je al klaar: Git zit daarbij.</li>
+                                    <li>Heb je Homebrew al  dan met <br> <code>brew install git</code> <a style="display: inline;" href="cli.html#slide=22"> link naar bonusopdracht les CLI</a></li>
+                                    <li>gewoon installeren met <a href="https://sourceforge.net/projects/git-osx-installer/">een installatie van Tim Harper</a></li>
+                                    <li>Wil je de laatste update van Git en je hebt Git al: dan via CLI: <br> <code>git clone https://github.com/git/git</code></li>
+                                </ul>
+                            
+                            </div>
+                            <p>Geef in de CLI <code><strong>git --version</strong></code> om vast te stellen of je Git hebt</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 6 stappenplan voor het maken van een repository  -->
+            <section class="fullscreen">
+                <div class="wrap">
+                    <h2 class="aligncenter">Stappenplan voor eenvoudige commits in &nbsp;<i class="fab fa-git-alt"></i></h2>
+                    <ul class="flexblock steps">
+                        
+                        <li><div class="aligncenter">
+                            <h3>Stap 01</h3>
+                        <code><strong>git init</strong></code>
+                        <hr>
+                        <p>Met deze opdracht maakt git voor jouw project eenmaal een git-repositry aan.<br>
+                        Zonder deze initialisatie heb je geen repository en kan Git niet werken.</p></div>
+                        </li>
+                        <li>
+                            <div class="process step-2"></div>
+                            <div class="aligncenter">
+                                <h3>Stap 02</h3>
+                        <code><strong>git add</strong> bestandsnaam</code>
+                        <hr>
+                        <p>Plaatst bestand(en) op de stage. <br>
+                        Je bepaalt hier welke opgeslagen bestanden in de commit terecht komen</p></div>
+                        </li>
+                        <li>
+                            <div class="process step-3"></div>
+                            <div class="aligncenter">
+                                <h3>Stap 03</h3>
+                        <code><strong>git commit -m "</strong><small>beschrijving van de commit</small><strong>"</strong></code>
+                        <hr>
+                        <p>Maakt een 'snapshot' van de bestanden op de stage. <br>
+                        Deze kun je op een later moment weer terughalen. <br>De stage is met dexe opdracht weer leeg.</p></div>
+                        </li>
+                    </ul>
+
+                    <hr>
+                    <div class="grid ms">
+                        <div class="column">
+                            <ul class="flexblock reasons">
+                            <li>Je kunt nu stap 02 en stap 03 hierboven zo vaak herhalen als je nodig vindt</li>
+                            <li><code><strong>git log</strong></code> geeft een overzicht van de commits in jouw repository</li>
+                            <li><code><strong>git status</strong></code> geeft een overzicht van de bestanden, die op de stage staan of als de stage leeg is. <br>
+                            Doe dit in het begin vaak, zodat je leert hoe het proces verloopt.
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="column">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png" alt="Git">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 7 videoinstructie commits maken  -->
+            <section class="content-center">
+                <h2>instructievideo <br> kennismaken met Git</h2>
+                <p class="intro-text">en de eerste commits maken</p>
+                Directe link naar <a href="https://www.youtube.com/watch?v=TbHrt9CQKr8" target="_blank">de video op YouTube</a>
+                <hr>
+                <div class="embed zoomIn">
+                    <iframe src="https://www.youtube.com/embed/TbHrt9CQKr8">
+                    </iframe>
+                   </div>
+            </section>
+            
+            <!-- dia 8 branches -->
+            <section class="wrap fullscreen">
+
+                <div class="content-center">
+                    <h2>Branches (zijtakken)</h2>
+                    <p class="text-intro">Werken met verschillende versies in <i class="fab fa-git-alt"></i></p>
+                </div>
+                <div class="grid">
+                    <div class="column">
+                        <p>
+                            <code><strong>git branch</strong> naamVanDeBranch</code> maakt een nieuwe branch aan. 
+                        </p> 
+                        <p><code><strong>git branch</strong></code> geeft een overzicht van de branches en markeert de branch waar je in werkt. <br>
+                        Technisch aangeduid: waar de HEAD van Git is.</p>
+                        <p>
+                            <code><strong>git checkout</strong> naamVanDeBranch</code> laat de HEAD naar die bracnh overgaan. <br>
+                            Git opdrachten zullen dan in die nieuwe branch uitgevoerd worden.
+                        </p>
+                        <p><strong>master</strong> is de naam van de hoofdbranch waar de repository mee start.
+                            <br>Met <code><strong>git checkout master</strong></code> keer je daarin terug.</p>
+                    </div>
+                    <div class="column fadeInUp">
+                        <img src="https://blog.seibert-media.net/wp-content/uploads/2015/07/Git-Branches-1.png" alt="Git branches" 
+                            style="object-position: left;">
+                    </div>
+                </div>                
+            </section>
+
+            <!-- dia 9 voorbeeld  -->
+            <section class="wrap ">
+                    <h2 class="aligncenter">commits in 2 branches in <i class="fab fa-git-alt"></i></h3>
+                        <hr>
+                    <img src="afb/git/branches.svg" alt="voorbeeld van 2 branches in Git" style="width: 90vw;" class="fadeInUp">                
+            </section>
+
+            <!-- dia 10 videoinstructie branches beheren  -->
+            <section class="content-center">
+                <h2>instructievideo <br> branches in <i class="fab fa-git-alt"></i></h2>
+                <p class="intro-text">om zo de versies te beheren</p>
+                Directe link naar <a href="https://www.youtube.com/watch?v=mZjtnYz32j0" target="_blank">de video op YouTube</a>
+                <hr>
+                <div class="embed zoomIn">
+                    <iframe src="https://www.youtube.com/embed/mZjtnYz32j0">
+                    </iframe>
+                   </div>
+            </section>
+
+            <!-- dia 11 woordenlijst  -->
+            <section class="bg-apple">
+                
+                <div class="grid">
+                    <div class="column">
+                        <h2 class="aligncenter">Woordenlijst <i class="fab fa-git-alt"></i></h2>
+                        <hr>
+                        <figure class="fadeInUp">
+                            <img src="https://iconape.com/wp-content/files/ni/64759/png/git-icon.png" alt="Git" 
+                                style="object-position: left;">
+                            <figcaption style="color: black;"><i class="fab fa-git-alt"></i> Git</figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <h4><strong>repository</strong></h4>
+                        <p>Een geheel van bestanden, commits, branches en daarmee de versiegeschiedenis van een project. <br>
+                        In de spreektaal wordt dit afgekort naar repo.</p>
+
+                        <h4><strong>commit</strong></h4>
+                        <p>Een snapshot van de bestanden op een bepaald moment. <br>
+                        Door bestanden op de stage te zetten (in de spotlight) geef je aan welke bestanden in de commit worden meegenomen.</p>
+
+                        <h4><strong>branch</strong></h4>
+                        <p>Afsplitsing van de repository bedoeld om tijdelijk verder te werken. De hoofd branch in Git is de master-branch.</p>
+
+                        <h4><strong>master</strong></h4>
+                        <p>De standard branch in een Git repository. <br> 
+                        Je kunt het opvatten als de hoofd-branch. Andere branches splitsen van deze master af.</p>
+
+                        <h4><strong>HEAD</strong></h4>
+                        <p>De plek in de branch waar Git aan het kijken is. Deze wisselt waanneer je met git checkout een andere branch kiest. <br>
+                        Je kunt het eigenlijk vergelijken met de CWD (huidige directory) bij de CLI.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 12 opdracht  -->
+            <section class="bg-apple">
+                <h2 class="aligncenter"><strong><i class="fab fa-git-alt"></i> &nbsp; opdracht </strong></h2>
+                <div class="grid">
+                    <div class="wrap flexblock reasons column">
+                        <ul>
+                            <li>Maak zelf een projectje zoals in de dia's hiervoor. <br>
+                                Maak 3 branches (inclusief master) en elke branch minimaal 2 commits.</li>
+                            <li>
+                                <code><strong>git log</strong></code> Dat laat zien dat het je is gelukt.
+                            </li>
+                            <li> Met de CLI zet je deze git log in een tekstbestandje met de naam
+                                gitLog.txt<code><strong>git log > gitLog.txt</strong></code></li>
+                            <li>
+                                Dit bestand gitlog.txt inleveren in Magister.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <figure class="fadeInUp">
+                            <img src="https://iconape.com/wp-content/files/ni/64759/png/git-icon.png" alt="Git"
+                                style="object-position: left;">
+                           
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+          
+
+        </article>
+    </main>
+
+    <script src="js/webslides.min.js"></script>
+    <script>
+        window.ws = new WebSlides();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verplaatsen | hoe en hoeveel</title>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/1a91c75a80.js"></script>
+    <link rel="stylesheet" href="../highlight/styles/atelier-estuary-light.css">
+    <script  charset="UTF-8" src="../highlight/highlight.pack.js"></script>
+    <link rel="stylesheet" href="css/webslides.css">
+    <style>
+        nav .alignright a {
+            padding: 0 .3em;
+        }
+        .text-landing, .text-intro {
+            text-align: center;
+        }
+        .videoHouder {
+            position: relative;
+            width: 100%;
+            height: 60vh
+        }
+        .videoHouder iframe {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="navigation">
+            <span class="fab fa-css3-alt"></span>
+            <span>Verplaatsen | hoe en hoeveel?</span>
+            <span class="alignright">
+                <a href="#slide=2"><span class="fab fa-css3-alt"></span> home</a>
+                    
+                <a href="../index.html"><img src="https://blanken5.home.xs4all.nl/afb/logotheo.jpg" alt="logo Theo den Blanken"></a>
+                <a href="https://welkombijma.nl/" target="_blank"><img
+                        src="https://welkombijma.nl/wp-content/themes/welkombijma/public/img/logo.svg"
+                        alt="logo Mediacollege Amsterdam"></a>
+            </span>
+        </nav>
+    </header>
+
+    <main role="main">
+        <article id="webslides" class="horizontal">
+            <!-- dia 1  -->
+            <section class="slide bg-apple fullscreen">
+                <span class="background dark" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/7/7f/Verplaatsing_caf%C3%A9_De_Bosrand_over_1_km%2C_Bestanddeelnr_906-2672.jpg')"></span>
+                <div class="wrap ">
+                     <h1 class="aligncenter"><strong> <span style="position: relative; left:.72em; font-style: inherit; font-family: sans-serif;">V</span><span style="font-style: inherit; font-family: sans-serif; color:magenta; position: relative; left:-.07em;">V</span>erplaatsen</strong></h1>
+                     <p class="text-intro">
+                        Positioneren en eenheden in CSS 
+                     </p>
+                     <hr>
+                     
+                     <p class="aligncenter fadeInUp" style="font-size: 1.7em; line-height: 2.2em;">
+                        <a href="#slide=2" class="button zoomIn">naar de slides </a> <br>
+                        <span  class="fab fa-css3-alt" style="font-size: 3em;position: relative; left: .4em;"></span>
+                        <span style="font-size: 3em;color: magenta; position: relative; left: -.48em;" class="fab fa-css3-alt" ></span>
+                     </p>
+                     <p class="aligncenter">vorige les: <a href="menu.html">intern menu</a></p>
+                </div>
+                <!-- einde van wrap  -->
+            </section>
+
+            <!-- dia 2 inhoudsopgave  -->
+            <section class=" fullscreen bg-apple">
+                <div class="card-50">
+                    <figure class="fadeInUp">
+                        <img src="https://media.nu.nl/m/ckrxy2na6u90_wd1280.jpg/organisator-italiaanse-koersen-vreest-afgelasting-en-hoopt-op-verplaatsing.jpg"
+                        alt="een razendsnelle verplaatsing" >
+                        <figcaption>een razendsnelle verplaatsing</figcaption>
+                    </figure>
+                    <div class="column" style="padding: 15vh 5vw;">
+                        
+                            <h2 class="text-landing aligncenter" style="margin-left:5vw;"> Inhoudsopgave  </h2>
+                            <hr>
+                            <ul class="description" style="font-size: 1.2em; margin-left: 3em">
+                                <li><a href="#slide=3">leerdoelen les<span class="toc-page">3</span></a></li>
+                                <li><a href="#slide=4">context positioning<span class="toc-page">4</span></a></li>
+                                <li><a href="#slide=5">experiment positioning<span class="toc-page">5</span></a></li>
+                                <li><a href="#slide=6"><code>position : static</code><span class="toc-page">6</span></a></li>
+                                <li><a href="#slide=7"><code>position : relative</code><span class="toc-page">7</span></a></li>
+                                <li><a href="#slide=8"><code>position : absolute</code><span class="toc-page">8</span></a></li>
+                                <li><a href="#slide=9"><code>position : fixed</code><span class="toc-page">9</span></a></li>
+                                <li><a href="#slide=10"><code>position : sticky</code><span class="toc-page">10</span></a></li>
+                                <li><a href="#slide=11">demo <code>em</code> versus <code>rem</code><span class="toc-page">11</span></a></li>
+                                <li><a href="#slide=12">procenten: ten opzichte waarvan?<span class="toc-page">12</span></a></li>
+                                <li><a href="#slide=13"><code>vw</code> en <code>vh</code><span class="toc-page">13</span></a></li>
+
+                        </ul>
+                    </div>
+                </div> 
+            </section>
+
+            <!-- dia 3 leerdoelen  -->
+            <section class="fullscreen bg-apple">
+                <div class="card-50">
+                    
+                        <figure class="fadeInUp browser">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Verplaatsing_caf%C3%A9_De_Bosrand_over_1_km%2C_Bestanddeelnr_906-2672.jpg" alt="verplaatsing van café De Bosrand">
+                            <figcaption>verplaatsing van café De Bosrand</figcaption>
+                        </figure>
+                    
+                    <div class="content-left" style="padding: 20vh 5vw;">
+
+                        <h2 class="aligncenter">Leerdoelen</h2>
+                        <hr>
+                            <ol>
+                                <li>veel voorkomende waarden van <code>positioning</code>
+                                <ul>
+                                    <li><code>static</code></li>
+                                    <li><code>relative</code></li>
+                                    <li><code>absolute</code></li>
+                                    <li><code>sticky</code></li>
+                                    <li><code>fixed</code></li>
+                                </ul></li>
+                                <li>veel voorkomende maateenheden in CSS
+                                    <ul>
+                                        <li><code>px</code></li>
+                                        <li><code>em</code></li>
+                                        <li><code>rem</code></li>
+                                        <li><code>%</code></li>
+                                        <li><code>vw</code> en <code>vh</code></li>
+                                    </ul>
+                                </li>                         
+                            </ol>
+                            
+                        
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 4 positioning context -->
+            <section class="bg-apple">
+                <span class="background dark" style="background-image:url('https://media.nu.nl/m/ckrxy2na6u90_wd1280.jpg/organisator-italiaanse-koersen-vreest-afgelasting-en-hoopt-op-verplaatsing.jpg')"></span>
+                <div class="wrap">
+                    <h2 class="text-landing">
+                        Positioning: de context
+                    </h2>
+                    <ul class="flexblock reasons size-80" style="font-size:1.8em; line-height: 2em;">
+                        <li>Met display-types (of die van hun parents) krijgen de elementen hun positie in de viewport;</li>
+                        <li style="display: block;">met de <code>position</code>-eigenschap kan van die plek op verschillende manieren worden afgeweken/bijgesteld;</li>
+                        <li style="display: block;">met <code>transform</code> en <code>margin</code> zijn <em>soms</em> vergelijkbare verschuivingen haalbaar</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- dia 5: demo positioning https://youtu.be/LazX5F0GWTM -->
+            <section class="fullscreen bg-apple">
+                
+                <h2 class="text-landing">
+                    experiment position  <span class="fab fa-css3-alt"></span>
+                </h2>
+                <div class="grid sm" style="width: 90vw">
+                    <div class="column" style="font-size: 1.2em">            
+                        <ol>
+                            <li>Ga naar <a href="https://blanken5.home.xs4all.nl/experimenten/testEM_REM_spelen/testEMs.html" target="_blank">https://blanken5.home.xs4all.nl/experimenten/testEM_REM_spelen/testEMs.html</a></li>
+                            <li>
+                                Zie hoe in de video de position-eigenschappen van het zwarte vlakje worden aangepast.
+                            </li>
+                            <li>Probeer dit ook</li>
+                        </ol>
+                        
+                    </div>
+                    <div class="column fadeInUp videoHouder">
+                        <iframe src="https://www.youtube.com/embed/LazX5F0GWTM">
+                        </iframe>
+                       </div>
+                </div>
+            </section>
+
+            <!-- dia 6 position : static -->
+            <section class="bg-apple">
+                <div class="wrap">
+                    <h2 class="text-landing">
+                        position: static<br>
+                        <img src="https://miro.medium.com/max/429/1*iVt-tUfGKHZyEkspuu7LlQ.png" alt="position static" style="padding-top: 2em"  class="zoomIn">
+                    </h2>
+                    <ul class="flexblock reasons size-50" style="font-size:1.8em; line-height: 2em;">
+                        <li style="display: block;">Geen verplaatsing <br> (wat de waarden van <code>top</code> en <code>left</code> ook zijn);</li>
+                        <li style="display: block;">Dit is de default instelling voor elk element 
+                        </li>
+                    </ul>
+                    
+                </div>
+            </section>
+
+            <!-- dia 7 position : relative -->
+            <section class="bg-apple">
+                <div class="wrap">
+                    <h2 class="text-landing">
+                        position: relative <br>
+                        <img src="https://miro.medium.com/max/455/1*3N2ousp3yth9ovHA8TpDZw.png" alt="postion: relative" class="zoomIn">
+                    </h2>
+                    <ul class="flexblock reasons size-50" style="font-size:1.8em; line-height: 2em;">
+                        <li style="display: block;">Verplaatsing ten opzichte van <br>
+                        zijn eigen positie, die het element heeft</li>
+                        <li>De andere elementen in de flow blijven op hun plek: er ontstaat een 'gat' als je echt verplaatst;</li>
+                        <li style="display: block;">Deze eigenschap wordt heel vaak toegepast <em>zonder</em> dat je waarden voor <code>top</code> en <code>left</code> gebruikt (om iets met de children van dit element te kunnen doen.</li>
+                    </ul>
+                </div>
+            </section>
+            <!-- dia 8 position : absolute -->
+            <section class="bg-apple" style="position: relative;">
+                <div class="wrap">
+                    <h2 class="text-landing">
+                        position: absolute 
+                    </h2>
+                    
+                    <div class="grid">
+                        <div class="column "> 
+                                                       
+                            <ul class="flexblock reasons size-80" style="font-size:1.8em; line-height: 2em; position: static;">
+                                <li style="display: block;">
+                                    <img src="https://miro.medium.com/max/343/1*XDqGjAEa_sNL1OlPQhEb7A.png" alt="postion: absolute"  class="zoomIn">
+                                </li>
+                                <li style="display: block;">Verplaatsing ten opzichte van <br>
+                                de positie van de dichtst-bijzijnde ancestor (bijvoorbeeld parent), die niet <code>static</code> is.
+                            <!-- <br> <img src="https://www.bapugraphics.com/multimediacoursetips/wp-content/uploads/2017/05/Explain-Absolute-Relative-Fixed-Positioning-Difference.jpg" alt="absolute"> -->
+                                
+                            </li>
+                            <li>De navolgende elementen in de flow, vullen direct de ruimte op die het element had.</li>
+                            </ul>
+                        </div>
+                        <div class="column" style="background-color: black; border: 1px solid grey;">
+                            <div> ancestor <br>
+                                experimenteer met de position van de 'parent' en het child.
+                                <div class="parent" style="background-color: bisque; min-height: 30vh; padding-left: 1em; color:black; text-shadow: none; font-size: 2rem; margin-top: 12em;">
+                                    parent
+                                    <div class="child" style="background-color: royalblue; padding:1em; top: 0; left: 150px; width: 70%; margin-bottom: 1em; padding-top: 2em;">
+                                        <p>child <code>top: 0; left: 150px;</code></p>
+                                        <select name="child" id="child" style="width: 70%;">
+                                            <option value="static"><code>position: static;</code></option>
+                                            <option value="absolute"><code>position: absolute;</code></option>
+                                            <option value="relative"><code>position: relative;</code></option>
+                                        </select>
+                                    </div>
+                                    <select name="parent" id="parent" style="width: 50%;">
+                                        <option value="static"><code>position: static;</code></option>
+                                        <option value="relative"><code>position: relative;</code></option>                   
+                                    </select>
+                                    
+                                </div>
+                            </div>
+                            <script>
+                                const parentEl  = document.querySelector('.parent');
+                                const childEl  = document.querySelector('.child');
+                                const parentSel = document.getElementById('parent');
+                                const childSel  = document.getElementById('child');
+    
+                                parentSel.addEventListener('change', (e) => {
+                                    parentEl.style.position = parentSel.value;
+                                });
+                                childSel.addEventListener('change', (e) => {
+                                    childEl.style.position = childSel.value;
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- dia 9 position : fixed -->
+            <section class="bg-apple">
+                <div class="wrap">
+                    <h2 class="text-landing">position: fixed</h2>
+                    <div class="grid">
+                        <div class="column">
+                            <ul class="flexblock reasons" style="font-size:1.8em; line-height: 2em;">
+                                <li style="display: block;">Verplaatsing ten opzichte van <br>
+                                de positie van de viewport. Als de pagina scrollt blijft het element op zijn plaats.</li>
+                                <li>De navolgende elementen in de flow, vullen direct de ruimte op die het element had.</li>
+                            </ul>
+                            <hr>
+                            
+                        </div>
+                        <div class="column zoomIn">
+                            <img src="https://cdn.minime.nl/uploads/kind-vastgeplakt-muur.jpg" alt="vastgeplakt">
+                        </div>
+                    </div>
+                    <p class="aligncenter">Hier nog een experimenteer-pagina: <a href="https://blanken5.home.xs4all.nl/experimenten/positioning/positioning.html" target="_blank">https://blanken5.home.xs4all.nl/experimenten/positioning/positioning.html</a></p>
+                </div>
+            </section>
+
+            <!-- dia 10 position : sticky-->
+            <section class="bg-apple">
+                <div class="wrap">
+                    <h2 class="text-landing">
+                        position: sticky</h2>
+                        <div class="grid">
+                            <div class="column">
+                                <ul class="flexblock reasons size-80" style="font-size:1.8em; line-height: 2em;">
+                                    <li style="display: block;">Het element blijft in de flow, tot het de grenswaarde (vaak <code>top</code>) heeft en scrollt dan niet verder binnen de viewport.</li>
+                                    <li>Heeft geen invloed op flow van andere elementen</li>
+                                </ul>
+                            </div>
+                            <div class="column fadeInUp">
+                                <iframe style="width: 100%;" title="Basic Sticky Menu Using Position: sticky" src="//codepen.io/georgec/embed/oqZerX/?height=300&amp;theme-id=14754&amp;default-tab=result&amp;embed-version=2" width="300" height="350" frameborder="no" scrolling="no" allowfullscreen="allowfullscreen"><br />
+                                </iframe>
+                            </div>
+                        </div>
+                                           
+                </div>
+            </section>
+
+            <!-- dia 11: demo em vs. rem https://youtu.be/Tu-jfzZY5aU -->
+            <section class="fullscreen bg-apple">
+                
+                <h2 class="text-landing">
+                    em <span style="font-size: 65%">versus</span> rem  <span class="fab fa-css3-alt"></span>
+                </h2>
+                <div class="grid sm" style="width: 90vw">
+                    <div class="column" style="font-size: 1.2em">            
+                        <ol class="flexblock reasons">
+                            <li>Ga naar <a href="https://blanken5.home.xs4all.nl/experimenten/testEM_REM_spelen/testEMs.html" target="_blank">https://blanken5.home. xs4all.nl/ experimenten/ testEM_REM_ spelen/ testEMs.html</a></li>
+                            <li>
+                                Kijk wat er met de paarse vlakjes (1em bij 1em) en de beige vlakjes (1rem bij 1rem) gebeurt als de font-grootte van het document wijzigt.
+                            </li>
+                            <li>De em-vlakjes schalen mee</li>
+                            <li>De rem-vlakjes en het zwarte px-vlakje blijven even groot</li>
+                            <li>in de groener 'wrapper-div' kan het font apart nog vergroot worden. De paarse vlakjes gaan in grootte verschillen, de beige blijven gelijk.</li>
+                        </ol>
+                        
+                    </div>
+                    <div class="column fadeInUp videoHouder">
+                        <iframe src="https://www.youtube.com/embed/Tu-jfzZY5aU">
+                        </iframe>
+                       </div>
+                </div>
+            </section>
+
+            <!-- dia 12 procenten: tenopzichte waarvan?  -->
+            <section class="fullscreen bg-apple">
+                <span class="background dark" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/7/7f/Verplaatsing_caf%C3%A9_De_Bosrand_over_1_km%2C_Bestanddeelnr_906-2672.jpg')"></span>
+
+                <h2 class="text-landing"><span class="fab fa-css3-alt"></span> procenten: tenopzichte waarvan?</h2>
+                <div class="grid">
+                    <div class="column aligncenter fadeInUp" >
+                        <p style="font-size: 70vh;line-height: 80vh;font-family: serif; opacity: .3;">%</p>
+                    </div>
+                    <div class="column" style="font-size: 125%;">
+                        <p class="text-intro">Dit hangt af van de css-eigenschap:</p>
+                        <ul class="flexblock reasons">
+                            <li style="display: block;"><code>height</code> 50% is de helft van de hoogte van de parent</li>
+                            <li style="display: block;"><code>width</code> 50% is de helft van de breedte van de parent</li>
+                            <li style="display: block;"><code>top</code> 50% is de helft van de hoogte van de parent</li>
+                            <li style="display: block;"><code>left</code> 50% is de helft van de breedte van de parent</li>
+                            <li style="display: block;"><code>margin-top</code> 50% is de helft van de breedte van de parent</li>
+                            <li style="display: block;"><code>margin-left</code> 50% is de helft van de breedte van de parent</li>
+                            <li style="display: block;"><code>font-size</code> 50% is de helft van de grootte van het font in het betreffende element</li>
+                        </ul>
+                        <hr>
+                        <p>Zie: <a href="http://bla.hosts1.ma-cloud.nl/blog/100-procent-van-wat/" target="_blank">http://bla.hosts1.ma-cloud.nl/blog/100-procent-van-wat/</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 13 vw en vh  -->
+            <section class="fullscreen bg-apple">
+                <span class="background dark" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/7/7f/Verplaatsing_caf%C3%A9_De_Bosrand_over_1_km%2C_Bestanddeelnr_906-2672.jpg')"></span>
+
+                <h2 class="text-landing">vw en vh</h2>
+                <div class="grid">
+                    <div class="column aligncenter fadeInUp" >
+                        <img src="https://d33wubrfki0l68.cloudfront.net/47c640ea3a502d602fc79a83512b3629af47cb90/54b10/images/css/viewport-units/screen-mockup-o.png" alt="vw en vh">
+                    </div>
+                    <div class="column" style="font-size: 125%;">
+                        <p class="text-intro"><code>vw</code>: viewport-width; <br> <code>vh</code>: viewport-height</p>
+                        <ul class="flexblock reasons">
+                            <li style="display: block;"><code>height: 50vh</code> 50% van de hoogte van de viewport</li>
+                            <li style="display: block;"><code>height: 100vh</code> precies de hoogte van de viewport</li>
+                            <li style="display: block;"><code>height: 50vw</code> 50% van de breedte van de viewport</li>
+                            <li style="display: block;"><code>height: 100vw</code> precies de breedte van de viewport</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+ <!-- laatste dia: credits  -->
+ <section class="slide-bottom bg-apple">
+    <span class="background dark" style="background-image:url('https://media.nu.nl/m/ckrxy2na6u90_wd1280.jpg/organisator-italiaanse-koersen-vreest-afgelasting-en-hoopt-op-verplaatsing.jpg')"></span>
+    <div class="wrap zoomIn">
+        <div class="content-right">
+            <h3>Credits</h3>
+            <p>Deze presentatie is gemaakt met gebruik van:</p>
+            <ol class="flexblock reasons" style="padding-bottom: 2em">
+                <li>
+                    <a href="https://github.com/webslides/WebSlides">WebSlides</a>
+                </li>
+                <li>
+                    <a href="https://webslides.tv/demos/classes#slide=2">documentatie WebSlides</a>
+                </li>
+                <li><a href="https://mothereff.in/html-entities">Omzetten van HTML-tags naar entiteiten</a></li>
+                <li><a href="https://leannezhang.medium.com/difference-between-css-position-absolute-versus-relative-35f064384c6">artikel op Medium.com</a></li>
+            </ol>
+            <a href="bootstrap5Layouten.html" class="button">volgende les: Bootstrap</a>
+        </div> 
+    </div>  <!-- einde van de wrap die heb je nodig om de inhoud rechtsonder te plaatsen -->
+</section>
+
+
+</article>
+    </main>
+
+    <script src="js/webslides.min.js"></script>
+    <script>
+        window.ws = new WebSlides();
+
+    // activeren highlight.js
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+  });
+});
+    </script>
+</body>
+
+</html>

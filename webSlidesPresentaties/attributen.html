@@ -1,0 +1,623 @@
+
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributen en CSS</title>
+    <link rel="stylesheet" href="css/webslides.css">
+    <style>
+        nav .alignright a {
+            padding: 0 .3em;
+        }
+    </style>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/1a91c75a80.js"></script>
+    <link rel="stylesheet" href="../highlight/styles/atelier-estuary-light.css">
+<script  charset="UTF-8" src="../highlight/highlight.pack.js"></script>
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="navigation">
+            <span>Attributen <span class="fab fa-html5"></span> en CSS <span class="fab fa-css3-alt"></span></span>
+            <span class="alignright">
+                <a href="#slide=2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/600px-HTML5_Badge.svg.png" alt="HTML5 logo">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/css-118-569410.png" alt="CSS3 logo" style="transform: scale(1.3);">
+                </a>
+                <a href="../index.html"><img src="https://blanken5.home.xs4all.nl/afb/logotheo.jpg"
+                        alt="logo Theo den Blanken"></a>
+                <a href="https://welkombijma.nl/" target="_blank"><img
+                        src="https://welkombijma.nl/wp-content/themes/welkombijma/public/img/logo.svg"
+                        alt="logo Mediacollege Amsterdam"></a>
+            </span>
+        </nav>
+    </header>
+
+    <main role="main">
+        <article id="webslides" class="horizontal" style="font-size: 1.5em;">
+            
+            <!-- dia 1  -->
+            <section class="bg-apple">
+                <span class="background dark" style="background-image:url('https://blog.udacity.com/wp-content/uploads/2020/06/HTML_Blog-scaled.jpeg')"></span>
+
+                <div class="wrap aligncenter">
+                    <h2 class="text-landing">Attributen HTML5 en intro CSS</h2>
+                    <p class="text-subtitle">Meer mogelijkheden met elementen
+                    </p>
+                    <hr>
+                    <div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/600px-HTML5_Badge.svg.png" alt="HTML5 logo"  style="height: 12vh; margin-bottom: 1.5vh;">
+                        <img src="https://cdn.iconscout.com/icon/free/png-512/css-118-569410.png" alt="CSS3 logo"  style="height: 15vh;">
+                    </div>
+                    <p class="text-intro">
+                    Laat elementen zich onderscheiden
+                    </p>
+                    <p>
+                        <a href="#slide=2" class="button zoomIn">
+                            naar de slides &nbsp;&nbsp;|&nbsp;&nbsp; <strong> <span class="fab fa-html5"></span> <span class="fab fa-css3-alt"></span> </strong> </a>
+                    </p>
+                    <p><a href="htmlIntro.html">De vorige les: Introductie HTML</a></p>
+                </div>
+            </section>
+
+            <!-- dia 2 inhoudsopgave  -->
+            <section class="bg-apple">
+
+                <span class="background dark" style="background-image:url('https://www.parsehub.com/blog/content/images/2019/09/html-scraping.jpg')"></span>
+                <div class="wrap">
+                    <h2 class="text-landing aligncenter">Inhoudsopgave</h2>
+                    <div class="grid">
+
+                        <div class="column fadeInUp">
+                            <ul class="description" style="font-size: 1.2em; margin-left: 1em">
+                                <li><a href="#slide=3">Leerdoelen les<span class="toc-page">3</span></a></li>
+                                <li> <span class="fab fa-html5"></span></li>
+                                <li><a href="#slide=4">Attribuut in een element<span class="toc-page">4</span></a></li>
+                                <li><a href="#slide=6">a-element met attribuut <i class="fas fa-anchor"></i> <span class="toc-page">6</span></a></li>
+                                <li><a href="#slide=8">Betekenis van HTML<span class="toc-page">8</span></a></li>
+                                <li><a href="#slide=9">img-element met attributen<span class="toc-page">9</span></a></li>
+                                <li><a href="#slide=11">input-element tekst<span class="toc-page">11</span></a></li>
+                                <li><a href="#slide=12">input-element email<span class="toc-page">12</span></a></li>
+                                <li><a href="#slide=13">input-element radio<span class="toc-page">13</span></a></li>
+                                <li><a href="#slide=14">input-element checkbox <i class="fas fa-check"></i><span class="toc-page">14</span></a><li>                                
+                                <li><span class="fab fa-css3-alt"></span></li>
+                                <li><a href="#slide=15">CSS basisstructuur<span class="toc-page">15</span></a><li> 
+                                <li><a href="#slide=16">CSS koppelen<span class="toc-page">16</span></a><li>
+                                <li><a href="#slide=17"><em>Cascade</em> in Cascading Style Sheets<span class="toc-page">17</span></a><li>
+                                <li><a href="#slide=18">Oefening<span class="toc-page">18</span></a><li>                                
+                            </ul>
+                        </div>
+
+                        
+                        
+                        <div class="column zoomIn">
+                            <div>
+                                <img src="https://www.nidido.com/wp-content/uploads/2017/12/html-css.png" alt="HTML en CSS" style="transform: scale(.5);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+
+            <!-- dia 3 leerdoelen  -->
+            <section class="fullscreen bg-apple">
+
+                <span class="background dark" style="background-image:url('https://blog.udacity.com/wp-content/uploads/2020/06/HTML_Blog-scaled.jpeg')"></span>
+                <div class="card-70">
+                    <figure class="fadeInUp align-left">
+                        <img src="https://paligo.net/docs/en/image/uuid-5e49e9d1-c883-0314-10e4-557462d50920-en.jpg" alt="CSS3">
+                        <figcaption style="color: black;">CSS</figcaption>
+                    </figure>
+                    <div class="flex-content flexblock reasons">
+                        <h2 class="text-landing">Leerdoelen <strong><span class="fab fa-html5"></span><span class="fab fa-css3-alt"></span></strong></h2>
+                        
+                        <ul>
+                            <li>Weten wat attributen en attribuut-waarden zijn</li>
+                            <li>a-element met attribuut</li>
+                            <li>
+                                img-element met attribuut
+                            </li>
+                            <li>input-elementen met attributen kennen</li>
+                            <li>Weten wat de basisstructuur van CSS is</li>
+                            <li>Koppelen van CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 4 een attribuut geeft een element iets extra's  -->
+            <section class="fullscreen bg-apple">                
+                <div class="wrap aligncenter"><h2 class="text-landing">
+                attribuut van een game-character
+                </h2>
+                <p class="text-intro">Een attribuut geeft het element iets extra's</p>
+                <img src="https://www.pcinvasion.com/wp-content/uploads/2016/05/tyranny_charactersheet.png" alt="game-karakter met attribuut">
+                </div>
+            </section>
+
+            <!-- dia 5 een attribuut van een HTML-element  -->
+            <section class="fullscreen bg-apple">
+                <div class="wrap aligncenter"><h2 class="text-landing">
+                    een attribuut van een HTML-element 
+                </h2>
+                <p class="text-intro">Een attribuut geeft het element iets extra's</p>
+                <img src="https://4.bp.blogspot.com/-B5vUzJXNAoE/Vuay2ygsN2I/AAAAAAAAG5o/-qOAVBa3LRkJ0fPWywYzkAcmezRAY2Rxg/s1600/html-syntax.png" alt="game-karakter met attribuut">
+                <p>merk op:</p>
+                <ul class="flexblock reasons size-50">
+                    <li>dat je hier het hele element ziet</li>
+                    <li>attribuut alleen in de openingstag aanwezig is</li>
+                    <li>de spatie in de openingstag en NIET bij het = -teken</li>
+                    <li>het = teken en de dubbele aanhalingstekens " en "</li>
+                    <li>het attribuut heeft een attribuut naam (hier is dat class) en een attribuut-waarde</li>
+                </ul>
+                </div>
+            </section>
+
+            <!-- dia 6 Het a-element  -->
+            <section class="fullscreen bg-apple">
+                <span class="background dark" style="background-image:url('afb/attributen/anker.svg');"></span>
+                
+                <div class="wrap aligncenter"><h2 class="text-landing">
+                    Het a-element <i class="fas fa-anchor"></i>
+                </h2>
+                <p class="text-intro">geeft een link naar een ander html-document</p>
+                <p>of een plek in een html-document</p>
+                <img src="afb/attributen/a-attribuut.svg" 
+                alt="anchor-element met attribuut"
+                class="fadeInUp">
+                </div>
+            </section>
+
+             <!-- dia 7 De mark-up van een a-element gemaakt met https://mothereff.in/html-entities -->
+             <section class="aligncenter bg-apple">
+                <span class="background dark" style="background-image:url('afb/attributen/anker.svg')"></span>
+                
+                <h2 class="text-landing">De mark-up van een a-element <i class="fas fa-anchor"></i></h2>
+                <hr>
+                <div class="grid ">
+                    <div class="content-left column fadeInUp">
+                        <h3 class="aligncenter fadeInUp"><code>href</code> is een onmisbaar attribuut van <code>a</code></h3>
+                        <hr>
+<pre><code class="html" style="font-size: 1.3em;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Een link naar het LAM&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+        &lt;h1&gt;Een link naar het LAM&lt;/h1&gt;
+        &lt;p&gt;Een link naar 
+        &lt;a href=&quot;https://www.lamlisse.nl/&quot;&gt;de website van het LAM&lt;/a&gt; 
+        te Lisse.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                            
+                      </code>
+                        </pre>
+                    </div>
+                    <div class="content-left column fadeInUp slow">
+                        <h3 class="aligncenter fadeInUp slow">Het resultaat</h3>
+                        <hr>
+                        <div class="embed bg-white" style="width: 40vw">
+                            <iframe src="afb/attributen/linkNaarLAM.html">
+                            </iframe>
+                        </div>       
+                        <p>
+                            Resultaat <a href="afb/attributen/linkNaarLAM.html" target="_blank">in apart venster</a>
+                        </p>
+                        <p>
+                            Alle andere attributen van <code>a</code> vind je bij <a href="https://www.w3schools.com/tags/tag_a.asp">w3schools.com</a>
+                        </p>                     
+                </div>
+            </section>
+
+
+             <!-- Dia 8: de betekenis van HTML  -->
+             <section class="fullscreen bg-apple">
+                <span class="background dark" style="background-image:url('https://miro.medium.com/max/2700/0*wwOQbx6qkQJBAUi_')"></span>
+                <div class="wrap aligncenter">
+                    <h2 class="text-landing ">De betekenis van HTML</h2>
+                    <hr>
+                    <div style="text-align: left; padding-left: 30%">
+                        <h3><strong><span style="color:magenta;">H</span>yper</strong></h3>
+                        <h3><strong><span style="color:magenta;">T</span>ext</strong> <em>hyper-text</em> is klikbare tekst, die andere informatie ontvouwt</h3>
+                        <h3><strong><span style="color:magenta;">M</span>ark-up</strong> <em>opmaak</em></h3>
+                        <h3><strong><span style="color:magenta;">L</span>anguage</strong> <em>taal</em></h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- dia 9 Het img-element  -->
+            <section class="fullscreen bg-apple">
+                <span class="background dark" style="background-image:url('https://www.parsehub.com/blog/content/images/2019/09/html-scraping.jpg')"></span>
+                
+                <div class="wrap aligncenter"><h2 class="text-landing">
+                    Het img-element 
+                </h2>
+                <p class="text-intro">Levert een afbeelding in het document</p>
+                <p>En heeft 2 onmisbare attributen</p>
+                <img src="afb/attributen/imgVogel.svg" alt="img-element met 2 attributen" class="size-60 zoomIn">
+                <h3>het <code>img</code>-element heeft minimaal de volgende attributen:</h3>
+                <ul class="flexblock reasons size-40">
+                    <li style="display: block;"><code>src</code>
+                    geeft de plaats weer waar de afbeelding is opgeslagen</li>
+                    <li style="display: block;">
+                        <code>alt</code>
+                        Geeft de omschrijving van de afbeelding weer
+                    </li>
+                </ul>
+                <hr>
+                <p>
+                    Alle andere attributen van <code>img</code> vind je bij <a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">w3schools.com</a>
+                </p>
+                </div>
+            </section>
+
+
+             <!-- dia 10 De mark-up van een img-element gemaakt met https://mothereff.in/html-entities -->
+             <section class="aligncenter bg-apple">
+                <span class="background dark" style="background-image:url('https://www.parsehub.com/blog/content/images/2019/09/html-scraping.jpg')"></span>
+                
+                <h2 class="text-landing">De mark-up van een img-element <span class="fab fa-html5"></span></h2>
+                <hr>
+                <div class="grid ">
+                    <div class="content-left column">
+                        <h3 class="aligncenter fadeInUp"><code>href</code> is een onmisbaar attribuut van <code>a</code></h3>
+                        <hr>
+<pre><code class="html" style="font-size: 1.3em;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Een link naar het LAM&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+    &lt;p&gt;Dit doen onze Kijkcoaches tijdens de lockdown&lt;/p&gt;
+    &lt;img src=&quot;https://www.lamlisse.nl/wp-content/uploads/2020/03/200220-LAM-Ron-van-der-Ende-Corine-Zijerveld-Fotografiec2020-155-scaled.jpg&quot; alt=&quot;Onze Kijkcoaches&quot; width=&quot;500&quot;&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                            
+                      </code>
+                        </pre>
+                    </div>
+                    <div class="content-left column">
+                        <h3 class="aligncenter fadeInUp slow">Het resultaat</h3>
+                        <hr>
+                        <div class="embed bg-white" style="width: 40vw">
+                            <iframe src="afb/attributen/afbLam.html">
+                            </iframe>
+                        </div>       
+                        <p>
+                            Resultaat <a href="afb/attributen/afbLam.html" target="_blank">in apart venster</a>
+                        </p>
+                        <p>
+                            Alle andere attributen van <code>img</code> vind je bij <a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">w3schools.com</a>
+                        </p>                     
+                </div>
+            </section>
+
+
+            <!-- dia 11 Het input-element tekst  -->
+            <section class="fullscreen bg-apple">
+                <span class="background dark" style="background-image:url('https://www.parsehub.com/blog/content/images/2019/09/html-scraping.jpg')"></span>
+
+                <div class="wrap size-70">
+                    <div>
+                        <h2 class="text-landing aligncenter" >Het input element tekst</h2>
+                        <p>
+                            <p >met <code>label</code> element</p>
+                        <pre ><code style="font-size: 1.5em; line-height: 1.5em;">
+    &lt;label&gt;naam:
+        &lt;input type=&quot;text&quot; value=&quot;&quot; placeholder=&quot;Voor- en achternaam&quot;&gt;
+    &lt;/label&gt;
+                        </code></pre>
+                        </p>
+                    </div>
+                        
+                    <div>
+                        <h3 class="aligncenter">Het resultaat</h3>
+                        <label>naam:
+                            <input type="text" value="" placeholder="Voor- en achternaam" style="font-size: 1.3em; padding: .9em .5em;" >
+                        </label>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- dia 12 Het input-element email  -->
+            <section class="fullscreen bg-apple">
+                <span class="background dark" style="background-image:url('https://www.parsehub.com/blog/content/images/2019/09/html-scraping.jpg')"></span>
+
+                <div class="wrap size-70">
+                    <div>
+                        <h2 class="text-landing aligncenter">Het input element email</h2>
+                        <p>
+                            <p>met <code>label</code> element</p>
+                        <pre  style="font-size: 1.5em; line-height: 1.5em;"><code>
+    &lt;label&gt;email:
+        &lt;input type=&quot;email&quot; value=&quot;&quot; 
+        placeholder=&quot;Emailadres&quot;&gt;
+    &lt;/label&gt;
+                        </code></pre>
+                        </p>
+                    </div>
+                        
+                    <div style="font-size: 1.3em; line-height: 1.3em;">
+                        <h3 class="aligncenter">Het resultaat</h3>
+                        <label>email:
+                            <input type="email" value="" placeholder="Emailadres" style="font-size: 1.3em; padding: .9em .5em;" >
+                        </label>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- dia 13 Het input-element radio  -->
+            <section class="fullscreen bg-apple">
+                <span class="background dark" style="background-image:url('https://www.parsehub.com/blog/content/images/2019/09/html-scraping.jpg')"></span>
+
+                <div class="wrap size-70">
+                    <div>
+                        <h2 class="text-landing aligncenter">Het input element radio</h2>
+                        <p>
+                            <p >met <code>label</code> element</p>
+                        <pre   style="font-size: .8em; line-height: 1.1em;"><code>
+    ...
+    &lt;p&gt;Hoe vaak heeft u het LAM bezocht?&lt;/p&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;aantal&quot; value=&quot;0&quot;&gt; Nog nooit&lt;/label&gt; &lt;br&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;aantal&quot; value=&quot;1&quot;&gt; Een keer &lt;/label&gt; &lt;br&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;aantal&quot; value=&quot;meer dan 2&quot;&gt; Meer dan 2 keer &lt;/label&gt; &lt;br&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;aantal&quot; value=&quot;Meer dan 5 keer&quot;&gt; Meer dan 5 keer &lt;/label&gt; 
+    ...
+                        </code></pre>
+                        </p>
+                    </div>
+                        
+                    <div class="grid">
+                        <div class="column">
+
+                            <h3 class="aligncenter">Het resultaat</h3>
+                            <div style="color: #000; background-color: #fff; padding: 1em; font-family: serif">
+                                <p>Hoe vaak heeft u het LAM bezocht?</p>
+                                <label style="margin-bottom: 1em; line-height: .8em;"> <input type="radio" name="aantal" value="0"> Nog nooit</label> <br>
+                                <label style="margin-bottom: 1em; line-height: .8em;"><input type="radio" name="aantal" value="1"> Een keer </label><br>
+                                <label style="margin-bottom: 1em; line-height: .8em;"><input type="radio" name="aantal" value="meer dan 2"> Meer dan 2 keer </label><br>
+                                <label><input type="radio" name="aantal" value="Meer dan 5 keer"> Meer dan 5 keer </label>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h4><strong>Merk op:</strong></h4>
+                            <ul class="flexblock reasons">
+                                <li style="display: block;">Alle radio-input-elementen hebben dezelfde waarde voor <code>name</code>-attribuut</li>
+                                <li>Hierdoor kan er maar 1 item geselecteerd worden</li>
+                                <li>Een radio-input-element komt nooit in zijn eentje voor: er moet iets de selecteren zijn.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- dia 14 Het input-element checkbox  -->
+            <section class="fullscreen bg-apple">
+                <span class="background dark" style="background-image:url('https://www.parsehub.com/blog/content/images/2019/09/html-scraping.jpg')"></span>
+
+                <div class="wrap size-70">
+                    <div>
+                        <h2 class="text-landing aligncenter">Het input-element checkbox <i class="fas fa-check-square"></i></h2>
+                        <p>
+                            <p >met <code>label</code> element</p>
+                        <pre   style="font-size: .8em; line-height: 1.1em;"><code>
+    ...
+    &lt;label&gt;
+        &lt;input type=&quot;checkbox&quot; value=&quot;donateur&quot;&gt;
+        Ik wil donateur worden
+    &lt;/label&gt;    &lt;br&gt;
+    &lt;label&gt;
+        &lt;input type=&quot;checkbox&quot; value=&quot;nieuwsbrief&quot; checked&gt;
+        Ik wil de nieuwsbrief van het LAM ontvangen
+    &lt;/label&gt;
+    ...
+                        </code></pre>
+                        </p>
+                    </div>
+                        
+                    <div class="grid">
+                        <div class="column">
+
+                            <h3 class="aligncenter">Het resultaat</h3>
+                            <div style="color: #000; background-color: #fff; padding: 1em; font-family: serif">
+                                <label>
+                                    
+                                    <label>
+                                        <input type="checkbox" value="donateur">
+                                        Ik wil donateur worden
+                                    </label>    <br>
+                                    <label>
+                                        <input type="checkbox" value="nieuwsbrief" checked>
+                                        Ik wil de nieuwsbrief van het LAM ontvangen
+                                    </label> 
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h4><strong>Merk op:</strong></h4>
+                            <ul class="flexblock reasons">
+                                <li style="display: block;">Alle checkbox-input-elementen hoeven geen <code>name</code>-attribuut te hebben. <br>
+                                Het komt wel vaak voor bij de verwerking in het PHP-script.</li>
+                                <li>Er kunnen meerdere opties aangevinkt worden</li>
+                                <li style="display: block;">Er is ook een attribuut <code>checked</code> <em>zonder </em> waarde</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- slide 15 CSS basisitructuur  -->
+        <section class="fullscreen bg-apple">
+            <span class="background dark" style="background-image:url('https://miro.medium.com/max/12000/0*2I9ym3yWraM8u3x1')"></span>
+
+            <h2 class="text-landing aligncenter">basisstructuur CSS <span class="fab fa-css3-alt"></span></h2>
+            <div class="grid">
+                
+                <div class="column">
+                    <h3 class="text-subtitle aligncenter">Structuur</h3>
+                    <div style="color: #000; background-color: #fff; padding: 1em; min-width: 30vw;">
+                        <pre style="font-size: 1em;"><code>
+selector {
+    eigenschap: waarde;
+    ...
+}  
+...                      
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="text-subtitle aligncenter">Voorbeeld</h3>
+                    <div style="color: #000; background-color: #fff; padding: 1em; min-width: 40vw;">
+                        <pre style="font-size: 1em;"><code>
+body {
+    font-family: sans-serif;
+    background-color: beige;
+}
+h1 {
+    color: #f00;
+}                        
+                        </code></pre>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- dia 16: 3 manieren om CSS te koppelen -->
+        <section class="fullscreen bg-apple">
+            <span class="background dark" style="background-image:url('https://miro.medium.com/max/12000/0*2I9ym3yWraM8u3x1')"></span>
+
+            <div class="wrap size-50">
+                <h2 class="text-landing">
+                    3 manieren om CSS aan HTML-elementen te koppelen <span class="fab fa-css3-alt"></span>
+                </h2>
+                <ul class="flexblock reasons">
+                    <li style="display: block;">De efficiëntste: een apart CSS-document koppelen in het <code>head</code>-element met het <code>link</code>element: <br>
+                    <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/webslides.css&quot;&gt;</code><br>
+                    Je kunt zo meerdere pagina's aan één stijlblad koppelen: eenvoudig in het onderhoud!</li> 
+                    <li style="display: block;">De CSS stoppen in het <code>style</code>-element in het <code>head</code>-element</li>
+                    <li style="display: block;">In een HTML-element een <code>style</code>-attribuut toevoegen en de CSS-eigenschappen en hun waarden toevoegen.</li>
+                </ul>
+                Voorbeelden: <a href="https://www.w3schools.com/css/css_howto.asp">https://www.w3schools.com/css/css_howto.asp</a>
+            </div>
+        </section>
+
+        <!-- dia 17: 3 manieren om CSS te koppelen https://frankrijkpuur.nl/wp-content/uploads/2017/05/la-cascade-du-Rouget-waterval-frankrijk.jpg -->
+        <section class="fullscreen bg-apple">
+            <span class="background dark" style="background-image:url('https://frankrijkpuur.nl/wp-content/uploads/2017/05/la-cascade-du-Rouget-waterval-frankrijk.jpg')"></span>
+
+            <div class="wrap size-60">
+                <h2 class="text-landing">
+                    CSS: <em>Cascading</em> Style Sheets <span class="fab fa-css3-alt"></span>
+                </h2>
+                <ul class="flexblock reasons">
+                    <li>De CSS-eigenschappen van een element neemt hij voor veel eigenschappen over van zijn parent. (overerving)</li>
+                    <li style="display: block;">De eigenschappen van het externe stijlblad kun je overschrijven in het interne stijlblad in de <code>head</code> van je document.</li>
+                    <li>De stijlen van een element kun je overschrijven in het stijl-attribuut van dat element.</li>
+                </ul>
+                <hr>
+                <h3>referenties</h3>
+                <ul>
+                    <li><a href="https://makeawebsitehub.com/wp-content/uploads/2015/10/css3-mega-cheat-sheet.jpg" target="_blank">een mega-spiekbrief</a></li>
+                    <li><a href="https://www.w3schools.com/css/default.asp">CSS op W3 Schools</a></li>
+                    <li><a href="https://cssauthor.com/html-and-css-cheat-sheets/#CSS">Meer CSS spiekbrieven</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- dia 18: oefening  -->
+        <section class="fullscreen bg-apple">
+            <span class="background dark" style="background-image:url('https://miro.medium.com/max/12000/0*2I9ym3yWraM8u3x1')"></span>
+
+            <h2 class="aligncenter">
+                Opdracht
+            </h2>
+            <div class="grid" style="transform: scale(.8) translateY(-4em);">
+                
+                <div class="column zoomIn">
+                    <ul class="flexblock reasons">
+                        <li style="display: block;">Ga naar <a href="https://whichmuseum.nl/nederland/beste-musea" target="_blank">https://whichmuseum.nl/nederland/beste-musea</a> en zoek daar een musem uit. Overleg dit met de docent, zodat je niet eenzelfde site kiest als een medestudent;</li>
+                        <li>Je gaat een websitje maken en dus maak je daarvoor een mapje aan naast de map van vorige week;</li>
+                        <li style="display: block;">Maak daarin een document met de naam <em>index.html</em> dit is van een site de pagina die automatisch geladen wordt;</li>
+                        <li>Zet de naam van het museum in het h1-element;</li>
+                        <li>Maak een lijstje van kenmerken van het museum op de pagina;</li>
+                        <li>Voeg een link naar de site van het museum toe;</li>
+                        <li>Voeg een afbeelding toe van het museum. Als deze te groot is, ga je dat verderop met CSS verkleinen;</li>
+                        <li>Zorg ervoor dat een klik op de afbeelding, ook naar de website van het museum gaat;</li>
+                        <li>Voeg een beschrijving toe van het museum;</li>
+                        </ul>
+                </div>
+                <div class="column zoomIn slow">
+                    
+                    <ul class="flexblock reasons">
+                       
+                        <li style="display: block;">Maak een apart CSS-dcument aan en koppel deze aan <em>index.html</em>;</li>
+                        <li  style="display: block;">Geef het <code>img</code> element een CSS-eigenschap <code>max-width</code> met de waarde van <code>100%</code> mee</li>
+                        <li style="display: block;">Ga naar <a href="https://www.w3schools.com/css/css_font.asp">de font-informatie van W3 Schools</a> en maak het lettertype van het document schreefloos;</li>
+                        <li style="display: block;">Bekijk <a href="https://www.w3schools.com/css/css_colors.asp">CSS kleuren</a> <a href="https://www.w3schools.com/css/css_background.asp">CSS achtergrond van W3 Schools</a> om de achtergrondkleur en de kleur van het document aan te passen;</li>
+                        <li style="display: block;">Voorzie het <code>h1</code>-element weer van een schreefletter en geef deze een andere achtergrond- en letterkleur;</li>
+                        <li>Zet deze oefening online;</li>
+                        <li>Zet deze oefening ook op GitHub met een link naar de live-versie in het README.md bestand;</li>
+                        <li>Lever de link van de GitHub in.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+             <!-- laatste dia: credits  -->
+        <section class="slide-bottom bg-apple">
+            <span class="background dark" style="background-image:url('https://www.parsehub.com/blog/content/images/2019/09/html-scraping.jpg')"></span>
+
+            <div class="wrap zoomIn">
+                <div class="content-right">
+                    <h3>Credits</h3>
+                    <p>Deze presentatie is gemaakt met gebruik van:</p>
+                    <ol class="flexblock reasons">
+                        <li>
+                            <a href="https://github.com/webslides/WebSlides">WebSlides</a>
+                        </li>
+                        <li>
+                            <a href="https://webslides.tv/demos/classes#slide=2">documentatie WebSlides</a>
+                        </li>
+                        <li><a href="https://mothereff.in/html-entities">Omzetten van HTML-tags naar entiteiten</a></li>
+                        <li><a href="https://highlightjs.org/">Highlight.js om de code te markeren</a></li>
+                    </ol>
+                    <div class="aligncenter"><a href="div-padding-marge.html" class="button zoomIn">
+                        <strong>naar les 3: div - padding - marge <span class="fab fa-css3-alt"></span></strong> </a></div>
+                </div> 
+            </div>  <!-- einde van de wrap die heb je nodig om de inhoud rechtsonder te plaatsen -->
+        </section>
+        
+        </article>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});
+    </script>
+
+    <script src="js/webslides.min.js"></script>
+    <script>
+        window.ws = new WebSlides();
+    </script>
+</body>
+
+</html>

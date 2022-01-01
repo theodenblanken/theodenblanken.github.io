@@ -1,0 +1,381 @@
+@charset "UTF-8";
+html,
+body,
+header,
+h1,
+h3 {
+   margin: 0;
+   padding: 0;
+}
+html {
+   overflow-x: hidden;
+}
+body {
+   color: rgb(20, 20, 20);
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   position: relative;
+}
+
+header {
+   overflow: hidden;
+   position: relative;
+   height: 167px;
+   background: url(../afb_vStijlen/tutorialheader.gif) no-repeat;
+   background-color: rgb(0, 0, 0);
+   margin: 0 auto;
+}
+
+#kopachtergrond {
+   position: absolute;
+}
+
+h1,
+#tagline {
+   color: rgb(255, 255, 255);
+   position: absolute;
+}
+
+h1 {
+   padding: 60px 0 0 2em;
+   text-shadow: 0 0 40px rgba(10, 0, 10, 0.7);
+}
+
+#tagline {
+   padding: 100px 0 0 160px;
+   text-shadow: 0 0 80px rgba(10, 0, 10, 0.5);
+}
+
+nav {
+   background-color: rgb(0, 0, 0);
+   height: 18px;
+}
+
+nav ul {
+   list-style-type: none;
+   margin: 0 10px 0 auto;
+   position: absolute;
+   right: 40px;
+}
+
+nav li {
+   width: 120px;
+   float: left;
+   transition: padding-top .5s;
+}
+nav li:hover {
+   padding-top: 1em;
+}
+
+nav a {
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   font-size: 12px;
+   line-height: 18px;
+   display: block;
+   text-align: center;
+   border-right: rgb(255, 255, 255) solid 1px;
+   background-color: rgb(0, 0, 0);
+   /*  omdat we de knop uit gaan schuiven zal hij ook boven het wit te zien moeten zijn  */
+}
+
+nav a:hover {
+   color: rgb(255, 10, 255);
+}
+
+nav li:first-child {
+   border-left: rgb(255, 255, 255) solid 1px;
+}
+
+article {
+   padding: 5px 40px;
+   margin-bottom: 1em;
+}
+/*    de video's met omschrijving    */
+.youtube {
+   position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.youtube iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+h3 {
+   padding: 3em 0 1em 0;
+}
+/* -------------  voor grotere vensters  ----------------  */
+
+@media screen and (min-width: 55rem) {
+      iframe {
+      border: 0;
+      float: right;
+      width: 55%;
+      margin-top: -4em;
+      margin-right: 1em
+   }
+
+   article .omschrijving {
+      width: 40%;
+      float: left;
+   }
+   article div p:first-child {
+      margin-top: 0;
+   }
+   
+   .youtube {
+      float: right;
+      width: 55%;
+      padding-bottom: 30.94%;    /*  .55*16:9 */
+   }
+   .youtube iframe {
+      right: 1em;
+      left: inherit;
+      top: -1em;
+   }
+
+   h3 {
+      clear: both;
+      padding: 3em 0 1em 0;
+      width: 40%;
+   }
+   h5 {
+      clear: both;
+   }
+}
+/* -------------  einde mediaquerie  ----------------  */
+
+.code {
+   font-family: "Courier New", Courier, monospace;
+}
+
+code {
+   color: blue;
+   font-size: 125%;
+}
+
+
+/* de footer opmaken */
+
+
+/* de social icons stylen */
+
+@font-face {
+   font-family: "socicon";
+   src: url("../fonts/sociocon/socicon.eot");
+   src: url("../fonts/sociocon/socicon.eot?#iefix") format("embedded-opentype"), url("../fonts/sociocon/socicon.woff") format("woff"), url("../fonts/sociocon/socicon.ttf") format("truetype"), url("../fonts/sociocon/socicon.svg#socicon") format("svg");
+   font-weight: normal;
+   font-style: normal;
+}
+
+[data-icon]:before {
+   font-family: "socicon" !important;
+   /*  content: attr(data-icon);*/
+   font-style: normal !important;
+   font-weight: normal !important;
+   font-variant: normal !important;
+   text-transform: none !important;
+   speak: none;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="socicon-"]:before,
+[class*=" socicon-"]:before {
+   font-family: "socicon" !important;
+   font-style: normal !important;
+   font-weight: normal !important;
+   font-variant: normal !important;
+   text-transform: none !important;
+   speak: none;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*     -----------     de icons  -------------  */
+
+.socicon-slideshare:before {
+   content: "\e017";
+}
+
+.socicon-buffer:before {
+   content: "\e018";
+}
+
+.socicon-disqus:before {
+   content: "\e019";
+}
+
+.socicon-whatsapp:before {
+   content: "\e01b";
+}
+
+.socicon-pocket:before {
+   content: "\e01e";
+}
+
+.socicon-mail:before {
+   content: "\e01f";
+}
+
+.socicon-blogger:before {
+   content: "\e020";
+}
+
+.socicon-technorati:before {
+   content: "\e021";
+}
+
+.socicon-reddit:before {
+   content: "\e022";
+}
+
+.socicon-dribbble:before {
+   content: "\e023";
+}
+
+.socicon-stumbleupon:before {
+   content: "\e024";
+}
+
+.socicon-digg:before {
+   content: "\e025";
+}
+
+.socicon-behance:before {
+   content: "\e027";
+}
+
+.socicon-wikipedia:before {
+   content: "\e02d";
+}
+
+.socicon-apple:before {
+   content: "\e02e";
+}
+
+.socicon-github:before {
+   content: "\e030";
+}
+
+.socicon-twitter:before {
+   content: "\e040";
+}
+
+.socicon-googleplus:before {
+   content: "\e042";
+}
+
+.socicon-pinterest:before {
+   content: "\e043";
+}
+
+.socicon-linkedin:before {
+   content: "\e049";
+}
+
+.socicon-youtube:before {
+   content: "\e051";
+}
+
+.socicon-vimeo:before {
+   content: "\e052";
+}
+
+.socicon-wordpress:before {
+   content: "\e058";
+}
+
+.socicon-tumblr:before {
+   content: "\e059";
+}
+
+#socialIcons {
+   background-color: #333;
+   text-align: right;
+   padding: .8em .8em .4em 0;
+   border: 1px solid transparent;
+   font-size: .8em;
+   color: #eee;
+   overflow: hidden;
+}
+
+#nav a span {
+   text-decoration: none;
+   color: #fff;
+   font-size: 19px;
+}
+
+#socialIcons a:hover {
+   text-decoration: none;
+   text-shadow: 0 0 10px #fff;
+}
+
+a .icon {
+   padding-left: .5em;
+   padding-right: .5em;
+}
+
+#socialIcons a {
+   color: #ddd;
+   font-size: 1.5em;
+   text-decoration: none;
+   -webkit-transition: all 1s ease;
+   transition: all 1s ease;
+   border: 0;
+}
+
+#validatie {
+   float: right;
+}
+
+#validatie img {
+   height: 1em;
+   width: auto;
+   border: 0;
+   margin-left: .5em;
+   margin-right: .3em;
+}
+
+
+/*   ---------------  opmaak van de knop, die naar bovengaat    -----------     */
+      
+.naarTop {
+   text-align: center;
+   background-color: #fff;
+   text-decoration: none;
+/*   padding: 0.3em;*/
+   float: right;
+   border-radius: 100%;
+   text-decoration: none;
+   width: 1em;
+   height: 1em;
+   line-height: 1.6em;
+   font-weight: 900;
+   -webkit-transition: all .4s ease-in-out;
+   transition: all .4s ease-in-out;
+   box-shadow: 0 0 0 .2em #000;
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -webkit-justify-content: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+}
+
+.naarTop:hover {
+   color: #a0a;
+   box-shadow: 0 0 0 .4em #a0a;
+   line-height: 1.3em;
+}
+

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8">
+  <title>Frontend | Naast elkaar: elementen plaatsen met display-types</title>
+  <meta name="keywords" content="Frontend, HTML, CSS, JS">
+  <meta name="description" content="Lessen front-end voor mediadevelopers">
+  <meta name="author" content="Theo den Blanken">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/stijlTheo.css">
+
+</head>
+
+<body>
+
+  <header>
+    <h1 id="paginaKop" class="paginaKop">Kop 1</h1>
+    <div class="tagline" id="tagline">tagline</div>
+    <svg id="ringen" class="ringen"></svg>
+  </header>
+
+  <nav class="nav" id="nav">
+    <label for="menu-toggle" class="nav__label"><span class="nav__labelText">&#xf0c9;</span></label>
+    <input type="checkbox" id="menu-toggle" class="nav__cb" checked>
+    <ul class="nav__list">
+      <li>
+        <a class="nav__item nav__item--active" href=index.html>home</a>
+      </li>
+      <li>
+        <a class="nav__item nav__item--active" href=#>inleiding</a>
+      </li>
+      <li>
+        <a class="nav__item nav__item--active" href=#instructie>instructie</a>
+      </li>
+      <li>
+        <a class="nav__item nav__item--active" href=#bonus>bonusopdracht</a>
+      </li>
+      <li>
+        <a class="nav__item nav__item--active" href=#inleveren>inleveren</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+      <!-- de presentatie in webSlides -->
+      <div class="inhoud" id="presentatie">
+        <iframe id="webSlides" src="webSlidesPresentaties/display-types.html" style="width: 85vw; max-width: 1450px; height: 60vw; border: 0; box-shadow: 0 0 3px 5px #3646b0;"></iframe>
+       <br><a href="webSlidesPresentaties/display-types.html">Link naar de presentatie</a>
+      </div>
+
+    <div class="inhoud" id="inleiding">
+      <article class="inhoud__tekst">
+        
+          <h3>Leerdoelen</h3>
+          <p>Er zijn maar weinig lay-outs waarbij er geen elementen naast elkaar geplaatst moeten worden. Je komt hier 4 verschillende manieren tegen waarop je dat zou kunnen doen! Twee daarvan worden heel vaak ingezet.</p>
+          <ul>
+            <li>display-types:
+              <ul>
+                <li>block</li>
+                <li>inline</li>
+                <li>inline-block</li>
+                <li>none</li>
+                <li>flex (summiere start)</li>
+              </ul>
+            </li>
+            <li>floats</li>
+            <li>clear</li>
+            <li>overflow</li>
+            <li>box-model</li>
+            <li>werken met padding</li>
+          </ul>
+      </article>
+      
+    </div>
+
+
+
+
+    <div class="inhoud" id="opdracht">
+      <article class="inhoud__tekst">
+        <h3>Naast elkaar 0: het resultaat (00:01:45)</h3>
+        <p>
+            In een aantal stappen laten we zien hoe items in een menu en blokken inhoud naast elkaar geplaatst kunnen worden. <br>
+            We doen dat op 4 verschillende manieren. Je krijgt dus 4 keer een resultaat te zien en dat is niet overal met evenveel moeite en met evenveel succes. <br>
+            Deze manieren leren ons hoe display-types bij CSS ingezet kunnen worden voor layout.
+        </p>
+      </article>
+      <div class="inhoud__IF-houder">
+        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/Rrtbeb1mibI?rel=0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+    <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Naast elkaar stap 1: de markup van 4 pagina's
+            (00:08:28)
+            </h3>
+          <p>
+            Uitgangspunt is een bestaande site. <br>
+            De inhoud daarvan gaat op 4 verschillende manieren naast elkaar geplaatst worden. <br>
+            De link naar de site wordt uitgebreid met de overige contactinformatie van het museum. <br>
+            Vervolgens wordt er een menu toegevoegd, naar telkens een gelijksoortige pagina, maar met een andere manier om de items zowel in het menu als in de hoofdinhoud naast elkaar te plaatsen.            
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/RylmSZRysi4?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+    <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Naast elkaar stap 2: menu stijlen
+            (00:13:13)
+            </h3>
+          <p>
+            Het html- en body-element krijgen eerst padding en marge 0, zodat de elementen goed aansluiten aan de linker en bovenzijde van de viewport. <br>
+            Om het menu te stijlen krijgen de linkjes een achtergrondkleur en een ruime padding. <br>
+            De selector voor deze linkjes in <code>nav a</code> zodat de gewone linkjes in de inhoud niet diezelfde stijl krijgen. <br>
+            Het geven van breedte lukt niet zo, omdat de linkjes van het display-type inline zijn. ze worden dus omgezet naar het type block. <br>
+            Om ze alsnog naast elkaar te zetten, krijgen ze <code>float: left;</code>. <br>
+            Hierdoor vloeit ook het h1-element er rechts-omheen. Dat is niet gewenst, en deze krijgt daarom een <code>clear: both;</code>. <br>
+            De navigatie-linkjes vullen niet de hele breedte. Het nav-element 'voelt' ze niet en daarom krijgt hij zelf hoogte en achtergrondkleur. <br>
+            <code>h1</code> heeft een marge, waardoor hij zichzelf van de navigatiebalk afduwt. Deze maken we dan 0 en geven het element in plaats daarvan een fikse padding.
+          </p>
+          <p>
+            Tot slot krijgen de linkjes ook een hover-effect. Met de pseudo-selector a:hover, kun je de eigenschappen aanpassen voor het geval de muis erover beweegt.
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/9dNvLIN2N-4?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Naast elkaar stap 3: sections en footer maken
+            (00:07:21)
+            </h3>
+          <p>
+            De delen, die in de inhoud naast elkaar moeten komen, zijn onderling nogal verschillend en daarmee moeilijk te selecteren. Door ze in een <code>main</code>-element met 4 sections te plaatsen wordt het geheel ook nog semantischer. <br>
+            Deze instructievideo laat zien hoe dat het eenvoudigst naar de andere pagina's wordt overgezet. <br>
+            Ook krijgt elke pagina nog een <code>footer</code>, die alvast wordt gestyled. Horizontaal krijgt hij dezelfde padding als <code>h1</code>, zodat dat mooi verticaal in lijn komt.
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/dEq0CBGgT4U?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Naast elkaar stap 4: block-items naast elkaar plaatsen
+            (00:07:32)
+            </h3>
+          <p>
+            De eerste poging om de 4 sections naast elkaar te plaatsen is er vanuit te gaan dat ze block-items zijn. <br>
+            We kunnen de breedte instellen, maar ze blijven onder elkaar. We stelen de breedte eerst in op 25% zodat ze samen de volledige breedte maken. <br>
+            Ze gaan pas naast elkaar als ze ook een <code>float; left;</code> gekregen hebben.
+          </p>
+          <p>
+            Is er dan ook maar enige ruimte, dan vloeit de zwarte footer rechts om het main-element heen. Om dat te voorkomen geven we de footer een <code>clear: left;</code> <br>
+            Hierna is het ook de bedoeling dat er padding en marge wordt toegevoegd om afstanden te maken. Daarvoor moet er gerekend worden. als je de sections een <code>box-sizing: border-box;</code> geeft, wordt dat rekeneen eenvoudiger. De breedte is namelijk gelijk aan de afmetingen inclusief de padding (en eventueel de rand. Je kunt dus de breedte op 25% laten staan. Voeg je ook marges toe, dan moet voor de totale breedte dat afgenomen worden van de breedte van de sections, zodat het totaal 100% blijft.
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/3_FMZTkgLGI?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Naast elkaar stap 5: inline-elementen niet naast elkaar te plaatsen
+            (00:02:01)
+            </h3>
+          <p>
+            Maken we het display-type van de sections van het type inline, dan blijken ze niet naast elkaar te zetten. Het begint al met het probleem dat de breedte niet in te stellen is. <br>
+            Wellicht kom je verder als de ook nog met floats gaat werken. Het is echter niet een verbetering van de situatie. Ook in video 2 was het in het menu al niet zo fijn werken met het naast elkaar plaatsen van inline elementen...  <br>
+            Wil je dit toch proberen, doe dit dan nadat je de volgende instructie met inline-block hebt gezien.
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/PoLhaKGcRVI?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Naast elkaar stap 6: inline-block-items naast elkaar plaatsen
+            (00:05:15)
+            </h3>
+          <p>
+
+      Inline-block-items kunnen wel op breedte ingesteld worden en gaan dan als vanzelf naast elkaar staan. Het precies verdelen van de items over de hele breedte is echter erg lastig, omdat er als vanzelf een tussenruimte tussen de items ontstaat. Feitelijk is deze zo groot als de breedte van een spatie tussen 2 woorden op een regel. <br>
+      Dat de items bij inline-block op 1 regel staat, zie je ook aan de onderzijde van items, die in hoogte verschillen. <br>
+      Deze werkwijze is dan ok goed toe te passen in bijvoorbeeld en menu, als je zeker weet dat alles even hoog is en er voldoende breedte in de parent beschikbaar is. Je hebt dan niet te doen met floats zoals bij block-items.
+    
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/29ird2r0E3c?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Naast elkaar stap 7: layout met flexbox
+            (00:13:25)
+            </h3>
+          <p>
+            Bij flexbox kun je prima layouten. Je moet je realiseren dat je iets niet direct over de items zegt maar eerst iets codeert voor de parent. <br>
+            Je geeft de parent <code>display: flex;</code>. Dan gaan de children sowieso naast elkaar staan. <br>
+            Daarnaast zijn de hoogtes van de items gelijk gemaakt. <br>
+            De verdeling blijkt in ons geval niet gewenst. Het eerste item dat brede paragrafen met lange regels had, krijgt het meest. <br>
+            De children (in ons geval de sections) kunnen met <code>flex: 1 0 20%;</code> gelijk gemaakt worden in breedte. De <code>flex: 1 0 20%;</code> heeft dus 3 waarden. De eerste is de <code>flex-grow</code>: de mate waarin de overblijvende breedte over de items wordt verdeeld.
+            De tweede waarde is geeft aan hoeveel het item mag krimpen bij een tekort aan ruimte. De derde waarde geeft de basiswaarde mee: de hoeveelheid ruimte waarbij er in de verdeling vanuit gegaan wordt. Dit is hier bewust te weinig gekozen, want dan zou alles te smal worden, maar ze mogen daarna toch van flexbox groeien. In ons geval gelijkmatig. <br>
+            We kunnen zonder moeite nu ook padding en marge meegeven voor extra tussenruimtes.
+          </p>
+          <p>
+            Maar flexbox kan ook verticaal ingezet worden om elementen te verdelen. <br>
+            In de <code>body</code> zijn 4 children: <code>nav</code>, <code>h1</code>, <code>main</code> en <code>footer</code>. De parent is dus <code>body</code>. Eerst geven we deze hoogte mee, want dat heeft de body gek genoeg niet van zichzelf. De hoogte wordt minimaal <code>100vh</code>: precies zo hoog als de viewport. <br>
+            Met een <code>display: flex;</code> voor de body worden de children in horizontale zin naast elkaar geperst. Dat komt omdat de richting default horizontaal is (<code>flex-direction: row;</code>). We geven dus <code>flex-direction: column;</code>. Er lijkt nu weer dat alles lijkt op de uitgangspositie, maar we kunnen de children nu in lengte laten 'groeien'. We geven de <code>main</code> een <code>flex: 1 0 auto;</code> Dan rekt deze zover op dat alles in de viewport staat. Dat kunnen we ook met <code>footer</code> en <code>h1</code> doen, en dan verdelen zij het overschot aan hoogte. <br>
+            Als de main nu een <code>flex: 3 0 auto;</code> krijgt zal deze 3 keer zo hard groeien als de <code>h1</code> en <code>footer</code>.
+          </p>
+          <h4>Centreren met flexbox</h4>
+          <p>
+            De inhoud van beide laatste kunnen we met flexbox ook heel mooi centreren. Recept begint vertrouwd: ze zijn voor hun inhoud een parent. Dus geef je deze elementen eerst <code>display: flex;</code> <br>
+            Daarna geef je met <code>justify-content: center;</code> een horizontale centrering en met <code>align-items: center;</code> een verticale centrering van de inhoud. <br>
+            De sections hoeven tenslotte geen achtergrondkleur meer om te laten zien wat er met ze gebeurd is in deze trainingen.
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/oBt-vXiqT1M?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+    <!--
+
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Naast elkaar stap</h3>
+          <p>
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/xxxx?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+    -->
+
+    <hr>
+
+    <div class="inhoud" id="inleveren">
+      <article class="inhoud__tekst">
+        <h4>Inleveren</h4>
+        <ul>
+          <li>Je hebt al een training met museum staan.</li>
+          <li>Update dus jouw GitHub-repositry <span class="fab fa-github"></span> en</li>
+          <li>Update de site op hosts.ma-cloud.nl
+          </li>
+        </ul>
+      </article>
+      <div id="bonus">
+          <h4>Bonusopdracht</h4>
+          <ul>
+              Pas bij het menu de CSS zodaing aan dat de items even breed zijn en samen de hele breedte van de anv beslaan. <br>
+              CSS Flexbox is hiervoor een prima gereedschap.
+              <br> Als je deze uitdaging hebt opgepakt, meldt dat dan wel in de README.md van je repo.
+          </ul>
+
+          <a href="naastElkaar2019.html">Link naar oudere les</a> over dit onderwerp met CSS Grid in plaats van CSS Flexbox.
+      </div>
+
+
+    </div>
+
+    
+
+  </main>
+
+  <footer>
+
+    <span class="social">
+        Delen:
+        <a href="#" class="social__item social__item--facebook" id="fb_link"></a>
+        <a href="#" class="social__item social__item--google" id="gl_link"></a>
+        <a href="#" class="social__item social__item--twitter" id=twt_link></a>
+      </span>
+    <span>&copy; Theo den Blanken</span>
+    <span><a href="http://validator.w3.org/check?uri=referer" target="_blank">
+        <img src="afb/valid-html5-blue.png" alt="Valide HTML5" style="height: 1em; padding: 0 0 0 1em;"></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+        <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS" style="height: 1em; padding: 0 0 0 1em;">
+    </a></span>
+  </footer>
+
+  <script src="scripts/social.js"></script>
+  <script src="scripts/headerAnimatie.js"></script>
+  <script src="scripts/activeLink.js"></script>
+  <script src="scripts/smoothScrolling.js"></script>
+</body>
+
+</html>

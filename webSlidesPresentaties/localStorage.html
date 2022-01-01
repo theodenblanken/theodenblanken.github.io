@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage | data bij de gebruiker</title>
+    <link rel="stylesheet" href="css/webslides.css">
+    <style>
+        nav .alignright a {
+            padding: 0 .3em;
+        }
+    </style>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/1a91c75a80.js"></script>
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="navigation">
+            <span>Local Storage: data bij de gebruiker</span>
+            <span class="alignright">
+                <a href="#slide=2"><img src="https://cdn4.iconfinder.com/data/icons/commercial-and-business-set-14/512/save2-512.png" alt="Local Storage"></a>
+                <a href="../jsonData.html"><img src="https://blanken5.home.xs4all.nl/afb/logotheo.jpg"
+                        alt="logo Theo den Blanken"></a>
+                <a href="https://welkombijma.nl/" target="_blank"><img
+                        src="https://welkombijma.nl/wp-content/themes/welkombijma/public/img/logo.svg"
+                        alt="logo Mediacollege Amsterdam"></a>
+            </span>
+        </nav>
+    </header>
+
+    <main role="main">
+        <article id="webslides" class="horizontal">
+            
+
+            <!-- dia 1  -->
+            <section>
+                <div class="wrap aligncenter">
+                    <h2 class="text-landing">Local storage</h2>
+                    <p class="text-subtitle">
+                    data bij de gebruiker
+                    </p>
+                    <img src="https://cdn4.iconfinder.com/data/icons/commercial-and-business-set-14/512/save2-512.png" alt="Local Storage">
+                    <p class="text-intro">
+                    Een vervolg op de import en verwerking van JSON-data
+                    </p>
+                    <p>
+                        <a href="#slide=2" class="button zoomIn">
+                            naar de slides &nbsp;&nbsp;|&nbsp;&nbsp; <strong> {...} </strong> </a>
+                    </p>
+                    
+                    Terug naar <a href="../jsonData.html"> de vorige opdracht JSON data</a>
+                </div>
+            </section>
+
+            <!-- dia 2 inhoudsopgave  -->
+            <section>
+                <div class="wrap">
+                    <h2 class="text-landing">Inhoud</h2>
+                    <div class="grid">
+
+                        <div class="column fadeInUp">
+                            <ul class="description">
+                                <li><a href="#slide=3">Leerdoelen les</a></li>
+                                <li><a href="#slide=4">Local Storage</a></li>
+                               
+                            </ul>
+                        </div>
+                        
+                        <div class="column zoomIn">
+                            <img src="https://uploads.website.storedge.com/28eb0598-b02c-439f-aebf-a1ff31146041/1st-row-1-1.jpg" alt="opslag">
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+
+            <!-- dia 3 leerdoelen  -->
+            <section class="fullscreen bg-apple">
+                <div class="card-40">
+                    <figure class="fadeInUp">
+                        <img src="https://uploads.website.storedge.com/28eb0598-b02c-439f-aebf-a1ff31146041/1st-row-1-1.jpg" alt="opslag">
+                        <figcaption style="color: black;">Veel boeken ordenen</figcaption>
+                    </figure>
+                    <div class="flex-content">
+                        <h2 class="text-landing">Leerdoelen <strong>{...}</strong></h2>
+                        <p class="text-intro">
+                            Deze les is een vervolg op de import van JSON data. <br>
+                            De oefening loopt ook door met het materiaal van <a href="../jsonData.html">de JSON-opdracht</a>.
+                        </p>
+                        <ul>
+                            <li>Local storage begrijpen</li>
+                            <li>
+                                Local storage toepassen
+                            </li>
+                            <li>JS objecten
+                                <ul>
+                                    <li>eigenschappen (properties)</li>
+                                    <li>methods</li>
+                                </ul>
+                            </li>
+                            <li>JSON.stringify()</li>
+                            <li>JSON.parse()</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+          
+            <!-- dia 4 local storage  -->
+            <section class="aligncenter">
+                <div class="wrap grid sm">
+                    <div class="content-left column">
+                        <h3 class="text-landing">local storage</h3>
+                        <p class="text-intro">web storage</p>
+                        <img src="https://cdn4.iconfinder.com/data/icons/commercial-and-business-set-14/512/save2-512.png" alt="local storage">
+                        
+                    </div>
+                    
+                    <div class="content-left column text-intro">
+                        <p>Data worden in de webbrowser van de gebruiker opgeslagen</p>
+                        <p>Kan zeker tot 5 MB aan data (veel meer dan cookies)</p>
+                        <p>De data is gekoppeld aan het domein dat de gebruiker bezoekt <br>
+                            <small class="alignright">Data van jouw webwinkel worden dus niet verward met die van b.v. Amazon</small>
+                            
+                        </p>
+                        <p>
+                            Data worden in de webbrowser van de gebruiker opgeslagen
+                            <small class="alignright">Kan zeker tot 5 MB aan data (veel meer dan cookies)</small>
+                        </p>
+                        <p>
+                            De data is gekoppeld aan het domein dat de gebruiker bezoekt
+                            <small class="alignright">Data van jouw webwinkel worden dus niet verward met die van b.v. Amazon</small>
+                        </p>
+                        <p>
+                            Zonder dat er continue met de server gecommuniceerd hoeft te worden, blijven keuzes en instellingen van de gebruiker werken in zijn browser
+                            <small class="alignright">Thema's als 'donkere modus' blijven bij andere pagina's van de site werken</small>
+                            <small class="alignright">Producten in de winkelwagen zijn na een onderbreking nog steeds in de winkelwagen op de locale browser.</small>
+                        </p>
+
+                    </div>
+                    
+                    
+                </div>
+            </section>
+
+            <!-- dia 5 codevoorbeeld  -->
+            <section class="bg-apple fullscreen">
+                <div class="grid">
+                    <div class="colum">
+                        <h2 class="text-landing">codevoorbeeld</h2>
+                        
+                        <p>
+                            2 manieren:
+                        </p>
+                        <ul>
+                            <li>naam-waarde paren (key-value)</li>
+                            <li>punt-notatie</li>
+                        </ul>
+                        <hr>
+                        <p>
+                            <code>localStorage.setItem();</code> <br>
+                            <code>localStorage.getItem();</code> <br>
+                        </p>
+
+                        <p>
+                            een item verwijderen: <code>localStorage.removeItem('opleiding')</code> <br>
+                            alle items uit local storage verwijderen: <code>localStorage.clear()</code>
+                        </p>
+                    </div>
+                <div class="column">
+                <script src="https://gist.github.com/Theo-denBlanken/7182bcc18fb9ebf3fbb6e527b2f9463b.js"></script>
+                </div></div>
+            </section>
+
+            <!-- dia 6 inspector  -->
+
+            <section class="bg-apple fullscreen">
+                <h2 class="aligncenter">Bekijk je local storage via de inspector</h2>
+                <img src="https://developers.google.com/web/tools/chrome-devtools/storage/imgs/localstorage.png" alt="Local storage">
+
+            </section>
+
+            <!-- dia 7 strings   -->
+            <section class="bg-apple">
+                <div class="wrap grid ms">
+                    <div class="column"><h2>Je slaat alleen maar <em>strings</em> op in de local storage </h2>
+                    <p class="text-intro">JS objecten moeten dus geconvergeerd worden naar string en omgekeerd!!!</p>
+                    <h4>Vóór het opslaan in local storage:</h4>
+                    <p>van JS-object naar JSON (= een string): <br> <code>let string = JSON.stringify(het_data_object)</code></p>
+                    <h4>Na het ophalen de string weer in een object zetten: </h4>
+                    <p>dus weer van string naar object: <br>
+                    <code>obj.data = JSON.parse(de_string_uit_local_storage)</code></p></div>
+                    <div class="column">
+                        <h2> string &lt; - - &gt; object</h2>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Achtung-orange.svg/2000px-Achtung-orange.svg.png" alt="let op" >
+                    </div>
+
+                </div>
+
+            </section>
+
+        </article>
+    </main>
+
+    <script src="js/webslides.min.js"></script>
+    <script>
+        window.ws = new WebSlides();
+    </script>
+</body>
+
+</html>

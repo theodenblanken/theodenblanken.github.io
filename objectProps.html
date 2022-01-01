@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8">
+  <title>Frontend | JavaScript: eigenschappen van objecten uitvoeren</title>
+  <meta name="keywords" content="Frontend, HTML, CSS, JS">
+  <meta name="description" content="Lessen front-end voor mediadevelopers">
+  <meta name="author" content="Theo den Blanken">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/stijlTheo.css">
+  <script crossorigin="anonymous" src="https://kit.fontawesome.com/1a91c75a80.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <h1 id="paginaKop" class="paginaKop">Kop 1</h1>
+    <div class="tagline" id="tagline">tagline</div>
+    <svg id="ringen" class="ringen"></svg>
+  </header>
+
+  <nav class="nav" id="nav">
+    <label for="menu-toggle" class="nav__label"><span class="nav__labelText">&#xf0c9;</span></label>
+    <input type="checkbox" id="menu-toggle" class="nav__cb" checked>
+    <ul class="nav__list">
+      <li>
+        <a class="nav__item nav__item--active" href=index.html>home</a>
+      </li>
+      <li>
+        <a class="nav__item nav__item--active" href=#>inleiding</a>
+      </li>
+      <li>
+        <a class="nav__item nav__item--active" href=#instructie>instructie</a>
+      </li>
+      <li>
+        <a class="nav__item nav__item--active" href=#bonus>bonusopdracht</a>
+      </li>
+      <li>
+        <a class="nav__item nav__item--active" href=#inleveren>inleveren</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+      <!-- de presentatie in webSlides -->
+      <div class="inhoud" id="presentatie">
+        <iframe id="webSlides" src="webSlidesPresentaties/objectEigenschappen.html" style="width: 85vw; max-width: 1450px; height: 60vw; border: 0; box-shadow: 0 0 3px 5px #3646b0;"></iframe>
+       <br><a href="webSlidesPresentaties/objectEigenschappen.html">Link naar de presentatie</a>
+      </div>
+
+    <div class="inhoud" id="inleiding">
+      <article class="inhoud__tekst">
+        
+          <h3>Leerdoelen</h3>
+          <p>In dit project wordt veel met data gewerkt. In deze reeks leer je hoe data vanuit een JavaScript-object in een HTML-document worden geplaatst.</p>
+          <ul>
+            <li><span class="fab fa-js"></span> Objecten en hun eigenschappen</li>
+            <li>Uitvoeren naar DOM</li>
+            <li><span class="fab fa-js"></span> Data-object met methods</li>
+            <li><span class="fab fa-js"></span> arrow-functie</li>
+            <li><span class="fab fa-js"></span> forEach()-loop</li>
+          </ul>
+          <p>
+            Broncode: <a href="https://gist.github.com/Theo-denBlanken/1493b067a87db6709dbc20b49b99378a" target="_blank">https://gist.github.com/Theo-denBlanken/1493b067a87db6709dbc20b49b99378a</a>
+          </p>
+      </article>
+      
+    </div>
+
+
+
+
+    <div class="inhoud" id="opdracht">
+      <article class="inhoud__tekst">
+        <h3>Eigenschappen van objecten uitvoeren stap 0: het resultaat
+            (00:02:13)</h3>
+        <p>
+            Het resultaat is een pagina met een overzicht van gegevens van een huis. <br>
+            Je ziet de tijd, de buitentemperatuur, de binnentemperatuur, de ingestelde temperatuur, of de verwarming, de kamerverlichting en de buitenverlichting aan of uit staat.
+        </p>
+        <p>
+            Als je de markup bekijkt, blijkt dat er helemaal geen data in staan. <br>
+            Deze worden door JavaScript uit een reeks objecten gehaald. <br>
+            Die objecten staan in een apart JavaScript-bestand. Het is een array van objecten. <br>
+            Elk object heeft eigenschappen (properties). En dat zijn de gegevens, die we gebruiken voor het getoonde overzicht.
+        </p>
+      </article>
+      <div class="inhoud__IF-houder">
+        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/5aa7lPQNrag?rel=0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+    <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Eigenschappen van objecten uitvoeren stap 1: Iets uitvoeren met Javascript
+            (00:09:37)
+          </h3>
+          <p>We beginnen deze oefening vanaf scratch. <br>
+            Er wordt een <code>div</code> aangemaakt met een <code>id</code>. <br>
+            Er wordt een script gekoppeld. <br>
+            In dat script wordt die div in een variabele gestopt. Dan kun je met <code>.innerHTML</code> daar inhoud in schrijven. <br>
+            Er wordt een arrow functie geschreven. Wellicht een andere notatie dan je tot nu toe gewend bent, maar je mag dit zeker ook doen in de notatie, die je wel kent.
+          </p>
+          <p>Omdat er ook een script met data geladen moet worden, wordt er een starten-functie gemaakt, die pas uitgevoerd wordt nadat alle content in de DOM is geladen. Nu staat daar alleen de uitvoeren-functie in, maar later zal ook de data uit een apart script in een variabele gestopt worden. <br>
+            Met het event DOMContentLoaded wordt deze start-functie aangeroepen. <br>
+            Dan wordt de uitvoer dus door het script gedaan.</p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/bvaGELGFOTM?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Eigenschappen van objecten uitvoeren stap 2: Data aanvullen
+            (00:06:12)</h3>
+          <p>In deze stap gaat het om data. In de toekomst halen we die van internet, maar in deze training plaatsen we de data hardcoded in het script. We maken een nieuw JavaScript bestand en plaatsen daar de raw-code van <br> <a href="https://gist.github.com/Theo-denBlanken/1493b067a87db6709dbc20b49b99378a">https://gist.github.com/Theo-denBlanken/1493b067a87db6709dbc20b49b99378a</a> <br>
+            Om de dat wat beter in de vingers te krijgen voegen we minimaal 5 elkaar opvolgende tijdstippen in. <br>
+            De datum is een JavaScript-tijd, zodat we later het script kunnen laten uitrekenen op welke dag van de week die data waren. Dat voeren we dus niet zelf in. We laten ook het script bepalen of de verwarmingsketel aan staat of uit staat.
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/EMmBev7YMqg?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Eigenschappen van objecten uitvoeren stap 3: Data uit object halen
+            (00:08:10)</h3>
+          <p>Eerst wordt het script met de data aan het document gekoppeld. <br>
+            Je kun dan al in de console de array met objecten opvragen. <br>
+            In ons script dat uitvoert, wordt deze in de variabele <code>dataObject</code> gestopt. <br>
+            We kunnen dan van elk item uit die array een eigenschap uitvoeren.  <br>
+            Als voorbeeld wordt hier van het eerste item de tijd opgevraagd en uitgevoerd. Om de waarde van een eigenschap uit het object op te vragen gebruiken we dan de punt-notatie: <code>
+                dataObject[0].tijd
+            </code>. <br>
+            Om van het tweede object de buitentemperatuur te krijgen: <code>dataObject[1].tempBuiten</code>.
+          </p>
+          <p>Voor de uitvoer maken we ook gebruik van de handige string-literals uit JavaScript. Ze worden omgeven met de back-ticks <code>``</code>. Je kunt dat eenvoudig (zelfs meerdere regels) als string aangeven doorspekt met variabele-waarden die omgeven zijn met <code>${}</code>.</p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/k-BGz7OkjZc?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Eigenschappen van objecten uitvoeren stap 4: Committen op GitHub <span class="fab fa-github"></span>
+            (00:06:20)</h3>
+          <p>Het is al een goed stukje werkend, dus ju kunt al een commit maken op GitHub. <br>
+            Ik beveel je hier aan om dat in een aparte repository te doen.
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/YIgQkl8irHk?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Eigenschappen van objecten uitvoeren stap 5: array van objecten doorlopen
+            (00:08:04)</h3>
+          <p>We gaan nu van elk object iets uitvoeren. <br>
+            Maak daarvoor in de uitvoer-functie een variabele die een html-string is. <br>
+            Als je met een loop door de array gaat, voeg je telkens iets aan die string toe: en wel de inhoud van een van de properties van elk object. <br>
+            Op het eind van het doorlopen van de array is die string dus heel groot geworden en voeg je hem met <code>.innerHTML</code> toe aan de inhoud van de uitvoer-div. <br>
+            Het doorlopen van de array kan met een for-lus, maar hier gebruiken we de .forEach)()- methode met daarin de arrow-schrijfwijze.
+          </p>
+          <pre>
+    let html =&#x22;&#x22;;
+    dataObject.forEach( obj =&#x3E; {
+        html += &#x60;&#x3C;div class=&#x22;rij&#x22;&#x3E;&#x60;;
+        html+= &#x60;&#x3C;div&#x3E;${obj.tijd} &#x3C;/div&#x3E;&#x60;;
+        html+= &#x60;&#x3C;div&#x3E;${obj.tempBuiten} &#x3C;/div&#x3E;&#x60;;
+        html += &#x22;&#x3C;/div&#x3E;&#x22;;
+    });
+    uitvoer.innerHTML = html;            
+          </pre>
+          <p>Er wordt voor elk object een div-element gemaakt, met daarin voor elke eigenschap <em>tijd</em> een <code>div</code> en elke eigenschap <em>tempBuiten</em> een <code>div</code>.</p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/HnWbTPdNRDE?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Eigenschappen van objecten uitvoeren stap 6: datum samenstellen
+            (00:11:07)</h3>
+          <p>De tijd is op dit moment een getal en stelt de tijd in milliseconden voor die verstreken zijn sinds 1 januari 1970. <br>
+            Dit is een zogenaamde JavaScript-tijd. We willen natuurlijk de dag van de week, de en de datum en die zijn hieruit af te leiden. <br>
+            We maken een aparte functie, die dit getal als parameter heeft en die daar vervolgens een string van maakt met de datum. <br>
+            In deze functie maken we een variabele aan van het type <em>Date</em>. <br>
+            Dit is een JavaScript object, die een aantal methods heeft. <br>
+            Zie: <a href="https://www.w3schools.com/jsref/jsref_obj_date.asp">https://www.w3schools.com/jsref/jsref_obj_date.asp</a>. <br>
+            Elke method geeft een getal terug. <br>
+            Bijvoorbeeld <code>getDate()</code> geeft een getal tussen 1 en 31 terug, die de dag van de maand van de datum-variabele is. Maar ook <code>getMonth()</code> die een getal tussen 0 en 11 geeft, die staat voor januari tot en met december en <code>getDay()</code> die de dag van de week oplevert. <br>
+            We maken ook gebruik van <code>getFullYear()</code>, <code>getHours()</code> en <code>getMinutes()</code>.
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/RKt1Srmb8D4?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Eigenschappen van objecten uitvoeren stap 7: dag van de week omzetten
+            (00:06:11)</h3>
+          <p>
+            De method bij de <code>getDay()</code>-method geeft een getal tussen 0 en 6. De gebruiker heeft meer aan de naam van de dag van de week. <br>
+            We kunnen die nu in onze eigen gewenste taal omzetten. <br>
+            Daarvoor maken we een eigen functie. Feitelijk werken we met een samenstelling van verschillende conditionals en we kunnen dat overzichtelijke scripten met de <code>switch</code>-opdracht. Deze heeft het getal als argument en afhankelijk van de waarde daarvan wordt er een <code>case</code> geschreven, die uitgevoerd wordt. Na zo een opdracht hoeft de <code>switch</code> niet verder meer doorgelopen te worden. (het is zelfs niet wenselijk) en daarom geef telkens de <code>break</code>-opdracht. De <code>switch</code> wordt dan verlaten. <br>
+            Voldoet geen enkele case aan de voorwaarde, dan wordt de <code>default</code>-opdracht uitgevoerd. <br>
+            Na het maken van de functie, voeg je hem toe aan de uitvoer-functie en is de dag van de week te zien.
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/CPtjysfjwDw?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Eigenschappen van objecten uitvoeren stap 8: nummers naar maandnamen omzetten
+            (00:05:07)</h3>
+          <p>Als je de vorige video begrijpt, kun je dat ook uitvoeren voor het omzetten van het maandnummer uit getMonth() naar een naam van de maand. <br>
+            Het werkt immers op dezelfde manier met de JavaScript switch-opdracht.
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/kj1p8seMMPM?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Eigenschappen van objecten uitvoeren stap 9: tijd en temperatuur formatteren
+            (00:04:32)</h3>
+          <p>Tijd wordt herkenbaar als je uren en minuten steeds met 2 cijfers weergeeft met <code>:</code> ertussen. Dit gebeurd niet als dat aantal minder is dan 10. We maken dus een conditional die onderzoekt of de uren minder is dan 10. Is dat het geval, dan plaats je er de string <code>'0'</code> voor. <br>
+            Idem voor de minuten. <br>
+            De temperatuur wordt ook herkenbaar als de eenheid graden Celsius wordt toegevoegd. Dat kleine graden-rondje met <code>&amp;degree;</code>.<br>
+            We voegen nog twee temperaturen toe uit de eigenschappen van onze objecten.
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/jLNJ8NTaQEM?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Eigenschappen van objecten uitvoeren stap 10: symbolen CV en lampen uitvoeren
+            (00:11:03)</h3>
+          <p>Je kunt ook de gegevens uitvoeren met plaatjes. <br>
+            Op <a href="https://gist.github.com/Theo-denBlanken/57130d4c7596170e462eb0193da288d4">https://gist.github.com/Theo-denBlanken/57130d4c7596170e462eb0193da288d4</a> staan 4 svg's, die je in je project opneemt. <br>
+            Voor de afbeeldingen maken we een stijl aan, die ervoor zorgt dat de afbeelding klein blijft. <br>
+            Je kunt object-eigenschappen vergelijken in een conditional en afhankelijk van het resultaat een keuze maken welke afbeelding je wilt toevoegen. In een if-statement vergelijken we de gewenste temperatuur en de binnentemperatuur van het object. <br>
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/McpfhzoU_uE?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Eigenschappen van objecten uitvoeren stap 11: de data stijlen
+            (00:12:06)</h3>
+          <p>De data binnen een rij worden naast elkaar geplaatst. <br>
+            Dat kan heel snel met <code>display: flex</code>. <br>
+            Geef de div's daarbinnen wat padding en er ontstaan al leuke rijen, zeker als je de oneven rijen een wat andere achtergrondkleur geeft. <br>
+            De data binnen een <code>div</code> kunnen ook verticaal uitgelijnd worden door ze zelf display flex te geven en ze met <code>align-items: center;</code> ze verticaal te centreren.
+          </p>
+          <p>Een tabel moet worden voorzien van een kop. We voegen hardcoded een tabelkop toe. <br>
+            Nu blijkt dat degene, die dit niet met div's maar met een tabel hebben uitgevoerd, duidelijk in het voordeel zijn. Want als ook deze kop met <code>display: flex;</code> naast elkaar staan, dat de kop niet uitgelijnd met de data. Door toevoegen van paddings en een enkel element nog een extra class kan dit op het oog worden geoptimaliseerd. 
+            </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/jZd9dIrovhU?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+
+
+
+
+
+
+    <!--
+
+
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3></h3>
+          <p>
+          </p>
+        </article>
+        <div class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/xxxx?rel=0"  allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+
+    -->
+
+    <hr>
+
+    <div class="inhoud" id="inleveren">
+      <article class="inhoud__tekst">
+        <h4>Inleveren</h4>
+        <ul>
+          <li>Plaats het resultaat op hosts.ma-cloud.nl</li>
+          <li>Update de GitHub-repositry <span class="fab fa-github"></span> en</li>
+          <li>Voeg de link naar de live versie toe aan de README.md</li>
+          <li>Lever de GitHub-link in ms-Teams <span class="fab fa-github"></span>
+          </li>
+        </ul>
+      </article>
+      <div id="bonus">
+          <h4>Bonusopdracht</h4>
+          <ul>
+              <li>
+                  In de turorial wordt de inhoud in div's uitgevoerd, maar eigenlijk is het een tabel. <br>
+                  Voer het geheel als een tabel uit in stijl die met Bootstrap5: <a href="https://getbootstrap.com/docs/5.0/content/tables/">https://getbootstrap.com/docs/5.0/content/tables/</a>
+              </li>
+              <li>Je kunt ook de forEach in het script vervangen door de for-lus. Dat laat dan zien dat je ook zelfstandig met loops in Javascript kunt werken.</li>
+          </ul>
+
+      </div>
+
+
+    </div>
+
+  </main>
+
+  <footer>
+
+    <span class="social">
+        Delen:
+        <a href="#" class="social__item social__item--facebook" id="fb_link"></a>
+        <a href="#" class="social__item social__item--google" id="gl_link"></a>
+        <a href="#" class="social__item social__item--twitter" id=twt_link></a>
+      </span>
+    <span>&copy; Theo den Blanken</span>
+    <span><a href="http://validator.w3.org/check?uri=referer" target="_blank" onclick="this.href='http://validator.w3.org/check?uri=' + document.URL">
+        <img src="afb/valid-html5-blue.png" alt="Valide HTML5" style="height: 1em; padding: 0 0 0 1em;"></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank" onclick="this.href='http://jigsaw.w3.org/css-validator/validator?uri=' + document.URL">
+        <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS" style="height: 1em; padding: 0 0 0 1em;">
+    </a></span>
+  </footer>
+
+  <script src="scripts/social.js"></script>
+  <script src="scripts/headerAnimatie.js"></script>
+  <script src="scripts/activeLink.js"></script>
+  <script src="scripts/smoothScrolling.js"></script>
+</body>
+
+</html>
